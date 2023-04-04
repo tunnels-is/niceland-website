@@ -576,7 +576,7 @@ html {
 
 .banner2 .banner-bg {
   height: auto;
-  min-height: 230px;
+  min-height: 300px;
   width: 100%;
 }
 
@@ -1142,7 +1142,7 @@ html {
   }
 
   .banner2 .get-started {
-    top: 12rem;
+    top: 13.5rem;
   }
 
   .about {
@@ -1686,8 +1686,12 @@ html {
     top: 10rem;
   }
 
+  .banner2 .banner-bg {
+    min-height: 250px;
+  }
+
   .banner2 .title {
-    top: 5rem;
+    top: 6rem;
   }
 
   .banner2 .get-started {
