@@ -12,7 +12,7 @@ const MainFeatures = (props) => {
       </div>
 
       <div className="s1 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/nolog.png"></img>
+        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-no-logging.png"></img>
         <div className="item-title font-section-item-title">No Data Collection</div>
         <div className="description font-section-description">
           Not tracking ANY user activity is our main objective, we do not collect data on user activity, track users or collect logs on any user related events.
@@ -25,7 +25,7 @@ const MainFeatures = (props) => {
 
 
       <div className="s2 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/hacker.png"></img>
+        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-anon-mask.png"></img>
         <div className="item-title font-section-item-title">Anonymity</div>
         <div className="description font-section-description">
           Our platform offers anonymous accounts. Meaning you can sign up with a randomly generated account name. Additionally we accept payments via cash
@@ -38,7 +38,7 @@ const MainFeatures = (props) => {
 
 
       <div className="s3 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/globe.png"></img>
+        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-geo-unlock.png"></img>
         <div className="item-title font-section-item-title">Higher Quality Service</div>
         <div className="description font-section-description">
           Our VPN platform ensures a basic quality of service, each user subscription has a minimum guaranteed bandwidth with no maximum limits

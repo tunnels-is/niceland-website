@@ -709,10 +709,9 @@ html {
         border-radius: 16px;
 
         .img {
-            width: 175px;
-            height: 175px;
-            margin-left: calc(50% - 95px);
+            width: 120px;
             margin-top: -110px;
+            margin-left: calc(50% - 60px);
         }
 
         .item-title {
@@ -785,16 +784,16 @@ html {
         // width: 410px;
 
         .img {
-            width: 90px;
+            width: 120px;
             height: auto;
-            background-color: $c-1;
+            // background-color: $c-1;
             padding: 15px;
-            border-radius: 60px;
+            // border-radius: 60px;
             margin-left: calc(50% - 65px);
         }
 
         .item-title {
-            margin-top: 20px;
+            // margin-top: 20px;
             text-align: center;
             height: fit-content;
             line-height: 1.2em;
@@ -856,20 +855,21 @@ html {
         // width: 410px;
 
         .img {
-            width: 40px;
-            height: 40px;
-            border-radius: 60px;
+            width: 60px;
+            margin-left: -10px;
+            height: auto;
             // margin-left: calc(50% - 65px);
-            float: left;
+            // float: left;
+            position: absolute;
         }
 
         .item-title {
-            width: 85%;
+            width: 100%;
             float: left;
+            margin-left: 60px;
             margin-top: none !important;
-            margin-left: 20px;
             text-align: left;
-            height: 42px;
+            height: fit-content;
             color: black;
             // color: $feature-section-item-title-color;
         }
@@ -1158,6 +1158,12 @@ html {
 
     height: auto;
 
+    .icons8 {
+        font-size: 0.7em;
+        color: $c-4;
+        text-decoration: none;
+    }
+
     .top-row {
         grid-row: 1;
         grid-column-start: 1;
@@ -1370,30 +1376,30 @@ html {
 
         .s1 {
             grid-row: 2;
-            margin-top: 40px;
+            margin-top: 0px;
             grid-column-start: 2;
-            grid-column-end: 10;
+            grid-column-end: 6;
         }
 
         .s2 {
             grid-row: 3;
-            margin-top: 40px;
+            margin-top: 30px;
             grid-column-start: 5;
-            grid-column-end: 13;
+            grid-column-end: 10;
         }
 
         .s3 {
             grid-row: 4;
-            margin-top: 40px;
+            margin-top: 0px;
             grid-column-start: 2;
-            grid-column-end: 12;
+            grid-column-end: 6;
         }
 
         .s4 {
             grid-row: 5;
-            margin-top: 40px;
+            margin-top: 0px;
             grid-column-start: 5;
-            grid-column-end: 13;
+            grid-column-end: 10;
         }
     }
 
