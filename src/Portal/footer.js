@@ -14,7 +14,7 @@ const Footer = (props) => {
                     <div className="item title">Downloads</div>
                     <div className="item">
                         <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">
-                            All Downloads
+                            All
                         </a>
                     </div>
                     <div className="item">

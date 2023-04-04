@@ -38,7 +38,7 @@ const MainFeatures = (props) => {
 
 
       <div className="s3 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-geo-unlock.png"></img>
+        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-quality.png"></img>
         <div className="item-title font-section-item-title">Higher Quality Service</div>
         <div className="description font-section-description">
           Our VPN platform ensures a basic quality of service, each user subscription has a minimum guaranteed bandwidth with no maximum limits

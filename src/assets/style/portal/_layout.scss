@@ -195,7 +195,7 @@ html {
 .learn-more-button:hover {
 
     .arrow {
-        animation: lefttoright 2s infinite;
+        animation: lefttoright 1s infinite;
     }
 
     background-color: $learn-more-button-gb-hover;
@@ -282,7 +282,7 @@ html {
 
 
         .active {
-            color: $c-2 !important;
+            color: $c-0 !important;
         }
     }
 }
@@ -1085,9 +1085,21 @@ html {
         }
 
         a:hover {
-            text-decoration: underline;
-            color: $c-1;
+            color: $c-2;
+        }
 
+        a:hover:after {
+
+            transform: scaleX(1);
+            transform-origin: 0% 50%;
+        }
+
+        a:after {
+            display: block;
+            content: '';
+            border-bottom: solid 2px $c-2;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
         }
     }
 
@@ -1108,29 +1120,49 @@ html {
             bottom: 40px;
 
             a {
-                color: $c-4;
+                color: $c-1;
                 font-family: $font-family;
                 font-style: $font-style;
                 font-weight: 700;
                 font-size: 1.3em;
                 text-align: center;
                 text-decoration: none;
+                display: inline-block;
             }
 
             a:hover {
-                text-decoration: underline;
-                color: $c-4;
+                color: $c-2;
+            }
+
+            a:hover:after {
+
+                transform: scaleX(1);
+                transform-origin: 0% 50%;
+            }
+
+            a:after {
+                display: block;
+                content: '';
+                border-bottom: solid 2px $c-2;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
             }
         }
 
         .icon {
             margin-top: 40px;
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
         }
     }
 
     .s1 {
+        .icon {
+            height: 80px;
+            width: 80px;
+            margin-top: 50px;
+        }
+
         // grid-row: 3/5;
         grid-row: 3;
         grid-column-start: 1;
@@ -1144,6 +1176,10 @@ html {
     }
 
     .s3 {
+        .icon {
+            margin-top: 50px;
+        }
+
         grid-row: 3;
         grid-column-start: 9;
         grid-column-end: 13;
@@ -1188,9 +1224,21 @@ html {
         }
 
         a:hover {
-            text-decoration: underline;
             color: $c-2;
+        }
 
+        a:hover:after {
+
+            transform: scaleX(1);
+            transform-origin: 0% 50%;
+        }
+
+        a:after {
+            display: block;
+            content: '';
+            border-bottom: solid 2px $c-2;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
         }
 
         .title {
@@ -1203,6 +1251,7 @@ html {
 
         .item {
             height: fit-content;
+            width: fit-content;
         }
 
         .s1 {

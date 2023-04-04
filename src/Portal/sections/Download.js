@@ -19,7 +19,7 @@ const Download = (props) => {
 
       <div className="s1 box">
 
-        <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/windows.svg"></img>
+        <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-win11.svg"></img>
         <div className="title">
           <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">
             Download for Windows
@@ -37,7 +37,7 @@ const Download = (props) => {
       </div>
 
       <div className="s3 box">
-        <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/linux.svg"></img>
+        <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-linux.png"></img>
         <div className="title">
           <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">
             Download for Linux
