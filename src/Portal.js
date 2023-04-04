@@ -25,7 +25,7 @@ const LaunchPortal = () => {
 
   return (
     <>
-      < BrowserRouter >
+      < HashRouter >
         <Nav setError={setError} />
 
         <Routes>
@@ -41,7 +41,7 @@ const LaunchPortal = () => {
         <Footer></Footer>
 
 
-      </BrowserRouter >
+      </HashRouter >
     </>
   )
 
