@@ -1,0 +1,44 @@
+// Table of contents
+
+$c-0: #ffffff;
+$c-1: #0E918D;
+$c-2: #FD9400;
+$c-3: #072A33;
+$c-4: #7FB800;
+$c-5: #F4FAFF;
+$c-6: #E2E8EE;
+$c-7: black;
+
+// FONTS
+$font-family: 'Nunito';
+$font-style: 'normal';
+
+// BUTTONS
+$button-border-radius: 30px;
+
+
+$c-button-dark-text: #202020;
+$c-button-light-text: $c-0;
+
+$button-orange-color: $c-button-dark-text;
+$button-orange-gb: $c-2;
+
+$button-green-color: $c-button-light-text;
+$button-green-gb: $c-1;
+
+$learn-more-button-color: $c-1;
+$learn-more-button-color-hover: $c-0;
+$learn-more-button-gb: $c-5;
+$learn-more-button-gb-hover: $c-1;
+$learn-more-button-border: #E2E8EE;
+
+// BANNER 
+$banner-color: $c-5;
+$banner-button-color-hover: white;
+$banner-button-bg-hover: $c-1;
+
+// SECTIONS
+$feature-section-item-title-color: $c-1;
+
+// FOOTER
+$footer-title-color: #B0B0B0;

@@ -1,0 +1,46 @@
+{
+  "name": "nicelandvpn.website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.27.2",
+    "moment": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-google-charts": "^4.0.0",
+    "react-hook-form": "^7.32.1",
+    "react-icons": "^4.8.0",
+    "react-lazy-load-image-component": "^1.5.6",
+    "react-qr-code": "^2.0.11",
+    "react-router-dom": "^6.4.5",
+    "react-spinners": "^0.13.7",
+    "react-twitter-widgets": "^1.11.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.1",
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "sass": "^1.52.3"
+  },
+  "scripts": {},
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
