@@ -672,9 +672,9 @@ html {
   margin-top: 34px;
 }
 
-.about-features .server {
-  width: 300px;
-  height: 300px;
+.about-features .iceland {
+  width: 350px;
+  height: auto;
   grid-area: 1 / 10 / 4 / 13;
 }
 
@@ -1169,7 +1169,7 @@ html {
     grid-template-columns: repeat(12, auto);
   }
 
-  .about-features .server {
+  .about-features .iceland {
     grid-column: 9 / 11;
   }
 
@@ -1345,7 +1345,7 @@ html {
     gap: 0 30px;
   }
 
-  .about-features .server {
+  .about-features .iceland {
     display: none;
   }
 

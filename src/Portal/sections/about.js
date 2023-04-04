@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ImArrowRight2 } from "react-icons/im"
 
 
 const About = (props) => {
@@ -18,7 +19,7 @@ const About = (props) => {
 
       <Link className="learn-more-button" to={"/about"}>
         Learn More
-        <img className="arrow" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/right-arrow.svg"></img>
+        <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
       </Link>
 
     </div >

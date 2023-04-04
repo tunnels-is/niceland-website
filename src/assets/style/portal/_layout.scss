@@ -671,12 +671,12 @@ html {
     }
 
 
-    .server {
+    .iceland {
         grid-row: 1/4;
         grid-column-start: 10;
         grid-column-end: 13;
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: auto;
     }
 
 }
@@ -1309,7 +1309,7 @@ html {
         grid-template-columns: repeat(12, auto);
         // gap: 0px 30px;
 
-        .server {
+        .iceland {
             grid-column-start: 9;
             grid-column-end: 11;
         }
@@ -1562,7 +1562,7 @@ html {
         grid-template-columns: repeat(12, auto);
         gap: 0px 30px;
 
-        .server {
+        .iceland {
             display: none;
         }
 

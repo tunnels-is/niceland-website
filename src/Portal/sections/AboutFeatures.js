@@ -8,14 +8,17 @@ const AboutFeatures = (props) => {
     < div className={`about-features grid-row-${props.row} inherit-grid`
     }>
 
-      <img className="server" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/server.svg"></img>
+      <img className="iceland" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/iceland-map.png"></img>
 
       <div className="title font-section-title">
-        Access geo-restricted content from anywhere in the world with Niceland VPN's global network of servers.
+        Focusing on anonymity and quality service
       </div>
       <div className="subtitle font-big-section-description">
-        Niceland VPN offers advanced security features to protect your online privacy. With
-        military-grade encryption, your internet activity is shielded from prying eyes, ensuring that your sensitive information and personal data remain secure. Niceland VPN also employs various protocols, including OpenVPN and IKEv2, to safeguard your internet connection from hackers and cybercriminals. Niceland VPN provides access to geo-restricted content from anywhere in the world. Whether you're traveling or living in a country where certain websites or services are blocked, Niceland VPN's global network of servers allows you to bypass these restrictions and access your favorite content.
+
+        We created Niceland VPN from the ground up using golang, and because of that we can accomplish
+        a high level of customization and control that is not possible with pre-build VPN solutions. When building the service our main focus was on anonymity and quality of service, we wanted to build a VPN that does not collect any logs regarding user activity and did not track anything related to users. This means we have no idea what our users do on our platform nor do we have any records of what they do. <br /><br />
+        Niceland VPN is owned by Tunnelf EHF which is a startup company registered in Iceland, which is not a part of the EU and has it's own laws and regulations when it comes to online services.
+
       </div>
 
     </div >
