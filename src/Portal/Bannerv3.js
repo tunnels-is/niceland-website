@@ -5,9 +5,11 @@ const BannerV3 = (props) => {
 
   return (
     <>
-      <div className="banner2">
-        <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/bannerv3.png"></img>
-        <div className="title font-banner-title">Experience everything niceland has to offer</div>
+      <div className="banner">
+        <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/bannerv6.png"></img>
+        <div className="title font-banner-title">Experience seamless <br /> and reliable online security</div>
+
+        <div className="subtitle font-banner-subtitle">Say goodbye to complicated setups and connection issues</div>
 
         <div className="button font-button get-started">Get niceland VPN
           <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>

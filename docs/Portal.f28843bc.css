@@ -529,7 +529,6 @@ html {
   height: 136px;
   text-align: center;
   color: #f4faff;
-  text-shadow: 0 4px 4px #00000040;
   margin-left: 10%;
   position: absolute;
   top: 14rem;
@@ -589,7 +588,6 @@ html {
   height: 136px;
   text-align: center;
   color: #f4faff;
-  text-shadow: 0 4px 4px #00000040;
   font-size: 3em;
   line-height: 1em;
   position: absolute;
