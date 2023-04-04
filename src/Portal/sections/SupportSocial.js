@@ -12,7 +12,7 @@ const SupportSocial = (props) => {
       </div>
 
       <div className="box slack">
-        <a href="https://join.slack.com/t/nicelandvpn/shared_invite/zt-1no4cjdjr-zv7JAbUhqL4cq0MSW1jPBQ" target={"_blank"}>
+        <a href="https://join.slack.com/t/nicelandvpn/shared_invite/zt-1rfv4ks6d-A5lLr9W4FdjEzlmZXwrMzw" target={"_blank"}>
           <img src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/slack-logo.svg" />
         </a >
       </div>
