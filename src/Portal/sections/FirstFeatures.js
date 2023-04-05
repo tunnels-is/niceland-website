@@ -18,7 +18,7 @@ const FirstFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-dns-protect.png"></img>
         <div className="item-title font-section-item-title">DNS/IPv6 leak prevention</div>
         <div className="description font-section-description">
-          DNS leak prevention is important to keep your location and indentity hidden when accessing website
+          DNS and IPv6 leaks can reveal your location, niceland VPN protects you by disabling IPv6 and changing your DNS settings whenever you connect. Doing so prevents big corporations and goverment related entities from tracking your location or knowing your are using a VPN
         </div>
 
       </div>
@@ -28,7 +28,7 @@ const FirstFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png"></img>
         <div className="item-title font-section-item-title">Anonymous Payments</div>
         <div className="description font-section-description">
-          Subscriptions can be payed for using cash. Send us USD using the postal service and we will enable your subscription.
+          Being extra cautious is a good thing, and if that applies to you we have just the thing. Subscriptions can be payed for using cash. Just send us the Subscription amount via mail carrier and we will activate your subscription when the payment arrives
         </div>
 
       </div>
@@ -36,9 +36,9 @@ const FirstFeatures = (props) => {
 
       <div className="s3 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-web-shield.png"></img>
-        <div className="item-title font-section-item-title">IP-Free session data</div>
+        <div className="item-title font-section-item-title">Anonymous Meta Data</div>
         <div className="description font-section-description">
-          Routing within our platform is done using custom Tags. This means any routing information on our servers does not include any IP information
+          Session data and meta data is something many VPN users are worried about. Niceland is designed with a custom Tag Routing protocol which keeps any session information anonymous. Additionally Niceland does not keep any session data or meta data on session after they have disconnected.
         </div>
 
 

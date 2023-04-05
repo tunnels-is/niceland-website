@@ -16,7 +16,7 @@ const SecondFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-lock.png"></img>
         <div className="item-title font-section-item-title">Additional Encryption</div>
         <div className="description font-section-description">
-          When browsing the web you are protected by the HTTPS standard. However, we add another layer of encryption on-top of that for all activity within our VPN platform
+          When browsing the web you are protected by the HTTPS standard. However, Niceland adds another layer of encryption on-top for all activity within our VPN platform
         </div>
 
       </div>
@@ -24,9 +24,9 @@ const SecondFeatures = (props) => {
 
       <div className="s2 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-double.png"></img>
-        <div className="item-title font-section-item-title">Double VPN by default</div>
+        <div className="item-title font-section-item-title">Double VPN By Befault</div>
         <div className="description font-section-description">
-          Our VPN system is built from the ground up by us, which enabled us to integrade double VPN routing by default.
+          Niceland uses what is called Double VPN protocols as it´s default mode of transport. What that means is your internet traffic will travel through two seperate servers or IPs before reaching the internet
         </div>
 
       </div>
@@ -34,9 +34,9 @@ const SecondFeatures = (props) => {
 
       <div className="s3 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-two-factor.png"></img>
-        <div className="item-title font-section-item-title">Two-Factor authentication</div>
+        <div className="item-title font-section-item-title">Two-Factor Authentication</div>
         <div className="description font-section-description">
-          Additional authentication can be enabled to ensure an extra layer of security for your account.
+          Standard email/password authentication is sometimes not enough to keep your accounts safe, which is why Niceland enables users to activate Two-Factor Authentication for their accounts
         </div>
       </div>
 
@@ -44,7 +44,7 @@ const SecondFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-dns.png"></img>
         <div className="item-title font-section-item-title">Custom DNS servers</div>
         <div className="description font-section-description">
-          Unlike some other VPNs, we allow you to use any DNS servers you prefer while still routing your DNS queries through our system.
+          Niceland will encrypt all DNS traffic over it's internal network, even so some users want to control which DNS servers they access. Changing your DNS servers while connected to Niceland is easy to do using the settings menu in our app.
         </div>
       </div>
     </div >

@@ -7,6 +7,7 @@ import SupportSocial from "./sections/SupportSocial";
 
 const HomePage = () => {
 
+  window.scrollTo(0, 0);
   return (
     <>
       <BannerV1 ></BannerV1>

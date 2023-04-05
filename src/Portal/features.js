@@ -9,6 +9,7 @@ import ThirdFeatures from "./sections/ThirdFeatures";
 import SupportSocial from "./sections/SupportSocial";
 
 const FeaturesPage = () => {
+  window.scrollTo(0, 0);
 
   return (
     <>

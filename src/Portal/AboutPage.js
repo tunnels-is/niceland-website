@@ -8,6 +8,8 @@ import SupportSocial from "./sections/SupportSocial.js";
 
 const AboutPage = () => {
 
+    window.scrollTo(0, 0);
+
     return (
         <>
             <BannerV5></BannerV5>

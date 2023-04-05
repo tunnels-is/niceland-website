@@ -9,7 +9,7 @@ const Download = (props) => {
     <div className={`download grid-row-${props.row} inherit-grid`}>
 
       <div className="download-title font-section-title">
-        Get niceland VPN
+        Get Niceland VPN
       </div>
       <div className="subtitle font-section-subtitle">
         <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">

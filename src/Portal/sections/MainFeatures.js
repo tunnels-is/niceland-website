@@ -13,9 +13,9 @@ const MainFeatures = (props) => {
 
       <div className="s1 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-no-logging.png"></img>
-        <div className="item-title font-section-item-title">No Data Collection</div>
+        <div className="item-title font-section-item-title">No Tracking or Logging</div>
         <div className="description font-section-description">
-          Not tracking ANY user activity is our main objective, we do not collect data on user activity, track users or collect logs on any user related events.
+          Niceland was built from the ground up to with anonymity as it's primary focus. Niceland does not rely on third party VPN clients or analytics services. <br /><br /> - You can't share what you don't have
         </div>
         <Link className="learn-more-button" to={"/features"}>
           Learn More
@@ -28,7 +28,7 @@ const MainFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-anon-mask.png"></img>
         <div className="item-title font-section-item-title">Anonymity</div>
         <div className="description font-section-description">
-          Our platform offers anonymous accounts. Meaning you can sign up with a randomly generated account name. Additionally we accept payments via cash
+          Anonymous (Token) user accounts, anonymous (Cash) payments, anonymous (Tag) routing, Niceland implemented these features from the very first stage of development and we welcome any new feature that helps our users stay safe
         </div>
         <Link className="learn-more-button" to={"/features"}>
           Learn More
@@ -41,7 +41,7 @@ const MainFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-good.png"></img>
         <div className="item-title font-section-item-title">Higher Quality Service</div>
         <div className="description font-section-description">
-          Our VPN platform ensures a basic quality of service, each user subscription has a minimum guaranteed bandwidth with no maximum limits
+          Instead of over-crowding servers with users, Niceland only places a limited number of users on each server and with our custom built algorithms we ensure every user has enough bandwidth to enjoy the internet without interruption from other users
         </div>
 
         <Link className="learn-more-button" to={"/features"}>

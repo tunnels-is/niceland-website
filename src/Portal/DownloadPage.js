@@ -5,6 +5,7 @@ import SupportSocial from "./sections/SupportSocial.js";
 
 
 const DownloadPage = () => {
+    window.scrollTo(0, 0);
 
     return (
         <>

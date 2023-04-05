@@ -297,8 +297,6 @@ html {
 
     .icon {
         height: 56px;
-        -webkit-filter: drop-shadow(5px 5px 5px #0000009f);
-        filter: drop-shadow(5px 5px 5px #0000009f);
         border-radius: 5px;
         cursor: pointer;
 
@@ -473,7 +471,7 @@ html {
         width: 920px;
         height: 222px;
         left: calc(50% - 460px);
-        top: 22rem;
+        top: 17rem;
         text-align: center;
         color: $banner-color;
         // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -481,7 +479,46 @@ html {
 
     .get-started {
 
-        top: 28rem;
+        top: 23rem;
+    }
+}
+
+
+.banner3 {
+
+    // margin-bottom: 120px;
+
+    .banner-bg {
+        min-height: 240px;
+        height: auto;
+        width: 100%;
+    }
+
+    .title {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        top: 9rem;
+        left: 2rem;
+        text-align: center;
+        color: $banner-color;
+        // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .subtitle {
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        color: #f4faff;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+        // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .get-started {
+        top: 17rem;
+        left: 2rem;
     }
 }
 
@@ -550,6 +587,34 @@ html {
 
     .get-started {
         top: 15rem;
+    }
+}
+
+
+.banner4 {
+    position: relative;
+
+    .banner-bg {
+        height: auto;
+        min-height: 300px;
+        width: 100%;
+    }
+
+    .title {
+        position: absolute;
+        font-size: 3em;
+        line-height: 1em;
+        width: 100%;
+        height: 136px;
+        bottom: 3rem;
+        text-align: center;
+        color: $banner-color;
+        // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .get-started {
+        position: absolute;
+        bottom: 14rem;
     }
 }
 
@@ -754,8 +819,8 @@ html {
 .first-features {
     grid-column-start: 1;
     grid-column-end: 13;
-    margin-top: 120px;
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 
     .title {
         grid-row: 1;
@@ -779,12 +844,13 @@ html {
 
     .box {
         padding: 30px;
-        height: 255px;
+        height: fit-content;
         position: relative;
         // width: 410px;
 
         .img {
             width: 120px;
+            min-width: 120px;
             height: auto;
             // background-color: $c-1;
             padding: 15px;
@@ -850,7 +916,7 @@ html {
 
     .box {
         padding: 20px;
-        height: 150px;
+        height: fit-content;
         position: relative;
         // width: 410px;
 
@@ -1304,18 +1370,19 @@ html {
         // }
 
         .title {
-            font-size: 2em;
-            top: 10rem;
+            // font-size: 2em;
+            top: 11rem;
             line-height: 1.2em;
         }
 
         .subtitle {
-            display: none;
-
+            top: 14rem;
         }
 
+
+
         .get-started {
-            top: 16rem;
+            top: 19rem;
         }
     }
 
@@ -1332,6 +1399,23 @@ html {
 
         .get-started {
             top: 13.5rem;
+        }
+    }
+
+    .banner4 {
+        .title {
+            font-size: 2em;
+            line-height: 1.2em;
+            bottom: 0rem;
+        }
+
+        .subtitle {
+            display: none;
+        }
+
+        .get-started {
+            bottom: 10rem;
+            // top: 13.5rem;
         }
     }
 
@@ -1555,14 +1639,18 @@ html {
         // }
 
         .title {
-            font-size: 2em;
+            font-size: 3em;
             top: 8rem;
             // top: 134px;
             line-height: 1.2em;
         }
 
+        .subtitle {
+            top: 10rem;
+        }
+
         .get-started {
-            top: 14rem;
+            top: 15rem;
         }
 
     }
@@ -1579,6 +1667,49 @@ html {
 
         .get-started {
             top: 11rem;
+        }
+
+    }
+
+    .banner4 {
+        .banner-bg {
+            width: 940px;
+        }
+
+        .title {
+            font-size: 1.5em;
+            line-height: 1em;
+            // top: 8rem;
+            bottom: 0rem;
+
+        }
+
+        .get-started {
+            bottom: 10rem;
+        }
+
+    }
+
+    .banner3 {
+        .banner-bg {
+            width: 911px;
+        }
+
+        .title {
+            font-size: 2.5em;
+            top: 16rem;
+            // top: 134px;
+            line-height: 1.2em;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            top: 17.5rem;
+            left: 2.5rem
+        }
+
+        .get-started {
+            top: 21.5rem;
         }
 
     }
@@ -1670,8 +1801,8 @@ html {
 
 
     .third-features {
-        grid-template-columns: repeat(12, 50px);
-        gap: 0px 0px;
+        grid-template-columns: repeat(12, auto);
+        gap: 0px 10px;
 
         .box {
             height: auto;
@@ -1685,22 +1816,22 @@ html {
         .s1 {
             // grid-row: 3/5;
             grid-row: 2;
-            grid-column-start: 2;
-            grid-column-end: 12;
+            grid-column-start: 3;
+            grid-column-end: 11;
         }
 
         .s2 {
             margin-top: 40px;
             grid-row: 3;
-            grid-column-start: 2;
-            grid-column-end: 12;
+            grid-column-start: 3;
+            grid-column-end: 11;
         }
 
         .s3 {
             margin-top: 40px;
             grid-row: 4;
-            grid-column-start: 2;
-            grid-column-end: 12;
+            grid-column-start: 3;
+            grid-column-end: 11;
         }
     }
 
@@ -1827,7 +1958,8 @@ html {
 
             .item-title {
                 float: none;
-                width: 100%;
+                width: fit-content;
+                line-height: 1em;
                 margin-left: 60px;
             }
 
@@ -1865,16 +1997,9 @@ html {
         }
     }
 
-    .third-features {
 
-        grid-template-columns: repeat(12, 30px);
-        gap: 0 0px;
 
-        .box {
 
-            height: auto;
-        }
-    }
 
     .main-features {
         .box {
@@ -1927,6 +2052,8 @@ html {
 }
 
 @media screen and (max-width: 670px) {
+
+
 
 
     .main-features {
@@ -2054,9 +2181,21 @@ html {
                 grid-column-end: 6;
             }
         }
+
+        .bottom-row {
+            grid-row: 3;
+            grid-column-start: 2;
+            grid-column-end: 12;
+        }
     }
 
     .support {
+        .title {
+            grid-row: 1;
+            grid-column-start: 6;
+            grid-column-end: 8;
+        }
+
         .discord {
             // margin-top: 25px;
             grid-row: 2;
@@ -2099,13 +2238,40 @@ html {
     }
 
     .banner {
+
+        .banner-bg {
+            width: 700px;
+            height: auto;
+        }
+
         .title {
-            top: 5rem;
-            font-size: 1.5em;
+            position: absolute;
+            top: 36px !important;
+            right: 30px;
+            height: fit-content;
+            width: fit-content;
+            font-size: 1.6em;
+        }
+
+        .subtitle {
+            height: fit-content;
+            width: 254px;
+            position: absolute;
+            // bottom: 50px;
+            text-align: right;
+            right: 30px !important;
+            line-height: 1em;
+            top: 110px;
+            left: unset;
+            font-size: 1.2em;
         }
 
         .get-started {
-            top: 10rem;
+            position: absolute;
+            top: 167px;
+            height: 40px;
+            right: 30px;
+            left: unset;
         }
     }
 
@@ -2120,8 +2286,40 @@ html {
         }
 
         .get-started {
-            top: 9rem;
+            height: 40px;
+            top: 10rem;
         }
+    }
+
+    .banner3 {
+        .banner-bg {
+
+            width: 700px;
+        }
+
+        .subtitle {
+            display: none;
+        }
+
+        .title {
+            font-size: 2.1em;
+            top: 5.5rem;
+            left: 6rem;
+        }
+
+        .get-started {
+            height: 40px;
+            top: 1.8rem;
+            left: 6rem;
+        }
+    }
+
+
+    .banner4 {
+
+        .title {}
+
+        .get-started {}
     }
 
     .mobile-menu {

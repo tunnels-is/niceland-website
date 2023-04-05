@@ -27,7 +27,7 @@ const Nav = (props) => {
     return (
         <>
             <div className="hamburger" onClick={() => setMenu(!menu)}>
-                <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/logo-white-orange-bg.svg"></img>
+                <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-mobile.png"></img>
             </div>
 
             <div className={`fixed-bg bg-transition ${fixed ? "show-bg" : ""}`}></div>
