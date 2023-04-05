@@ -2318,15 +2318,17 @@ body {
         }
 
         .title {
+            width: 256px;
             font-size: 2.1em;
-            top: 5.5rem;
-            left: 6rem;
+            top: 9.5rem;
+            margin: auto;
+            left: calc(50% - 128px);
         }
 
         .get-started {
             height: 40px;
-            top: 1.8rem;
-            left: 6rem;
+            top: 5.8rem;
+            left: calc(50% - 104px);
         }
     }
 
