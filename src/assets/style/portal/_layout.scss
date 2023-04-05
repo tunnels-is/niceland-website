@@ -2261,31 +2261,33 @@ body {
         .title {
             position: absolute;
             top: 36px !important;
-            right: 30px;
+            // right: 30px;
             height: fit-content;
-            width: fit-content;
+            // width: fit-content;
             font-size: 1.6em;
         }
 
         .subtitle {
             height: fit-content;
-            width: 254px;
-            position: absolute;
+            width: 250px;
+            // position: absolute;
             // bottom: 50px;
-            text-align: right;
-            right: 30px !important;
+            text-align: center;
+            // right: 30px !important;
             line-height: 1em;
             top: 110px;
-            left: unset;
+            // left: unset;
             font-size: 1.2em;
+            left: calc(50% - 125px);
         }
 
         .get-started {
-            position: absolute;
+            // position: absolute;
             top: 167px;
             height: 40px;
-            right: 30px;
-            left: unset;
+            left: calc(50% - 104px);
+            // right: 30px;
+            // left: unset;
         }
     }
 
