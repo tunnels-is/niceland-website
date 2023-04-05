@@ -11,7 +11,7 @@ const BannerV5 = (props) => {
         <div className="title font-banner-title">Learn more about Niceland</div>
 
         <div className="subtitle font-banner-subtitle">
-          there is always something new to learn
+          There is always something new to learn
         </div>
 
         <div className="button font-button get-started">Get Niceland VPN

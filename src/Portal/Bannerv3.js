@@ -9,7 +9,7 @@ const BannerV3 = (props) => {
         <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/bannerv6.png"></img>
         <div className="title font-banner-title">Niceland is here for you</div>
 
-        <div className="subtitle font-banner-subtitle">join our communities for advanced customer support</div>
+        <div className="subtitle font-banner-subtitle">Join our communities for advanced customer support</div>
 
         <div className="button font-button get-started">Get Niceland VPN
           <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
