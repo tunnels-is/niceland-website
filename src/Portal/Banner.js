@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useId } from "react";
 import { ImArrowRight2 } from "react-icons/im"
+import { Link } from "react-router-dom";
 
 const BannerV1 = (props) => {
 
@@ -12,9 +13,9 @@ const BannerV1 = (props) => {
 
         <div className="subtitle font-banner-subtitle">Focusing on security to protect your anonymity</div>
 
-        <div className="button font-button get-started">Get Niceland VPN
+        <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
           <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
-        </div>
+        </Link>
       </div>
     </>
   );
