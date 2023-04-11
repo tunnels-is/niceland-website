@@ -1,5 +1,6 @@
 import React from "react";
 import BannerV1 from "./Banner";
+import Notice from "./NoticeBanner";
 import About from "./sections/about";
 import Download from "./sections/Download";
 import MainFeatures from "./sections/MainFeatures";
@@ -11,6 +12,7 @@ const HomePage = () => {
   return (
     <>
       <BannerV1 ></BannerV1>
+      <Notice row={"1"} bg={"1"}></Notice>
       <About row={"1"} bg={"1"}></About>
       <MainFeatures row={"2"} bg={"2"}></MainFeatures>
       {/* <Pricing row={3} bg={"1"}></Pricing> */}

@@ -6,7 +6,7 @@ const BannerV5 = (props) => {
   return (
     <>
       <div className="banner">
-        <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/bannerv5.png"></img>
+        <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/comp/bannerv5.webp"></img>
 
         <div className="title font-banner-title">Learn more about Niceland</div>
 

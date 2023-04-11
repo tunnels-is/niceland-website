@@ -12,6 +12,7 @@ import STORE from "./store";
 import "./assets/style/portal.scss"
 import AboutPage from "./Portal/AboutPage";
 import DownloadPage from "./Portal/DownloadPage";
+import Beta from "./Portal/Beta";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -35,6 +36,7 @@ const LaunchPortal = () => {
           <Route path="pricing" element={<Pricing setError={setError} setSuccess={setSuccess} />} />
           <Route path="about" element={<AboutPage setError={setError} setSuccess={setSuccess} />} />
           <Route path="download" element={<DownloadPage setError={setError} setSuccess={setSuccess} />} />
+          <Route path="beta" element={<Beta setError={setError} setSuccess={setSuccess} />} />
           <Route path="*" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
         </Routes>
 

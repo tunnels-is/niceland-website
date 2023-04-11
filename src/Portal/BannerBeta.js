@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useId } from "react";
 import { ImArrowRight2 } from "react-icons/im"
 
-const BannerV3 = (props) => {
+const BannerBeta = (props) => {
 
   return (
     <>
       <div className="banner3">
         <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/comp/bannerv6.webp"></img>
-        <div className="title font-banner-title">Niceland is here for you</div>
+        <div className="title font-banner-title">Niceland VPN Open Beta</div>
 
         <div className="subtitle font-banner-subtitle">Join our communities for advanced customer support</div>
 
@@ -20,4 +20,4 @@ const BannerV3 = (props) => {
   );
 }
 
-export default BannerV3;
+export default BannerBeta;
