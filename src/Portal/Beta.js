@@ -8,7 +8,7 @@ import SupportSocial from "./sections/SupportSocial";
 
 const Beta = () => {
 
-    // window.scrollTo(0, 400);
+    window.scrollTo(0, 0);
 
     return (
         <>

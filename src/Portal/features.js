@@ -7,6 +7,7 @@ import FirstFeatures from "./sections/FirstFeatures";
 import SecondFeatures from "./sections/SecondFeatures";
 import ThirdFeatures from "./sections/ThirdFeatures";
 import SupportSocial from "./sections/SupportSocial";
+import Notice from "./NoticeBanner";
 
 const FeaturesPage = () => {
   window.scrollTo(0, 0);
@@ -14,6 +15,7 @@ const FeaturesPage = () => {
   return (
     <>
       <BannerV2 ></BannerV2>
+      <Notice row={"1"} bg={"1"}></Notice>
       <AboutFeatures row={"1"} bg={"1"}></AboutFeatures>
       <MainFeatures row={"2"} bg={"2"}></MainFeatures>
       <FirstFeatures row={"3"} bg={"1"}></FirstFeatures>
