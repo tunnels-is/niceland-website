@@ -80,13 +80,17 @@ const Beta = () => {
 
                 <div className="testing-section section">
                     <h1>What are we testing during this open beta?</h1>
-                    <h4>- Multi-Platform Support (mac/linux/windows) -</h4>
-                    <h4>- App(GUI) interface stability / operability -</h4>
-                    <h4>- Encryption for the API/Proxy modules -</h4>
-                    <h4>- Long-Term Connections -</h4>
-                    <h4>- Firewall Penetration -</h4>
-                    <h4>- Automatic Updates -</h4>
-                    <h4>- Overall Stability -</h4>
+                    <h4>
+
+                        - Multi-Platform Support (mac/linux/windows) -<br></br>
+                        - App(GUI) interface stability / operability -<br></br>
+                        - Encryption for the API/Proxy modules -<br></br>
+                        - Long-Term Connections -<br></br>
+                        - Firewall Penetration -<br></br>
+                        - Automatic Updates -<br></br>
+                        - Overall Stability -<br></br>
+
+                    </h4>
 
                 </div>
 
