@@ -12,9 +12,9 @@ const BannerV4 = (props) => {
         <div className="title font-banner-title">Experience everything Niceland has to offer</div>
 
 
-        <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
+        {/* <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
           <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
-        </Link>
+        </Link> */}
 
       </div>
     </>

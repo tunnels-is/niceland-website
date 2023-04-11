@@ -8,7 +8,7 @@ import SupportSocial from "./sections/SupportSocial";
 
 const Beta = () => {
 
-    // window.scrollTo(0, 0);
+    // window.scrollTo(0, 400);
 
     return (
         <>
@@ -16,25 +16,25 @@ const Beta = () => {
             < div className={`beta-section inherit-grid`
             }>
 
-                <div className="title-section section">
-                    Welcome to the beta
-                </div>
-
                 <div className="about-section section">
+                    <h1 >
+
+                        Welcome to Niceland VPN free and open beta
+                    </h1>
                     NicelandVPN is currently in development and we have finally reached enough stability to enter a Beta phase. Even though we consider the app to be stable enough to be revealed to the public, there might still be undiscovered bugs.
                     <br></br>
                     <br></br>
                     We need your help to squash those bugs!
                 </div>
 
-                <div className="more-about-section section">
+                <div id="title" className="more-about-section section">
                     <h1>Why did we create a new VPN platform from scratch ?</h1>
                     Most VPNs today re-sell open source software such as OpenVPN or WireGuard, both of these platforms have served VPN users for years and proven themselves to be fairly reliable. However, re-selling a pre-build VPN platform limits you to the implementation of that specific platform. <br /><br />In short, the reason we made our VPN platform from scratch is because we wanted more customizability in order to accomplish the goals we set for NicelandVPN.
                     <br />
                     <br />
                     <h1>What are these 'goals' we mentioned ?</h1>
 
-                    <h2>Anonymity</h2>
+                    <h2 className="more-space"><u>Anonymity</u></h2>
                     The most important goal for NicelandVPN was to accomplish as much Anonymity as possible. Talking in depth about how we accomplish this goal would be a very long discussion.<br></br><br></br> We will be adding a detailed section about security and anonymity to the website at a later date, in the meantime here is an short list of methods we use to keep our users safe:
                     <h4>
                         - The app is not DNS dependant in order to operate properly -
@@ -64,7 +64,7 @@ const Beta = () => {
 
 
 
-                    <h2>Quality Of Service</h2>
+                    <h2 className="more-space"><u>Quality Of Service</u></h2>
                     This goal is very important to us. Most VPNs out there assign to many users to a single VPN and do not take into account traffic spikes and other factors that may decrease their users available bandwidth. <br></br>
                     <br />
                     In order to guarantee users a minimum amount of bandwidth we have implemented a custom algorithm which engages if any VPN is above 80% bandwidth usage. This algorithm prioritizes limiting users that are using a high amount of bandwidth and DOES NOT limit users that are at or below the minimum bandwidth threshold.
@@ -72,7 +72,7 @@ const Beta = () => {
                     <br />
                     Additionally, there is no upper-limit to bandwidth, if the VPN has the bandwidth available, you can use it.
 
-                    <h2>Flexibility</h2>
+                    <h2 className="more-space"><u>Flexibility</u></h2>
                     Creating a service that could be customized down to the smallest details was very important. We wanted to offer users the ability to raise their minimum guaranteed bandwidth, add permanent session assignments, add more available device connections and so much more..
 
 
@@ -94,9 +94,12 @@ const Beta = () => {
                 </div>
 
                 <div className="notice-section section">
-                    <h1>!!! NOTICES !!!</h1>
+                    <h1>! NOTICES !</h1>
                     <p>- Additional Encryption for the internet traffic itself has not been enabled yet, this is in order to make overall debugging easier. However, your internet traffic is still protected in the same way as it would without the service enabled.<br></br>
+                        <br></br>
                         <u>The additional encryption will be enabled at a later stage in the open beta </u> </p>
+
+                    <p>- Minimum bandwidth during the open beta can not be guaranteed 100% of the time due to budget limitations. Currently we are utilizing shared network ports on VPS instances, which means we can not be 100% sure the servers always have the bandwidth availability advertised. However, we will be moving to deticated hardware and network ports as soon as possible </p>
 
                 </div>
 

@@ -7,9 +7,9 @@ const Nav = (props) => {
     const location = useLocation();
 
     document.addEventListener("scroll", (event) => {
-        if (window.scrollY > 150 && fixed === false) {
+        if (window.scrollY > 50 && fixed === false) {
             setFixed(true)
-        } else if (window.scrollY < 151 && fixed == true) {
+        } else if (window.scrollY < 51 && fixed == true) {
             setFixed(false)
         }
     });

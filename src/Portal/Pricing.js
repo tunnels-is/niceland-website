@@ -13,9 +13,7 @@ const PricingPage = (props) => {
     <>
       <Banner></Banner>
       <div className="home container">
-        <Pricing></Pricing>
-        <Payment></Payment>
-
+        <h1 className="TBA">TO BE ANNOUNCED</h1>
       </div>
     </>
   );
