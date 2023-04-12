@@ -8,7 +8,7 @@ const BannerV3 = (props) => {
     <>
       <div className="banner3">
         <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/comp/bannerv6.webp"></img>
-        <div className="title font-banner-title">Niceland is here for you</div>
+        <div className="title font-banner-title">Niceland At Your Service </div>
 
         <div className="subtitle font-banner-subtitle">Join our communities for advanced customer support</div>
 

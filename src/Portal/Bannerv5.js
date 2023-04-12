@@ -9,10 +9,10 @@ const BannerV5 = (props) => {
       <div className="banner">
         <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/comp/bannerv5.webp"></img>
 
-        <div className="title font-banner-title">Learn more about Niceland</div>
+        <div className="title font-banner-title">Learn More About Niceland</div>
 
         <div className="subtitle font-banner-subtitle">
-          There is always something new to learn
+          An Icelandic Startup company
         </div>
 
         <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
