@@ -26,7 +26,7 @@ const SecondFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-double.png"></img>
         <div className="item-title font-section-item-title">Double VPN By Befault</div>
         <div className="description font-section-description">
-          Niceland uses what is called Double VPN protocols as it´s default mode of transport. What that means is your internet traffic will travel through two seperate servers or IPs before reaching the internet
+          Niceland uses what is called Double VPN protocols as its default mode of transport. What that means is your internet traffic will travel through two separate servers or IPs before reaching the internet
         </div>
 
       </div>
@@ -44,7 +44,7 @@ const SecondFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-dns.png"></img>
         <div className="item-title font-section-item-title">Custom DNS servers</div>
         <div className="description font-section-description">
-          Niceland will encrypt all DNS traffic over it's internal network, even so some users want to control which DNS servers they access. Changing your DNS servers while connected to Niceland is easy to do using the settings menu in our app.
+          Niceland will encrypt all DNS traffic over its internal network, even so some users want to control which DNS servers they access. Changing your DNS servers while connected to Niceland is easy to do using the settings menu in our app.
         </div>
       </div>
     </div >

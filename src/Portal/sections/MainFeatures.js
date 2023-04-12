@@ -8,7 +8,7 @@ const MainFeatures = (props) => {
     <div className={`main-features grid-row-${props.row} inherit-grid bg-${props.bg}`}>
 
       <div className="title font-section-title">
-        These are our Core Principles
+        Our Core Principles
       </div>
 
       <div className="s1 box">

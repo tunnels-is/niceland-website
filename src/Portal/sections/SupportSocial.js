@@ -8,7 +8,7 @@ const SupportSocial = (props) => {
     <div className={`support grid-row-${props.row} bg-${props.bg} inherit-grid`}>
 
       <div className="title font-section-title">
-        Join our communities for additional support
+        Our Communities
       </div>
 
       <div className="box slack">
