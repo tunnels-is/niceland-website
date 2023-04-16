@@ -99,7 +99,7 @@ const Beta = () => {
                         <br></br>
                         <u>The second encryption layer will be enabled at a later stage in the open beta </u> </p>
 
-                    <p>- Minimum bandwidth during the open beta can not be guaranteed 100% of the time due to budget limitations. Currently we are utilizing shared network ports on VPS instances, which means we can not be 100% sure the servers always have the bandwidth availability advertised. However, we will be moving to deticated hardware and network ports as soon as possible </p>
+                    <p>- Minimum bandwidth during the open beta can not be guaranteed 100% of the time due to budget limitations. Currently we are utilizing shared network ports on VPS instances, which means we can not be 100% sure the servers always have the bandwidth availability advertised. However, we will be moving to dedicated hardware and network ports as soon as possible </p>
 
                     <p>- Some GEO blocked content will remain blocked while using the VPN, we are in the process of aquiring rented IP Addresses in order to bypass GEO restrictions</p>
 
