@@ -18,8 +18,10 @@ const Beta = () => {
 
                 <div className="about-section section">
                     <h1 >
-
-                        Welcome to Niceland VPN free and open beta
+                        Just download and install to join the beta, registration is in the app!
+                    </h1>
+                    <h1 >
+                        Welcome to Niceland VPN free and open beta <br></br>
                     </h1>
                     NicelandVPN is currently in development and we have finally reached enough stability to enter a Beta phase. Even though we consider the app to be stable enough to be revealed to the public, there might still be undiscovered bugs.
                     <br></br>
@@ -103,7 +105,7 @@ const Beta = () => {
 
                     <p>- Some GEO blocked content will remain blocked while using the VPN, we are in the process of aquiring rented IP Addresses in order to bypass GEO restrictions</p>
 
-                    <p>- Niceland is a Layer 3 VPN</p>
+                    <p>- Niceland is a Layer 3 VPN. So far we have implemented UDP and TCP transport protocols and will be working on things like ICMP in the near future.</p>
 
                 </div>
 
