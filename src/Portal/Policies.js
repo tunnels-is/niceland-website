@@ -77,7 +77,7 @@ const Policies = () => {
 
                 <div className="personal-section section">
                     <h1>Personal Data</h1>
-                    The most important thing for our platform is to protect your personal data at all cost and the best way to do that is to collect as little personal data as possible, preferably no personal data.<br /><br /> We have gone to great lengths to design our platform to not required users to give up any personal information if they do not wish to do so.<br /><br />
+                    The most important thing for our platform is to protect your personal data at all cost and the best way to do that is to collect as little personal data as possible, preferably no personal data.<br /><br /> We have gone to great lengths to design our platform to not require users to give up any personal information if they do not wish to do so.<br /><br />
                     <b>Here are some of the features/protocols we have implemented in order to protect our users privacy</b>
                     <br />
                     <br />- Cash payments
