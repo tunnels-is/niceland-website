@@ -118,7 +118,7 @@ const Policies = () => {
 
                     <br />
                     <br />
-                    All data is owned and controlled by:
+                    <b> All data is owned and controlled by</b>
                     <br />
                     <br />
                     <b>
