@@ -15,7 +15,7 @@ const MainFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-no-logging.png"></img>
         <div className="item-title font-section-item-title">No Tracking or Logging</div>
         <div className="description font-section-description">
-          Niceland does not track any user activity in any form. The most important functionality of Niceland is not knowing anything about user activity  <br /><br /> - You can't share what you don't have
+          Niceland does not track any user activity in any form. The most important functionality of Niceland is not knowing anything about user activity  <br /><br /> - You can't share what you do not have
         </div>
         <Link className="learn-more-button" to={"/features"}>
           Learn More

@@ -781,6 +781,75 @@ body {
     }
 }
 
+.policy-section {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    padding-bottom: 120px;
+    padding-top: 120px;
+    font-family: OpenSans, Arial, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: 500;
+    // line-height: 1.2em;
+
+    h1 {
+        line-height: 1.5em;
+        // text-decoration: underline;
+    }
+
+    .more-space {
+        margin-top: 40px;
+    }
+
+    .section {
+        margin-bottom: 60px;
+        width: 100%;
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+
+    .title-section {
+        text-decoration: none;
+    }
+
+    .general-section {
+        grid-row: 1;
+    }
+
+    .cookies-section {
+        grid-row: 2;
+    }
+
+    .logging-section {
+        grid-row: 3;
+    }
+
+    .payments-section {
+        grid-row: 4;
+    }
+
+    .personal-section {
+        grid-row: 5;
+    }
+
+    .customer-section {
+        grid-row: 6;
+    }
+
+    .thirdp-section {
+        grid-row: 7;
+    }
+
+    .right-section {
+        grid-row: 8;
+    }
+
+    .progress-section {
+        grid-row: 9;
+    }
+}
+
 .notice-banner {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -1754,6 +1823,12 @@ body {
 }
 
 @media screen and (max-width: 955px) {
+
+    .policy-section {
+        grid-template-columns: repeat(12, auto);
+
+
+    }
 
     .banner {
         // .banner-bg {
