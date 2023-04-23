@@ -13,7 +13,7 @@ const MainFeatures = (props) => {
 
       <div className="s1 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-no-logging.png"></img>
-        <div className="item-title font-section-item-title">No Tracking or Logging</div>
+        <div className="item-title font-section-item-title">No Logging</div>
         <div className="description font-section-description">
           Niceland does not track any user activity in any form. The most important functionality of Niceland is not knowing anything about user activity  <br /><br /> - You can't share what you do not have
         </div>
@@ -39,7 +39,7 @@ const MainFeatures = (props) => {
 
       <div className="s3 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-good.png"></img>
-        <div className="item-title font-section-item-title">Higher Quality Service</div>
+        <div className="item-title font-section-item-title"> Quality</div>
         <div className="description font-section-description">
           Instead of over-crowding servers with users, Niceland only places a limited number of users on each server and with our custom built algorithms we ensure every user has enough bandwidth to enjoy the internet without interruption from other users
         </div>

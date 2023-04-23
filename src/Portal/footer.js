@@ -11,31 +11,7 @@ const Footer = (props) => {
             <div className="links inherit-grid font-footer-links">
 
                 <div className="s1">
-                    <div className="item title">Downloads</div>
-                    <div className="item">
-                        <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">
-                            All
-                        </a>
-                    </div>
-                    <div className="item">
-                        <Link to={"/downloads"}>
-                            Windows
-                        </Link>
-                    </div>
-                    <div className="item">
-                        <Link to={"/downloads"}>
-                            Mac
-                        </Link>
-                    </div>
-                    <div className="item">
-                        <Link to={"/downloads"}>
-                            Linux
-                        </Link>
-                    </div>
-                </div>
-
-                <div className="s2">
-                    <div className="item title">Pages</div>
+                    <div className="item title">Niceland</div>
                     <div className="item">
                         <Link to={"/features"}>
                             Features
@@ -56,29 +32,25 @@ const Footer = (props) => {
                             Support
                         </Link>
                     </div>
+                    <div className="item">
+                        <Link to={"/beta"}>
+                            Beta
+                        </Link>
+                    </div>
                 </div>
 
-                <div className="s3">
-                    <div className="item title">Subscriptions</div>
+                <div className="s2">
+                    <div className="item title">Policies</div>
                     <div className="item">
-                        <Link to={"/pricing"}>
-                            Nice
-                        </Link>
-                    </div>
-                    <div className="item">
-                        <Link to={"/pricing"}>
-                            Nicer
-                        </Link>
-                    </div>
-                    <div className="item">
-                        <Link to={"/pricing"}>
-                            Mega Nice
+                        <Link to={"/policies"}>
+                            Privacy
                         </Link>
                     </div>
                 </div>
 
-                <div className="s4">
+                <div className="s3">
                     <div className="item title">Support</div>
+                    <div className="item">support@nicelandvpn.is</div>
                     <div className="item">
                         <a href="https://join.slack.com/t/nicelandvpn/shared_invite/zt-1no4cjdjr-zv7JAbUhqL4cq0MSW1jPBQ" target={"_blank"}>Slack</a>
                     </div>
@@ -93,14 +65,16 @@ const Footer = (props) => {
                     </div>
                 </div>
 
-                <div className="s5">
-                    <div className="item title">Policies</div>
-                    <div className="item">
-                        <Link to={"/policies"}>
-                            Privacy
-                        </Link>
-                    </div>
+                <div className="s4">
+                    <div className="item title">Contact</div>
+                    <div className="item">Tunnels EHF</div>
+                    <div className="item">SSN. 4209221080</div>
+                    <div className="item">VAT. No. 148343</div>
+                    <div className="item">Borgartún 25</div>
+                    <div className="item">105 Reykjavík</div>
+                    <div className="item">Iceland</div>
                 </div>
+
 
             </div>
             <div className="bottom-row font-footer-links">

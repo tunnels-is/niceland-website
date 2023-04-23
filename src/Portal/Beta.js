@@ -17,12 +17,12 @@ const Beta = () => {
             }>
 
                 <div className="about-section section">
-                    <h3 >
-                        Just download and install to join the beta, registration is in the app!
-                    </h3>
                     <h1 >
                         Welcome to Niceland VPN free and open beta <br></br>
                     </h1>
+                    <h3 >
+                        Just download and install to join the beta, registration is in the app!
+                    </h3>
                     NicelandVPN is currently in development and we have finally reached enough stability to enter a Beta phase. Even though we consider the app to be stable enough to be revealed to the public, there might still be undiscovered bugs.
                     <br></br>
                     <br></br>
@@ -118,7 +118,7 @@ const Beta = () => {
                     Because we focus heavily on anonymity, we do not implement any kind of automatic bug reporting. At the moment our bug reporting process is a bit cumbersome.<br></br>
                     <br></br>
                     <h3>
-                        <u>      To submit bug reports follow these steps:
+                        <u>      To submit bug reports follow these steps
                         </u>
                     </h3>
                     - Open NicelandVPN and go to "Settings" in the menu on the left
