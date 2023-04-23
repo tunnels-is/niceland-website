@@ -10,9 +10,9 @@ const Notice = (props) => {
     }>
 
       <div className="title">
-        NOTICE: Niceland VPN is currently in open beta
+        Niceland VPN is currently in open beta
       </div>
-      <Link to={"/beta"} className="learn-more-button">Beta notice
+      <Link to={"/beta"} className="learn-more-button">Join The Beta
         <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
       </Link>
 
