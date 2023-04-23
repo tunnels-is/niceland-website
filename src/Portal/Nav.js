@@ -41,7 +41,7 @@ const Nav = (props) => {
                     <Link className={`mobile-item font-mobile-menu-item ${path === "features" ? "active" : ""}`} to={"/features"} onClick={() => setMenu(!menu)}>Features</Link>
                     <Link className={`mobile-item font-mobile-menu-item ${path === "support" ? "active" : ""}`} to={"/support"} onClick={() => setMenu(!menu)}>Support</Link>
                     <Link className={`mobile-item font-mobile-menu-item ${path === "about" ? "active" : ""}`} to={"/about"} onClick={() => setMenu(!menu)}>About</Link>
-                    <Link className={`mobile-item font-mobile-menu-item ${path === "policies" ? "active" : ""}`} to={"/policies"} onClick={() => setMenu(!menu)}>Policies</Link>
+                    <Link className={`mobile-item font-mobile-menu-item ${path === "beta" ? "active" : ""}`} to={"/beta"} onClick={() => setMenu(!menu)}>Beta</Link>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@ const Nav = (props) => {
                     <Link className={`item font-menu-item ${path === "features" ? "active" : ""}`} to={"/features"}>Features</Link>
                     <Link className={`item font-menu-item ${path === "support" ? "active" : ""}`} to={"/support"}>Support</Link>
                     <Link className={`item font-menu-item ${path === "about" ? "active" : ""}`} to={"/about"}>About</Link>
-                    <Link className={`item font-menu-item ${path === "policies" ? "active" : ""}`} to={"/policies"}>Policies</Link>
+                    <Link className={`item font-menu-item ${path === "beta" ? "active" : ""}`} to={"/beta"}>Beta</Link>
                 </div>
             </div>
         </>

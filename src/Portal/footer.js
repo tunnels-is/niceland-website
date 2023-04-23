@@ -93,6 +93,15 @@ const Footer = (props) => {
                     </div>
                 </div>
 
+                <div className="s5">
+                    <div className="item title">Policies</div>
+                    <div className="item">
+                        <Link to={"/policies"}>
+                            Privacy
+                        </Link>
+                    </div>
+                </div>
+
             </div>
             <div className="bottom-row font-footer-links">
                 © 2023 NicelandVPN. All rights reserved.<br />

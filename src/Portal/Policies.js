@@ -11,7 +11,7 @@ import SupportSocial from "./sections/SupportSocial";
 
 const Policies = () => {
 
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
     return (
         <>
