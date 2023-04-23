@@ -11,10 +11,16 @@ const About = (props) => {
       <img className="lock" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/logo-green-orange-bg.svg"></img>
 
       <div className="title font-section-title">
-        What is Niceland VPN?
+        Niceland at it´s Core
       </div>
       <div className="subtitle font-big-section-description">
-        Niceland is an Icelandic-based VPN service that was founded by four individuals who wanted to offer a reliable, secure, and user-friendly VPN solution. Our focus is on providing a high-quality service that emphasizes privacy and anonymity. Niceland uses an industry standard encryption to keep outsiders from spying on users activities and operates under a strict no-logs policy, ensuring maximum privacy for our users. Customer support is available 24/7, and there is a 30-day money-back guarantee for users who aren't completely satisfied. Niceland´s goal is to provide a top-tier VPN service that is dependable and easy to use.
+        Niceland VPN is a platform created by Tunnels EHF, which is a newly founded startup-company from Iceland. Tunnels EHF was founded by four individual.
+        <br></br>
+        Tjörvi Guðjónsson is the acting CEO. Tjörvi has a background as an entrepreneur and in business. The COO is Andrea Líf Ægisdóttir, her background comes from international business and relations. Grímur Ásgeir Björnsson is our CLO, a LLM law graduate from the University of Iceland, having specialized in corporate law. Our CTO is Sveinn Óttar Lárusson his background is in IT tech and network programming.
+        <br></br>
+        <br></br>
+        Niceland VPN was built from the ground up with anonimity at it's core. Every decision we make is centerd around keeping our users data anonymous. How the platform was built, how data is stored, what third party providers to use, even where to register our company.
+
       </div>
 
       {/* <Link className="learn-more-button" to={"/about"}>

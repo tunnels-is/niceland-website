@@ -14,11 +14,17 @@ const AboutHome = (props) => {
         What is Niceland VPN?
       </div>
       <div className="subtitle font-big-section-description">
-        Niceland is an Icelandic-based VPN service that was founded by four individuals who wanted to offer a reliable, secure, and user-friendly VPN solution. Our focus is on providing a high-quality service that emphasizes privacy and anonymity. Niceland uses an industry standard encryption to keep outsiders from spying on users activities and operates under a strict no-logs policy, ensuring maximum privacy for our users. Customer support is available 24/7, and there is a 30-day money-back guarantee for users who aren't completely satisfied. Niceland´s goal is to provide a top-tier VPN service that is dependable and easy to use.
+        Niceland is a startup-company registered and operated out of Iceland.
+        The focus of the platform is to create a VPN that prioritizes anonymity while still maintaining a high degree of quality.
+        In order to accomplish this goal Niceland had to be built from the ground up without using pre-built VPN solutions while avoiding the use of any platforms and tools that utilize analytics or user tracking.
+        <br></br>
+        <br></br>
+        In its core, Niceland is a global routing network that offers VPN functionality but does not operate like a normal VPN.
+
       </div>
 
       <Link className="learn-more-button" to={"/about"}>
-        About Niceland
+        Learn More
         <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
       </Link>
 
