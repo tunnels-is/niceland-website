@@ -19,7 +19,7 @@ const About = (props) => {
         Tjörvi Guðjónsson is the acting CEO his background in business administration. The COO is Andrea Líf Ægisdóttir, her background comes from international business and relations. Grímur Ásgeir Björnsson is our CLO, a LLM law graduate from the University of Iceland, having specialized in corporate law and Our CTO is Sveinn Óttar Lárusson, his background is in IT tech and network programming.
         <br></br>
         <br></br>
-        Niceland VPN was built from the ground up with anonimity at it's core. Every decision we make is centerd around keeping our users data anonymous. How the platform was built, how data is stored, what third party providers to use, even where to register our company.
+        Niceland VPN was built from the ground up with anonimity at it's core. Every decision we make is centerd around keeping our users data anonymous. How the platform was built, how data is stored, what third party providers to use, even where we registered the company.
 
       </div>
 
