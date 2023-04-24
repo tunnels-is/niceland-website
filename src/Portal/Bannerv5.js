@@ -12,7 +12,7 @@ const BannerV5 = (props) => {
         <div className="title font-banner-title">Learn More About Niceland</div>
 
         <div className="subtitle font-banner-subtitle">
-          An Icelandic Startup company
+          And it's founders
         </div>
 
         <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
