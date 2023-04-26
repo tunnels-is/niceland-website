@@ -44,7 +44,7 @@ const Beta = () => {
                     {/* <h4> */}
                     <br></br>
                     <br></br>
-                    - The app is not DNS dependant in order to operate properly
+                    - The app is not DNS dependent in order to operate properly
                     <br />
                     - Connection Meta Data uses byte-tag system instead of IPs
                     <br />
