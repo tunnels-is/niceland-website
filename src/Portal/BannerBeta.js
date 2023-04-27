@@ -12,7 +12,7 @@ const BannerBeta = (props) => {
 
         <div className="subtitle font-banner-subtitle">Join our communities for advanced customer support</div>
 
-        <Link className="button font-button get-started">Get Niceland VPN
+        <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
           <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
         </Link>
 

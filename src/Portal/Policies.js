@@ -1,12 +1,6 @@
 import React from "react";
-import { ImArrowRight2 } from "react-icons/im";
 import { Link } from "react-router-dom";
-import BannerBeta from "./BannerBeta";
 import BannerPolicy from "./BannerPolicy";
-import BannerV2 from "./Bannerv2";
-import BannerV3 from "./Bannerv3";
-import Download from "./sections/Download";
-import SupportSocial from "./sections/SupportSocial";
 
 
 const Policies = () => {
