@@ -24,7 +24,7 @@ const SecondFeatures = (props) => {
 
       <div className="s2 box">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-double.png"></img>
-        <div className="item-title font-section-item-title">Double VPN By Befault</div>
+        <div className="item-title font-section-item-title">Double VPN By Default</div>
         <div className="description font-section-description">
           Niceland uses what is called Double VPN as its default mode of transport. What that means is your internet traffic will travel through two separate servers or IPs before reaching the internet
         </div>
