@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Link, Route, Router, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, HashRouter, Link, Route, Router, Routes, useLocation, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import FeaturesPage from "./Portal/features";
@@ -14,6 +14,7 @@ import AboutPage from "./Portal/AboutPage";
 import DownloadPage from "./Portal/DownloadPage";
 import Beta from "./Portal/Beta";
 import Policies from "./Portal/Policies";
+import SliderSmall from "./Portal/sliders/Small";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -23,14 +24,24 @@ const LaunchPortal = () => {
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
 
+  // console.dir(window.location)
+  let locationHash = window.location.hash
+  let slider = false
+  if (locationHash.includes("slider")) {
+    // console.dir(locationHash)
+    slider = true
+  }
 
 
   return (
     <>
       < HashRouter >
-        <Nav setError={setError} />
+        {slider === false &&
+          <Nav setError={setError} />
+        }
 
         <Routes>
+          <Route path="slider/:dir/:code" element={<SliderSmall />} />
           <Route path="/" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
           <Route path="support" element={<SupportPage setError={setError} setSuccess={setSuccess} />} />
           <Route path="features" element={<FeaturesPage setError={setError} setSuccess={setSuccess} />} />
@@ -40,9 +51,12 @@ const LaunchPortal = () => {
           <Route path="beta" element={<Beta setError={setError} setSuccess={setSuccess} />} />
           <Route path="policies" element={<Policies setError={setError} setSuccess={setSuccess} />} />
           <Route path="*" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
+
         </Routes>
 
-        <Footer></Footer>
+        {slider === false &&
+          <Footer></Footer>
+        }
 
 
       </HashRouter >
