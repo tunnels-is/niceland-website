@@ -1,24 +1,34 @@
 import React, { useEffect, useState, useId } from "react";
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate, Navigate, useParams } from "react-router-dom";
 import { BsCheck2All } from "react-icons/bs"
 import { CLIENT } from "../../lib/api";
+import STORE from "../../store";
 
 let defaultInputs = {
   email: "",
-  password: "",
-  password2: "",
-  cardName: "",
   card: "",
-  expM: "",
-  expY: "",
-  CVC: ""
+  month: 0,
+  year: 0,
+  CVC: "",
+  subtype: 1,
+  affiliate: "",
+  dicountcode: ""
 }
 
-const useForm = (props) => {
-  const [inputs, setInputs] = useState({});
+const useForm = (paymentData) => {
+
+  if (!paymentData) {
+    paymentData = defaultInputs
+  }
+
+  console.log("PD!")
+  console.dir(paymentData)
+
+  const [inputs, setInputs] = useState(paymentData);
   const [errors, setErrors] = useState({})
   const navigate = useNavigate();
   const [loading, setLoading] = useState(undefined)
+  const [response, setResponse] = useState(undefined)
 
   const handleSubmit = async (event) => {
     if (event) {
@@ -33,38 +43,12 @@ const useForm = (props) => {
     console.log("SUBMITTING")
 
     if (!inputs["email"] || inputs["email"] === "") {
-      errors["email"] = "Email missing"
+      errors["email"] = "Email/Username missing"
       hasErrors = true
     }
 
-    if (inputs["email"]) {
-      if (!inputs["email"].includes(".") || !inputs["email"].includes("@")) {
-        errors["email"] = "Password format is incorrect"
-        hasErrors = true
-
-      }
-    }
-
-    if (!inputs["password"] || inputs["password"] === "") {
-      errors["password"] = "Password missing"
-      hasErrors = true
-    }
-
-    if (!inputs["password2"] || inputs["password2"] === "") {
-      errors["password2"] = "Confirmation missing"
-      hasErrors = true
-    }
-
-    if (inputs["password"] && inputs["password"].length < 9) {
-      errors["password"] = "Password needs to be at least 9 characters long"
-      hasErrors = true
-    }
-
-    if (inputs["password"] && inputs["password"].length > 255) {
-      errors["password"] = "Password cannot be longer then 255 characters"
-      hasErrors = true
-    }
-
+    inputs["month"] = Number(inputs["month"])
+    inputs["year"] = Number(inputs["year"])
 
     if (hasErrors) {
       setErrors({ ...errors })
@@ -73,16 +57,13 @@ const useForm = (props) => {
 
     try {
 
-      const response = await CLIENT.post("register", JSON.stringify(inputs));
-
-      if (response.status === 202) {
-      } else if (response.status === 200) {
-      }
-
-      setErrors({})
+      const r = await CLIENT.post("http://localhost:1223/verify", JSON.stringify(inputs));
+      const xd = await r.data
+      console.dir(xd)
+      setResponse(xd)
 
     } catch (error) {
-      props.toggleError(STORE.ParseResponseErrorMessage(error))
+      console.dir(error)
     }
 
   }
@@ -94,149 +75,135 @@ const useForm = (props) => {
     setInputs(inputs => ({ ...inputs, [event.target.id]: event.target.value }));
   }
 
-  const manualInputChange = (key, value) => {
-    console.log("setting manual input: ", key, value)
-    setInputs(inputs => ({ ...inputs, [key]: value }));
-  }
+
 
   return {
     inputs,
     setInputs,
     handleInputChange,
-    manualInputChange,
     handleSubmit,
     errors,
     navigate,
-    loading
+    loading,
+    response
   };
 }
 
 
-const Payment = (props) => {
+const Payment = () => {
 
-  const { inputs, setInputs, handleInputChange, handleSubmit, errors, navigate, loading } = useForm(props);
+  let { data } = useParams()
+  let paymentObject = undefined
+  if (data) {
+    paymentObject = JSON.parse(data)
+  }
+  console.log("payment")
+  console.dir(paymentObject)
+
+  const { inputs, setInputs, handleInputChange, handleSubmit, errors, navigate, loading, response } = useForm(paymentObject);
 
   return (
     <>
       <div className="row payment-wrapper">
 
-        <div className="form col-md-6">
+        {response &&
+          <>
+            {response.cardVerificationRawResponse &&
+              <div className="" dangerouslySetInnerHTML={{ __html: response.cardVerificationRawResponse }}></div>
+            }
+          </>
+        }
+        {!response &&
+          <>
+            <div className="form col-md-6">
 
-          <form class="row" onSubmit={e => e.preventDefault()}>
+              <form class="row" onSubmit={e => e.preventDefault()}>
 
-            <div class="col-md-12">
-              {errors["email"] &&
-                <div className="error email-error">
-                  {errors["email"]}<br />
+                <div class="col-md-12">
+                  {errors["email"] &&
+                    <div className="error email-error">
+                      {errors["email"]}<br />
+                    </div>
+                  }
+                  {!errors["email"] &&
+                    <label for="email" class="form-label">Email</label>
+                  }
+                  <input type="email" value={inputs["email"]} class="form-control" id="email" onChange={handleInputChange} />
                 </div>
-              }
-              {!errors["email"] &&
-                <label for="email" class="form-label">Email</label>
-              }
-              <input type="email" class="form-control" id="email" onChange={handleInputChange} />
-            </div>
 
-            <div class="col-md-12">
-              {errors["password"] &&
-                <div className="error password-error">
-                  {errors["password"]}<br />
+
+
+
+                <div class="col-8">
+                  {errors["card"] &&
+                    <div className="error card-error">
+                      {errors["card"]}<br />
+                    </div>
+                  }{!errors["card"] &&
+                    <label for="card" class="form-label">Card Number</label>
+                  }
+                  <input type="text" value={inputs["card"]} class="form-control" id="card" placeholder="XXXX-XXXX-XXXX-XXXX" onChange={handleInputChange} />
                 </div>
-              }
-              {!errors["password"] &&
-                <label for="password" class="form-label">Password</label>
-              }
-              <input type="password" class="form-control" id="password" onChange={handleInputChange} />
-            </div>
-
-            <div class="col-md-12">
-              {errors["password2"] &&
-                <div className="error password2-error">
-                  {errors["password2"]}<br />
+                <div className="col-4 card-logo">
+                  <div className="visa"></div>
+                  <div className="mc"></div>
+                  <div className="amx"></div>
                 </div>
-              }
-              {!errors["password2"] &&
-                <label for="password2" class="form-label">Confirm Password</label>
-              }
-              <input type="password" class="form-control" id="password2" onChange={handleInputChange} />
-            </div>
 
-            <div class="col-12">
-              {errors["name"] &&
-                <div className="error name-error">
-                  {errors["name"]}<br />
+                <div class="col-md-3">
+                  {errors["month"] &&
+                    <div className="error month-error">
+                      {errors["month"]}<br />
+                    </div>
+                  }
+                  {!errors["month"] &&
+                    <label for="month" class="form-label">month</label>
+                  }
+                  <input type="number" value={inputs["month"]} class="form-control" id="month" onChange={handleInputChange} />
                 </div>
-              }
-              {!errors["name"] &&
-                <label for="name" class="form-label">Name</label>
-              }
-              <input type="text" class="form-control" id="name" placeholder="" onChange={handleInputChange} />
-            </div>
 
-            <div class="col-8">
-              {errors["card"] &&
-                <div className="error card-error">
-                  {errors["card"]}<br />
+                <div class="col-md-3">
+                  {errors["year"] &&
+                    <div className="error year-error">
+                      {errors["year"]}<br />
+                    </div>
+                  }
+                  {!errors["year"] &&
+                    <label for="year" class="form-label">year</label>
+                  }
+                  <input type="number" value={inputs["year"]} class="form-control" id="year" onChange={handleInputChange} />
                 </div>
-              }{!errors["card"] &&
-                <label for="card" class="form-label">Card Number</label>
-              }
-              <input type="text" class="form-control" id="card" placeholder="XXXX-XXXX-XXXX-XXXX" onChange={handleInputChange} />
-            </div>
-            <div className="col-4 card-logo">
-              <div className="visa"></div>
-              <div className="mc"></div>
-              <div className="amx"></div>
-            </div>
 
-            <div class="col-md-3">
-              {errors["month"] &&
-                <div className="error month-error">
-                  {errors["month"]}<br />
+                <div class="col-md-3">
+                  {errors["CVC"] &&
+                    <div className="error cvc-error">
+                      {errors["CVC"]}<br />
+                    </div>
+                  }
+                  {!errors["CVC"] &&
+                    <label for="CVC" class="form-label">CVC</label>
+                  }
+                  <input type="number" value={inputs["CVC"]} class="form-control" id="CVC" onChange={handleInputChange} />
                 </div>
-              }
-              {!errors["month"] &&
-                <label for="month" class="form-label">month</label>
-              }
-              <input type="number" class="form-control" id="month" onChange={handleInputChange} />
-            </div>
+                <div class="col-12">
+                  <div className="terms">By submitting this form, you agree to our <a href="/terms.pdf" target="_blank">Terms of Service.</a></div>
 
-            <div class="col-md-3">
-              {errors["year"] &&
-                <div className="error year-error">
-                  {errors["year"]}<br />
                 </div>
-              }
-              {!errors["year"] &&
-                <label for="year" class="form-label">year</label>
-              }
-              <input type="number" class="form-control" id="year" onChange={handleInputChange} />
-            </div>
-
-            <div class="col-md-3">
-              {errors["CVC"] &&
-                <div className="error cvc-error">
-                  {errors["CVC"]}<br />
+                <div class="col-12">
+                  <button onClick={handleSubmit} type="submit" class="btn btn-primary">Confirm</button>
                 </div>
-              }
-              {!errors["CVC"] &&
-                <label for="CVC" class="form-label">CVC</label>
-              }
-              <input type="number" class="form-control" id="CVC" onChange={handleInputChange} />
-            </div>
-            <div class="col-12">
-              <div className="terms">By submitting this form, you agree to our <a href="/terms.pdf" target="_blank">Terms of Service.</a></div>
+              </form>
 
             </div>
-            <div class="col-12">
-              <button onClick={handleSubmit} type="submit" class="btn btn-primary">Confirm</button>
+
+            <div className="col-md-6">
+              some more information and selections about the subscriptions
             </div>
-          </form>
+          </>
 
-        </div>
+        }
 
-        <div className="col-md-6">
-          some more information and selections about the subscriptions
-        </div>
+
       </div>
 
     </>

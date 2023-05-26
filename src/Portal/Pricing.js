@@ -13,7 +13,7 @@ const PricingPage = (props) => {
   return (
     <>
       <Banner></Banner>
-      <Notice row={"1"} bg={"1"}></Notice>
+      {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <div className="home container">
         <h1 className="TBA">TO BE ANNOUNCED</h1>
       </div>

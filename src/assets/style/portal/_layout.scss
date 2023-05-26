@@ -123,7 +123,7 @@ body {
     font-family: $font-family;
     font-style: $font-style;
     font-weight: 700;
-    font-size: 3em;
+    font-size: 3.8em;
     line-height: 52px;
 }
 
@@ -412,7 +412,7 @@ body {
 
     .items {
         visibility: inherit;
-        max-width: 700px;
+        max-width: 740px;
         margin-top: 45px;
 
         .item {
@@ -687,6 +687,16 @@ body {
 
         text-align: center;
         height: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 13;
+
+        text-align: center;
+        height: fit-content;
         margin-bottom: 60px;
     }
 
@@ -697,29 +707,39 @@ body {
 
     .discord {
         // margin-top: 25px;
-        grid-row: 2;
-        grid-column-start: 2;
+        grid-row: 3;
+        grid-column-start: 3;
         grid-column-end: 3;
     }
 
-    .reddit {
-        grid-row: 2;
-        grid-column-start: 5;
-        grid-column-end: 5;
-    }
 
     .slack {
-        grid-row: 2;
-        grid-column-start: 8;
+        grid-row: 3;
+        grid-column-start: 6;
         grid-column-end: 8;
     }
 
     .twitter {
 
         // margin-top: 35px;
-        grid-row: 2;
-        grid-column-start: 11;
-        grid-column-end: 11;
+        grid-row: 3;
+        grid-column-start: 10;
+        grid-column-end: 10;
+    }
+
+    .reddit {
+        margin-top: 50px;
+        grid-row: 4;
+        grid-column-start: 5;
+        grid-column-end: 5;
+    }
+
+    .telegram {
+        margin-top: 50px;
+        // margin-top: 25px;
+        grid-row: 4;
+        grid-column-start: 8;
+        grid-column-end: 8;
     }
 
 
@@ -735,6 +755,34 @@ body {
     font-family: Nunito;
     font-style: "normal";
     margin-bottom: 50px;
+}
+
+.business-vpn {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    // padding-bottom: 120px;
+    // padding-top: 120px;
+    line-height: 1.2em;
+
+    font-family: OpenSans, Arial, sans-serif;
+    font-weight: 500;
+    text-align: left;
+
+    .section {
+        font-size: 1.2em;
+        width: 100%;
+        grid-column-start: 3;
+        grid-column-end: 11;
+        margin-bottom: 60px;
+    }
+
+    .business-img {
+        width: 100%;
+        max-width: 80vw;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
 }
 
 .beta-section {
@@ -916,6 +964,8 @@ body {
     }
 }
 
+
+
 .about-features {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -951,6 +1001,19 @@ body {
         height: auto;
     }
 
+    .office {
+        grid-row: 1/4;
+        grid-column-start: 10;
+        grid-column-end: 13;
+        width: 480px;
+        height: auto;
+        margin-left: -60px;
+    }
+
+    .learn-more-button {
+        margin-top: 20px;
+    }
+
 }
 
 .main-features {
@@ -970,7 +1033,7 @@ body {
 
         text-align: center;
         height: auto;
-        margin-bottom: 120px;
+        margin-bottom: 140px;
     }
 
     .box {
@@ -1043,7 +1106,7 @@ body {
 
         text-align: center;
         height: fit-content;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
     }
 
     .subtitle {
@@ -1110,6 +1173,14 @@ body {
     }
 }
 
+.no-top-padding {
+    padding-top: 0px !important;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0px !important;
+}
+
 .second-features {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -1118,8 +1189,8 @@ body {
 
     .title {
         grid-row: 1;
-        grid-column-start: 3;
-        grid-column-end: 11;
+        grid-column-start: 1;
+        grid-column-end: 13;
 
         text-align: center;
         height: 52px;
@@ -1135,18 +1206,25 @@ body {
         // width: 410px;
 
         .img {
-            width: 60px;
-            margin-left: -10px;
+            width: 120px;
+            // margin-left: -10px;
             height: auto;
             // margin-left: calc(50% - 65px);
             // float: left;
-            position: absolute;
+            // position: absolute;
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        .fake-img {
+            display: none;
+            height: 110px !important;
         }
 
         .item-title {
             width: 100%;
             float: left;
-            margin-left: 60px;
+            // margin-left: 60px;
             margin-top: none !important;
             text-align: left;
             height: fit-content;
@@ -1155,9 +1233,10 @@ body {
         }
 
         .description {
-            margin-top: 50px;
-            margin-left: 62px;
+            // margin-top: 50px;
+            // margin-left: 62px;
             // padding: 5px;
+            float: left;
         }
 
 
@@ -1167,12 +1246,14 @@ body {
         grid-row: 2;
         grid-column-start: 1;
         grid-column-end: 7;
+        margin-top: 30px;
     }
 
     .s2 {
         grid-row: 2;
         grid-column-start: 7;
         grid-column-end: 13;
+        margin-top: 30px;
     }
 
     .s3 {
@@ -1674,6 +1755,11 @@ body {
             grid-column-end: 11;
         }
 
+        .office {
+            grid-column-start: 9;
+            grid-column-end: 11;
+        }
+
         .title {
             // font-size: 2em;
             // line-height: 1.4em;
@@ -1717,7 +1803,7 @@ body {
         }
 
         .s3 {
-            margin-top: 50px;
+            // margin-top: 50px;
             grid-row: 4;
             grid-column-start: 4;
             grid-column-end: 10;
@@ -1727,23 +1813,33 @@ body {
     .second-features {
         grid-template-columns: repeat(12, auto);
 
+        .box {
+            .fake-img {
+                display: inline;
+                // height: 110px !important;
+            }
+        }
+
         .s1 {
+            margin-top: -100px;
             grid-row: 2;
-            margin-top: 0px;
+            // margin-top: 0px;
             grid-column-start: 2;
             grid-column-end: 6;
         }
 
         .s2 {
             grid-row: 3;
-            margin-top: 30px;
+            // margin-top: 30px;
+            margin-top: 0px;
             grid-column-start: 5;
             grid-column-end: 10;
         }
 
         .s3 {
+            margin-top: -100px;
             grid-row: 4;
-            margin-top: 0px;
+            // margin-top: 0px;
             grid-column-start: 2;
             grid-column-end: 6;
         }
@@ -1812,27 +1908,36 @@ body {
 
         .discord {
             // margin-top: 25px;
-            grid-row: 2;
+            grid-row: 3;
             grid-column-start: 5;
             grid-column-end: 5;
         }
 
         .reddit {
-            grid-row: 2;
+            margin-top: 0px !important;
+            grid-row: 3;
             grid-column-start: 8;
             grid-column-end: 8;
         }
 
         .slack {
-            margin-top: 40px;
-            grid-row: 3;
+            margin-top: 50px;
+            grid-row: 4;
             grid-column-start: 5;
             grid-column-end: 5;
         }
 
         .twitter {
-            margin-top: 40px;
-            grid-row: 3;
+            margin-top: 50px;
+            grid-row: 4;
+            grid-column-start: 8;
+            grid-column-end: 8;
+        }
+
+        .telegram {
+            margin-top: 50px;
+            // margin-top: 25px;
+            grid-row: 5;
             grid-column-start: 8;
             grid-column-end: 8;
         }
@@ -1979,6 +2084,10 @@ body {
             display: none;
         }
 
+        .office {
+            display: none;
+        }
+
         .title {
             text-align: center;
             grid-column-start: 2;
@@ -2017,7 +2126,7 @@ body {
         }
 
         .s3 {
-            margin-top: 50px;
+            // margin-top: 50px;
             grid-row: 5;
             grid-column-start: 4;
             grid-column-end: 10;
@@ -2161,14 +2270,14 @@ body {
         }
 
         .s2 {
-            margin-top: 50px;
+            // margin-top: 50px;
             grid-row: 5;
             grid-column-start: 2;
             grid-column-end: 11;
         }
 
         .s3 {
-            margin-top: 50px;
+            // margin-top: 50px;
             grid-row: 6;
             grid-column-start: 2;
             grid-column-end: 11;
@@ -2180,13 +2289,17 @@ body {
         gap: 0px 0px;
 
         .box {
-            margin-top: 40px;
+            margin-top: 20px;
 
             .item-title {
-                float: none;
-                width: fit-content;
+                // float: none;
+                // width: fit-content;
                 line-height: 1em;
-                margin-left: 60px;
+                // margin-left: 60px;
+            }
+
+            .fake-img {
+                display: none;
             }
 
             .description {
@@ -2435,34 +2548,41 @@ body {
     .support {
         .title {
             grid-row: 1;
-            grid-column-start: 6;
-            grid-column-end: 8;
+            grid-column-start: 1;
+            grid-column-end: 13;
         }
 
         .discord {
             // margin-top: 25px;
-            grid-row: 2;
+            grid-row: 3;
             grid-column-start: 6;
             grid-column-end: 8;
         }
 
         .reddit {
             margin-top: 40px;
-            grid-row: 3;
+            grid-row: 4;
             grid-column-start: 6;
             grid-column-end: 8;
         }
 
         .slack {
             margin-top: 40px;
-            grid-row: 4;
+            grid-row: 5;
             grid-column-start: 6;
             grid-column-end: 8;
         }
 
         .twitter {
             margin-top: 40px;
-            grid-row: 5;
+            grid-row: 6;
+            grid-column-start: 6;
+            grid-column-end: 8;
+        }
+
+        .telegram {
+            margin-top: 40px;
+            grid-row: 7;
             grid-column-start: 6;
             grid-column-end: 8;
         }
@@ -2489,11 +2609,11 @@ body {
 
         .title {
             position: absolute;
-            top: 36px !important;
+            top: 62px !important;
             // right: 30px;
             height: fit-content;
             // width: fit-content;
-            font-size: 1.6em;
+            font-size: 2.3em;
         }
 
         .subtitle {

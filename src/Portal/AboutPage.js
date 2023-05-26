@@ -14,10 +14,10 @@ const AboutPage = () => {
     return (
         <>
             <BannerV5></BannerV5>
-            <Notice row={"1"} bg={"1"}></Notice>
+            {/* <Notice row={"1"} bg={"1"}></Notice> */}
             <About row={"1"} bg={"1"}></About>
-            <SupportSocial row={"2"} bg={"2"}></SupportSocial>
-            <Download row={"3"} bg={"2"}></Download>
+            <SupportSocial row={"2"} bg={"1"}></SupportSocial>
+            <Download row={"3"} bg={"1"}></Download>
 
         </>
     )

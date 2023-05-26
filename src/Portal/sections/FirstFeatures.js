@@ -5,44 +5,51 @@ const FirstFeatures = (props) => {
 
   return (
 
-    <div className={`first-features grid-row-${props.row} inherit-grid`}>
+    <div className={`first-features grid-row-${props.row} inherit-grid bg-${props.bg}`}>
 
       <div className="title font-section-title">
-        Anonymity
+        Highlights
       </div>
-      <div className="subtitle font-section-subtitle">
-        One of our main goals is anonimity on the internet.
-      </div>
+      {/* <div className="subtitle font-section-subtitle">
+        ???????
+      </div> */}
 
-      <div className="s1 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-dns-protect.png"></img>
-        <div className="item-title font-section-item-title">DNS/IPv6 leak prevention</div>
-        <div className="description font-section-description">
-          DNS and IPv6 leaks can reveal your real world location, Niceland protects you by disabling IPv6 and changing your DNS settings whenever you connect. Doing so helps prevent big corporations and goverment related entities from tracking you
+      {props.features[0] &&
+        <div className="s1 box">
+          <img className="img" src={props.features[0].icon}></img>
+          <div className="item-title font-section-item-title">{props.features[0].title}</div>
+          <div className="description font-section-description">
+            {props.features[0].short}
+          </div>
+
         </div>
+      }
 
-      </div>
+      {props.features[1] &&
+        <div className="s2 box">
+          <img className="img" src={props.features[1].icon}></img>
+          <div className="item-title font-section-item-title">
+            {props.features[1].title}
+          </div>
+          <div className="description font-section-description">
+            {props.features[1].short}
+          </div>
 
-
-      <div className="s2 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png"></img>
-        <div className="item-title font-section-item-title">Anonymous Payments</div>
-        <div className="description font-section-description">
-          Being extra cautious is a good, and if that applies to you we have just the thing. Subscriptions can be payed for using cash, just send us the Subscription fee via mail carrier and we will activate your account when the payment arrives
         </div>
+      }
 
-      </div>
 
-
-      <div className="s3 box">
-        <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-web-shield.png"></img>
-        <div className="item-title font-section-item-title">Anonymous Meta Data</div>
-        <div className="description font-section-description">
-          Session data and meta data is something many VPN users are worried about. Niceland is designed with a custom Tag-Routing protocol which keeps any session information anonymous. Additionally Niceland does not keep any session data or meta data after users have disconnected
+      {props.features[1] &&
+        <div className="s3 box">
+          <img className="img" src={props.features[2].icon}></img>
+          <div className="item-title font-section-item-title">
+            {props.features[2].title}
+          </div>
+          <div className="description font-section-description">
+            {props.features[2].short}
+          </div>
         </div>
-
-
-      </div>
+      }
 
 
     </div>

@@ -8,7 +8,7 @@ const SecondFeatures = (props) => {
     <div className={`second-features grid-row-${props.row} inherit-grid  ${props.class}`}>
 
       <div className="title font-section-title">
-        Feature Overview
+        On The Roadmap
       </div>
 
 

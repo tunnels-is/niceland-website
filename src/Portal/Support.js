@@ -12,7 +12,7 @@ const SupportPage = () => {
     return (
         <>
             <BannerV3></BannerV3>
-            <Notice row={"1"} bg={"1"}></Notice>
+            {/* <Notice row={"1"} bg={"1"}></Notice> */}
             <SupportSocial row={"1"} bg={"1"}></SupportSocial>
             <Download row={"2"} bg={"1"}></Download>
 

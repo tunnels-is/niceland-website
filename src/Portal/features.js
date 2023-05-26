@@ -4,10 +4,10 @@ import Download from "./sections/Download";
 import React from "react";
 import BannerV2 from "./Bannerv2";
 import FirstFeatures from "./sections/FirstFeatures";
-import SecondFeatures from "./sections/SecondFeatures";
-import ThirdFeatures from "./sections/ThirdFeatures";
 import SupportSocial from "./sections/SupportSocial";
-import Notice from "./NoticeBanner";
+import XXXXFeatures from "./sections/4xFeatures";
+import STORE from "../store";
+import AboutBusinessVPN from "./sections/AboutBusinessVPN";
 
 const FeaturesPage = () => {
   window.scrollTo(0, 0);
@@ -15,14 +15,84 @@ const FeaturesPage = () => {
   return (
     <>
       <BannerV2 ></BannerV2>
-      <Notice row={"1"} bg={"1"}></Notice>
+
       <AboutFeatures row={"1"} bg={"1"}></AboutFeatures>
-      <MainFeatures row={"2"} bg={"2"}></MainFeatures>
-      <FirstFeatures row={"3"} bg={"1"}></FirstFeatures>
-      <ThirdFeatures row={"5"} bg={"2"}></ThirdFeatures>
-      <SecondFeatures row={"4"} bg={"1"}></SecondFeatures>
-      <Download row={"10"} bg={"1"}></Download>
-      <SupportSocial row={"11"} bg={"2"}></SupportSocial>
+
+
+      <FirstFeatures row={"3"} bg={"2"}
+        features={[
+          STORE.Content.Features["NoLogging"],
+          STORE.Content.Features["SandboxedUserActions"],
+          STORE.Content.Features["AnonymousAccounts"],
+        ]}
+      ></FirstFeatures>
+
+
+      <XXXXFeatures row={"4"} bg={"1"} class={"no-bottom-padding"}
+        title={"Feature Overview"}
+        features={[
+          STORE.Content.Features["NoLogging"],
+          STORE.Content.Features["AnonymousMetaData"],
+          STORE.Content.Features["AnonymousAccounts"],
+          STORE.Content.Features["CashPayments"]
+        ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"5"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
+        STORE.Content.Features["PaymentProcessor"],
+        STORE.Content.Features["OffsitePaymentData"],
+        STORE.Content.Features["ProtectedKeys"],
+        STORE.Content.Features["CookiePolicy"]
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"6"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
+        STORE.Content.Features["DNSLeaks"],
+        STORE.Content.Features["IPv6Leaks"],
+        STORE.Content.Features["DoubleVPN"],
+        STORE.Content.Features["TwoFactorAuthentication"]
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"7"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
+        STORE.Content.Features["GuaranteedBandwidth"],
+        STORE.Content.Features["Multithreading"],
+        STORE.Content.Features["UniqueBuffersAndTunnels"],
+        STORE.Content.Features["NoPersistanceService"]
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"8"} bg={"1"} class={"no-top-padding"} features={[
+        STORE.Content.Features["CrossContinent"],
+        STORE.Content.Features["CustomDNS"],
+        STORE.Content.Features["SandboxedUserActions"],
+        STORE.Content.Features["GEOUnblocking"],
+      ]}></XXXXFeatures>
+
+      <MainFeatures row={"2"} bg={"2"} button={false}></MainFeatures>
+      <AboutBusinessVPN row={"10"} bg={"1"} button={true}></AboutBusinessVPN>
+
+      <XXXXFeatures row={"10"} bg={"1"} class={"no-bottom-padding"}
+        title={"On The Horizon"}
+        features={[
+          STORE.Content.Features["PersistantSessions"],
+          STORE.Content.Features["CryptoPayments"],
+          STORE.Content.Features["GamingMode"],
+          STORE.Content.Features["IncreasedMinimumBandwidth"]
+        ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"11"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
+        STORE.Content.Features["PrivateVPN"],
+        STORE.Content.Features["AndroidAPP"],
+        STORE.Content.Features["iOSAPP"],
+        STORE.Content.Features["SecurityAudit"],
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding"} features={[
+        STORE.Content.Features["DetailedDocs"],
+        STORE.Content.Features["OpenSource"],
+        STORE.Content.Features["StandAloneCLI"],
+        STORE.Content.Features["LinuxSecuritySigning"]
+      ]}></XXXXFeatures>
+
+
+      <Download row={"10"} bg={"2"}></Download>
     </>
   );
 

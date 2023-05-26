@@ -8,7 +8,7 @@ const MainFeatures = (props) => {
     <div className={`main-features grid-row-${props.row} inherit-grid bg-${props.bg}`}>
 
       <div className="title font-section-title">
-        Our Core Principles
+        Core Principles
       </div>
 
       <div className="s1 box">
@@ -17,10 +17,12 @@ const MainFeatures = (props) => {
         <div className="description font-section-description">
           Niceland does not track any user activity in any form. The most important functionality of Niceland is not knowing anything about our users  <br /><br /> - You can't share what you do not have
         </div>
-        <Link className="learn-more-button" to={"/features"}>
-          Learn More
-          <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
-        </Link>
+        {props.button &&
+          <Link className="learn-more-button" to={"/features"}>
+            Learn More
+            <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
+          </Link>
+        }
       </div>
 
 
@@ -30,10 +32,12 @@ const MainFeatures = (props) => {
         <div className="description font-section-description">
           Token user accounts, cash payments, tag routing, Niceland implemented these features from the very first stage of development and we welcome any new feature that helps our users stay safe
         </div>
-        <Link className="learn-more-button" to={"/features"}>
-          Learn More
-          <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
-        </Link>
+        {props.button &&
+          <Link className="learn-more-button" to={"/features"}>
+            Learn More
+            <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
+          </Link>
+        }
       </div>
 
 
@@ -44,10 +48,12 @@ const MainFeatures = (props) => {
           Instead of over-crowding servers with users, Niceland only places a limited number of users on each server and with our custom built algorithms we ensure every user has enough bandwidth to enjoy the internet without interruption
         </div>
 
-        <Link className="learn-more-button" to={"/features"}>
-          Learn More
-          <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
-        </Link>
+        {props.button &&
+          <Link className="learn-more-button" to={"/features"}>
+            Learn More
+            <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
+          </Link>
+        }
       </div>
 
     </div >

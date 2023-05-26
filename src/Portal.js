@@ -15,6 +15,8 @@ import DownloadPage from "./Portal/DownloadPage";
 import Beta from "./Portal/Beta";
 import Policies from "./Portal/Policies";
 import SliderSmall from "./Portal/sliders/Small";
+import Payment from "./Portal/sections/Payment";
+import BusinessVPNPage from "./Portal/BusinessVPNPage";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -24,42 +26,49 @@ const LaunchPortal = () => {
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
 
-  // console.dir(window.location)
-  let locationHash = window.location.hash
+  console.dir(window.location)
+  let locationHash = window.location.pathname
   let slider = false
+  let payment = false
   if (locationHash.includes("slider")) {
-    // console.dir(locationHash)
     slider = true
+  }
+  if (locationHash.includes("payment")) {
+    payment = true
   }
 
 
   return (
     <>
-      < HashRouter >
-        {slider === false &&
+      <BrowserRouter basename='/'>
+        {(slider === false && payment === false) &&
           <Nav setError={setError} />
         }
 
         <Routes>
           <Route path="slider/:dir/:code" element={<SliderSmall />} />
+          {/* <Route path="payment" element={<Payment />} />
+          <Route path="payment/:data" element={<Payment />} /> */}
+
           <Route path="/" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
           <Route path="support" element={<SupportPage setError={setError} setSuccess={setSuccess} />} />
           <Route path="features" element={<FeaturesPage setError={setError} setSuccess={setSuccess} />} />
           <Route path="pricing" element={<Pricing setError={setError} setSuccess={setSuccess} />} />
           <Route path="about" element={<AboutPage setError={setError} setSuccess={setSuccess} />} />
           <Route path="download" element={<DownloadPage setError={setError} setSuccess={setSuccess} />} />
-          <Route path="beta" element={<Beta setError={setError} setSuccess={setSuccess} />} />
+          {/* <Route path="beta" element={<Beta setError={setError} setSuccess={setSuccess} />} /> */}
           <Route path="policies" element={<Policies setError={setError} setSuccess={setSuccess} />} />
+          <Route path="business" element={<BusinessVPNPage setError={setError} setSuccess={setSuccess} />} />
           <Route path="*" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
 
         </Routes>
 
-        {slider === false &&
+        {(slider === false && payment === false) &&
           <Footer></Footer>
         }
 
 
-      </HashRouter >
+      </BrowserRouter>
     </>
   )
 
