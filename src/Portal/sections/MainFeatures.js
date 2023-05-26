@@ -30,7 +30,7 @@ const MainFeatures = (props) => {
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-anon-mask.png"></img>
         <div className="item-title font-section-item-title">Anonymity</div>
         <div className="description font-section-description">
-          Token user accounts, cash payments, tag routing, Niceland implemented these features from the very first stage of development and we welcome any new feature that helps our users stay safe
+          Anonymous user accounts, cash payments, custom routing protocols, forward secrecy, off-site payment processing and so much more. Niceland was built from the ground up with anonymity and privacy as it's main focus.
         </div>
         {props.button &&
           <Link className="learn-more-button" to={"/features"}>

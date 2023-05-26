@@ -1654,6 +1654,14 @@ body {
 
 
 @media screen and (max-width: 1325px) {
+    .big-menu {
+        .items {
+            .item {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
 
     .notice-banner {
 
