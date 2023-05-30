@@ -8,6 +8,7 @@ import SupportSocial from "./sections/SupportSocial";
 import XXXXFeatures from "./sections/4xFeatures";
 import STORE from "../store";
 import AboutBusinessVPN from "./sections/AboutBusinessVPN";
+import Countries from "./sections/Countries";
 
 const FeaturesPage = () => {
   window.scrollTo(0, 0);
@@ -91,8 +92,10 @@ const FeaturesPage = () => {
         STORE.Content.Features["LinuxSecuritySigning"]
       ]}></XXXXFeatures>
 
+      <Countries row={13} bg={2}></Countries>
 
-      <Download row={"10"} bg={"2"}></Download>
+
+      <Download row={"14"} bg={"2"}></Download>
     </>
   );
 

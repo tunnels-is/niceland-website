@@ -19,7 +19,7 @@ const AboutHome = (props) => {
         In order to accomplish this goal Niceland had to be built from the ground up without using pre-built VPN solutions while avoiding the use of any platforms and tools that utilize analytics or user tracking.
         <br></br>
         <br></br>
-        In its core, Niceland is a global routing network that offers VPN functionality but does not operate like a normal VPN.
+        In its core, Niceland is a global Mesh network that offers VPN functionality but does not operate like a normal VPN.
 
       </div>
 

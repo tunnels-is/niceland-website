@@ -8,6 +8,7 @@ import SecondFeatures from "./sections/SecondFeatures";
 import SupportSocial from "./sections/SupportSocial";
 import FirstFeatures from "./sections/FirstFeatures";
 import STORE from "../store";
+import Countries from "./sections/Countries";
 
 const HomePage = () => {
 
@@ -18,7 +19,8 @@ const HomePage = () => {
       {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <AboutHome row={"1"} bg={"1"}></AboutHome>
       <MainFeatures row={"2"} bg={"2"} button={true}></MainFeatures>
-      <FirstFeatures row={"3"} bg={"1"}
+      <Countries row={4} bg={1}></Countries>
+      <FirstFeatures row={"3"} bg={"2"}
         features={[
           STORE.Content.Features["NoLogging"],
           STORE.Content.Features["SandboxedUserActions"],
@@ -27,8 +29,8 @@ const HomePage = () => {
       ></FirstFeatures>
       {/* <SecondFeatures row={"3"} bg={"1"}></SecondFeatures> */}
       {/* <Pricing row={3} bg={"1"}></Pricing> */}
-      <Download row={"4"} bg={"1"}></Download>
-      <SupportSocial row={"5"} bg={"1"}></SupportSocial>
+      <Download row={"5"} bg={"1"}></Download>
+      <SupportSocial row={"6"} bg={"2"}></SupportSocial>
     </>
   );
 

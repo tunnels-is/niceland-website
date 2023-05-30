@@ -5,6 +5,7 @@ import BannerBusiness from "./BannerBusiness";
 import XXXXFeatures from "./sections/4xFeatures";
 import STORE from "../store";
 import BusinessVPN from "./sections/BusinessVPN";
+import ContactUS from "./sections/ContactUS";
 
 const PrivateVPNPage = () => {
 
@@ -25,11 +26,13 @@ const PrivateVPNPage = () => {
                     STORE.Content.Features["BUSINESS-NAT"]
                 ]}></XXXXFeatures>
 
-            <XXXXFeatures row={"4"} bg={"1"} class={"no-bottom-padding no-top-padding"}
+            <XXXXFeatures row={"4"} bg={"1"} class={" no-top-padding"}
                 features={[
                     STORE.Content.Features["BUSINESS-ToggleAccess"],
                     STORE.Content.Features["BUSINESS-BlackWhiteListing"],
                 ]}></XXXXFeatures>
+
+            <ContactUS row={"1"} bg={1}></ContactUS>
 
 
 

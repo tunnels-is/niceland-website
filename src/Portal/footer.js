@@ -40,10 +40,15 @@ const Footer = (props) => {
                 </div>
 
                 <div className="s2">
-                    <div className="item title">Policies</div>
+                    <div className="item title">Other</div>
+                    <div className="item">
+                        <Link to={"/countries"}>
+                            Available Countries
+                        </Link>
+                    </div>
                     <div className="item">
                         <Link to={"/policies"}>
-                            Privacy
+                            Privacy Policy
                         </Link>
                     </div>
                 </div>
@@ -62,6 +67,9 @@ const Footer = (props) => {
                     </div>
                     <div className="item">
                         <a href="https://www.twitter.com/nicelandvpn" target={"_blank"}>Twitter</a>
+                    </div>
+                    <div className="item">
+                        <a href="https://t.me/+hTRZ3W3YyuQwZGFk" target={"_blank"}>Telegram</a>
                     </div>
                 </div>
 

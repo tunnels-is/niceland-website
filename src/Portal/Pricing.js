@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import Pricing from "./sections/Pricing";
 import Payment from "./sections/Payment";
 import Notice from "./NoticeBanner";
+import Download from "./sections/Download";
 
 const PricingPage = (props) => {
 
@@ -14,9 +15,8 @@ const PricingPage = (props) => {
     <>
       <Banner></Banner>
       {/* <Notice row={"1"} bg={"1"}></Notice> */}
-      <div className="home container">
-        <h1 className="TBA">TO BE ANNOUNCED</h1>
-      </div>
+      <Pricing row={1} bg={1}></Pricing>
+      <Download row={"2"} bg={"2"}></Download>
     </>
   );
 }

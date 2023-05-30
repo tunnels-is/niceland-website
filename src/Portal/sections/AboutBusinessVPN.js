@@ -24,7 +24,7 @@ const AboutBusinessVPN = (props) => {
         We've designed our business VPN solution to be as user-friendly as possible. With NicelandVPN, you can establish your own VPNs without the need for complex port forwarding configurations or in-depth networking knowledge.
         <br />
         <br />
-        Niceland uses a combination of routers and VPN endpoints, making it easily scalable for large infrastructure and cloud projects. For businesses with exceptionally high demands, Niceland offers a custom deployment of it's global VPN routing network.
+        Niceland uses a combination of routers and VPN endpoints, making it easily scalable for large infrastructure and cloud projects. For businesses with exceptionally high demands, Niceland offers a custom deployment of it's global VPN Mesh network.
 
         {props.button &&
           <Link className="learn-more-button" to={"/business"}>

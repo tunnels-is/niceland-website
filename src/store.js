@@ -1,4 +1,5 @@
 import moment from "moment";
+
 const DATA = "data_";
 
 var STORE = {
@@ -239,7 +240,7 @@ var STORE = {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
                 icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/streaming.svg",
                 title: "Unlock Your Favourite Content",
-                short: "Unlocking GEO-blocked content is something VPN users have come to expect. Niceland utilizes Rented IP addresses, IP rotations, full DNS routing and server user limits to ensure GEO-blocked content stays un-blocked.",
+                short: "Unlocking GEO-blocked content is something VPN users have come to expect. Niceland intercepts all DNS queries and re-writes the IP information, then forwards those DNS queries through the encrypted user connections. Additionally Niceland has fewer users per VPN server, making it less likely to get blocked.",
                 long: "",
             },
             // TO BE ANNOUNCED / LAUNCHED
@@ -269,8 +270,8 @@ var STORE = {
             },
             "PrivateVPN": {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
-                title: "User Home Network VPN",
-                short: "Niceland will be announcing a privately deployable VPN for home and company networks. This VPN will include custom DNS records, NAT capabilities, network White/Black listing and User access control.",
+                title: "Private VPN for the Home",
+                short: "Niceland will be announcing a private VPN for homes which connects directly to the global Mesh network. This VPN will include custom DNS records, NAT capabilities, network White/Black listing and User access control.",
                 long: "",
             },
             "iOSAPP": {

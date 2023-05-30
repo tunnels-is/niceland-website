@@ -17,7 +17,7 @@ const AboutFeatures = (props) => {
         Niceland is an Icelandic-based VPN service that was founded by four individuals who wanted to offer a reliable, and user-friendly VPN solution.
         <br></br>
         <br></br>
-        Niceland operates under a no-logging and no-tracking policy, additionally Iceland is not in the Five Eyes, Nine Eyes, or Fourteen Eyes and does not collect nor share intelligence with the U.S., UK or Europe. As an added benefit searches by foreign law enforcement cannot be conducted on equipment in Iceland, as espionage intelligence is not a valid reason for issuing a warrant.
+        Niceland operates under a no-logging and no-tracking policy, additionally Iceland is not in the Five Eyes, Nine Eyes, or Fourteen Eyes.
         <br></br>
         <br></br>
         We created Niceland VPN from the ground up in order to accomplish
