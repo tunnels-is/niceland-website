@@ -295,7 +295,7 @@ var STORE = {
             "SecurityAudit": {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
                 title: "3rd Party Security Audits",
-                short: "Niceland will be subject to 3rd party security audits once we have enough revenue to pay for them. If some security firms out there want to volunteer their services for free, please send us an email!",
+                short: "Niceland will be subject to 3rd party security audits once we have enough revenue to pay for them.",
                 long: "",
             },
             "OpenSource": {

@@ -2,13 +2,16 @@ import React, { useEffect, useState, useId } from "react";
 import { ImArrowRight2 } from "react-icons/im"
 import { Link } from "react-router-dom";
 
-const BannerV2 = (props) => {
+const BannerPricing = (props) => {
 
   return (
     <>
       <div className="banner2">
-        <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/comp/bannerv2.webp"></img>
-        <div className="title font-banner-title">Features And Roadmap</div>
+        <img className="banner-bg" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/bannerv3.png"></img>
+
+        <div className="title font-banner-title">Nice Subscription Options
+        </div>
+
 
         <Link to={"/download"} className="button font-button get-started">Get Niceland VPN
           <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
@@ -19,4 +22,4 @@ const BannerV2 = (props) => {
   );
 }
 
-export default BannerV2;
+export default BannerPricing;

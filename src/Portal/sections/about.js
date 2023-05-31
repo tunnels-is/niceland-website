@@ -11,7 +11,7 @@ const About = (props) => {
       <img className="lock" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/logo-green-orange-bg.svg"></img>
 
       <div className="title font-section-title">
-        Niceland at it´s Core
+        Niceland at its Core
       </div>
       <div className="subtitle font-big-section-description">
         Niceland VPN is a platform created by Tunnels EHF, which is a newly founded startup-company from Iceland. Tunnels EHF was founded by four individual.

@@ -9,6 +9,9 @@ var countries = [
   { code: "de", name: "Germany" },
   { code: "gb", name: "United Kingdom" },
   { code: "hk", name: "Hong Kong" },
+  { code: "nl", name: "Netherlands" },
+  { code: "ca", name: "Canada" },
+  { code: "pl", name: "Poland" },
 ]
 const Countries = (props) => {
 
@@ -35,7 +38,7 @@ const Countries = (props) => {
 
       <div className="subtitle font-section-subtitle">
         <Link to={"/support"}>
-          Is your country missing ?<br /> you can request a server in one of our community channel
+          Is your country missing ?<br /> New servers can be requested in our community channels
         </Link>
       </div>
 

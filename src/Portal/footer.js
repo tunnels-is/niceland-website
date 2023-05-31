@@ -78,7 +78,7 @@ const Footer = (props) => {
                     <div className="item">Tunnels EHF</div>
                     <div className="item">SSN. 4209221080</div>
                     <div className="item">VAT. No. 148343</div>
-                    <div className="item">Borgartún 25</div>
+                    <div className="item">Borgartún 23</div>
                     <div className="item">105 Reykjavík</div>
                     <div className="item">Iceland</div>
                 </div>
