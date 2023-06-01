@@ -9,6 +9,7 @@ import Download from "./sections/Download";
 import BannerPricing from "./BannervPricing";
 
 const PricingPage = (props) => {
+  window.scrollTo(0, 0);
 
   const navigate = useNavigate();
 

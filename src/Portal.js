@@ -30,22 +30,17 @@ const LaunchPortal = () => {
   const [success, setSuccess] = useState();
 
   console.dir(window.location)
-  let locationHash = window.location.pathname
+  let locationHash = window.location.hash
   let slider = false
-  let payment = false
   if (locationHash.includes("slider")) {
     slider = true
   }
-  if (locationHash.includes("payment")) {
-    payment = true
-  }
-
 
   return (
     <>
       <React.StrictMode>
         <HashRouter >
-          {(slider === false && payment === false) &&
+          {!slider &&
             <Nav setError={setError} />
           }
 
@@ -66,7 +61,7 @@ const LaunchPortal = () => {
 
           </Routes>
 
-          {(slider === false && payment === false) &&
+          {!slider &&
             <Footer></Footer>
           }
 
