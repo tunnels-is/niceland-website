@@ -51,6 +51,21 @@ const Footer = (props) => {
                             Privacy Policy
                         </Link>
                     </div>
+                    <div className="item">
+                        <Link to={"/cash"}>
+                            Cash Payments
+                        </Link>
+                    </div>
+                    <div className="item">
+                        <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/tunnels-is/media/master/terms/terms.pdf" target="_blank">
+                            Terms And Conditions
+                        </a>
+                    </div>
+                    <div className="item">
+                        <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/tunnels-is/media/master/terms/terms-icelandic.pdf" target="_blank">
+                            Terms ( Icelandic )
+                        </a>
+                    </div>
                 </div>
 
                 <div className="s3">

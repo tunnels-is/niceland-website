@@ -9,16 +9,25 @@ import XXXXFeatures from "./sections/4xFeatures";
 import STORE from "../store";
 import AboutBusinessVPN from "./sections/AboutBusinessVPN";
 import Countries from "./sections/Countries";
+import AboutTechnical from "./sections/AboutTechnical";
+import BannerNew from "./BannerNew";
 
 const FeaturesPage = () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
   return (
     <>
-      <BannerV2 ></BannerV2>
+      {/* <BannerV2 ></BannerV2> */}
+      <BannerNew
+        image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/features-banner.webp"}
+        title={"Features And Roadmap"}
+        subtitle={"Learn more about Niceland and what is to come"}
+        showLink={true}
+        linkText={"Get NicelandVPN"}
+        linkPath={"/download"}
+      />
 
       <AboutFeatures row={"1"} bg={"1"}></AboutFeatures>
-
 
       <FirstFeatures row={"3"} bg={"2"}
         features={[
@@ -28,6 +37,7 @@ const FeaturesPage = () => {
         ]}
       ></FirstFeatures>
 
+      <AboutTechnical row={"4"} bg={"1"}></AboutTechnical>
 
       <XXXXFeatures row={"4"} bg={"1"} class={"no-bottom-padding"}
         title={"Feature Overview"}
@@ -40,7 +50,7 @@ const FeaturesPage = () => {
 
       <XXXXFeatures row={"5"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
         STORE.Content.Features["PaymentProcessor"],
-        STORE.Content.Features["OffsitePaymentData"],
+        STORE.Content.Features["OffsitePaymentProcessing"],
         STORE.Content.Features["ProtectedKeys"],
         STORE.Content.Features["CookiePolicy"]
       ]}></XXXXFeatures>
@@ -85,11 +95,16 @@ const FeaturesPage = () => {
         STORE.Content.Features["SecurityAudit"],
       ]}></XXXXFeatures>
 
-      <XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding"} features={[
+      <XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
         STORE.Content.Features["DetailedDocs"],
         STORE.Content.Features["OpenSource"],
         STORE.Content.Features["StandAloneCLI"],
         STORE.Content.Features["LinuxSecuritySigning"]
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"13"} bg={"1"} class={"no-top-padding"} features={[
+        STORE.Content.Features["PortForwarding"],
+        STORE.Content.Features["RouteOnlyVPN"],
       ]}></XXXXFeatures>
 
       <Countries row={13} bg={2}></Countries>

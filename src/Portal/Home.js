@@ -9,13 +9,22 @@ import SupportSocial from "./sections/SupportSocial";
 import FirstFeatures from "./sections/FirstFeatures";
 import STORE from "../store";
 import Countries from "./sections/Countries";
+import BannerNew from "./BannerNew";
 
 const HomePage = () => {
 
   window.scrollTo(0, 0);
   return (
     <>
-      <BannerV1 ></BannerV1>
+      {/* <BannerV1 ></BannerV1> */}
+      <BannerNew
+        image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/home-banner.webp"}
+        title={"Welcome To Niceland"}
+        subtitle={"The Global Mesh-Network VPN"}
+        showLink={true}
+        linkText={"Get NicelandVPN"}
+        linkPath={"/download"}
+      />
       {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <AboutHome row={"1"} bg={"1"}></AboutHome>
       <MainFeatures row={"2"} bg={"2"} button={true}></MainFeatures>

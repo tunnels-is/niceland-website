@@ -5,6 +5,7 @@ import Notice from "./NoticeBanner";
 import About from "./sections/about";
 import Download from "./sections/Download";
 import SupportSocial from "./sections/SupportSocial.js";
+import BannerNew from "./BannerNew";
 
 
 const AboutPage = () => {
@@ -13,8 +14,15 @@ const AboutPage = () => {
 
     return (
         <>
-            <BannerV5></BannerV5>
-            {/* <Notice row={"1"} bg={"1"}></Notice> */}
+            <BannerNew
+                image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/about-banner.webp"}
+                title={"Learn About Niceland"}
+                subtitle={""}
+                showLink={true}
+                linkText={"Get NicelandVPN"}
+                linkPath={"/download"}
+            />
+
             <About row={"1"} bg={"1"}></About>
             <SupportSocial row={"2"} bg={"1"}></SupportSocial>
             <Download row={"3"} bg={"1"}></Download>

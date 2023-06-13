@@ -60,11 +60,11 @@ var STORE = {
                 short: "To prevent excessive data collection Niceland decided to not use any 3rd party payment processing platforms like PayPal or stripe. Instead, we have a direct contract with a payment processor in Iceland.",
                 long: "",
             },
-            "OffsitePaymentData": {
+            "OffsitePaymentProcessing": {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
                 icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/offsite.svg",
                 title: "Offsite Payment Processing",
-                short: "Payment data is moved and encrypted in a database that is stored on a seperate server from the user database. The payment data server is only operated manually with no external access.",
+                short: "Recurring payments are processed on an off-site server. This means that once the initial payment has been made, subsequent payments will be processed in an isolated environment in order to reduce the risk of interference from malicious actors.",
                 long: "",
             },
             "ProtectedKeys": {
@@ -314,6 +314,18 @@ var STORE = {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
                 title: "Linux security signing",
                 short: "The Windows and MacOS applications are already signed with verified certificates, but the Linux app still needs security signing implementations. This will be a top priority in the coming days.",
+                long: "",
+            },
+            "PortForwarding": {
+                // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
+                title: "Port Forwarding",
+                short: "Being able to forward ports enables users to share websites and private servers with other users without the risk of exposing their own IP address.",
+                long: "",
+            },
+            "RouteOnlyVPN": {
+                // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
+                title: "Custom Route VPN",
+                short: "Being able to forward specific routes/IP Addresses and not others is a feature requested by many system administrators and we are happy to announce that it is officially on the roadmap.",
                 long: "",
             },
         }

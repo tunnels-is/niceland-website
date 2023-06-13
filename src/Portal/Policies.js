@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BannerPolicy from "./BannerPolicy";
+import BannerNew from "./BannerNew";
 
 
 const Policies = () => {
@@ -10,7 +11,14 @@ const Policies = () => {
     return (
         <>
 
-            <BannerPolicy></BannerPolicy>
+            <BannerNew
+                image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/privacy-banner.webp"}
+                title={"Read Our Privacy Policy"}
+                subtitle={"More details can be found in the terms and conditions"}
+                showLink={true}
+                linkText={"Get NicelandVPN"}
+                linkPath={"/download"}
+            />
             <div className={`policy-section inherit-grid`}>
                 <div className="general-section section">
                     <h1>Privacy Policy</h1>

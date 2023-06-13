@@ -6,6 +6,7 @@ import XXXXFeatures from "./sections/4xFeatures";
 import STORE from "../store";
 import BusinessVPN from "./sections/BusinessVPN";
 import ContactUS from "./sections/ContactUS";
+import BannerNew from "./BannerNew";
 
 const PrivateVPNPage = () => {
 
@@ -13,7 +14,14 @@ const PrivateVPNPage = () => {
 
     return (
         <>
-            <BannerBusiness></BannerBusiness>
+            <BannerNew
+                image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/buisness-banner.webp"}
+                title={"Enterprise VPN"}
+                subtitle={"Deploy NicelandVPN at scale"}
+                showLink={true}
+                linkText={"Get NicelandVPN"}
+                linkPath={"/download"}
+            />
             <AboutBusinessVPN row={"1"} bg={1}></AboutBusinessVPN>
             <BusinessVPN row={"1"} bg={1}></BusinessVPN>
 
