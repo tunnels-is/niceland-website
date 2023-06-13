@@ -20,6 +20,7 @@ const FeaturesPage = () => {
       {/* <BannerV2 ></BannerV2> */}
       <BannerNew
         image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/features-banner.webp"}
+        mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/features-banner-mobile.webp"}
         title={"Features And Roadmap"}
         subtitle={"Learn more about Niceland and what is to come"}
         showLink={true}

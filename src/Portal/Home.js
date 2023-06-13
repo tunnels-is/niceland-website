@@ -19,6 +19,7 @@ const HomePage = () => {
       {/* <BannerV1 ></BannerV1> */}
       <BannerNew
         image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/home-banner.webp"}
+        mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/home-banner-mobile.webp"}
         title={"Welcome To Niceland"}
         subtitle={"The Global Mesh-Network VPN"}
         showLink={true}

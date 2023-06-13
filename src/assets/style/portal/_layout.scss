@@ -468,12 +468,16 @@ body {
         width: 100%;
     }
 
+    .banner-bg-small {
+        display: none;
+    }
+
     .title {
         position: absolute;
-        width: 80%;
+        width: 100%;
         height: auto;
         top: 14rem;
-        margin-left: 10%; // left: calc(50% - 460px);
+        // margin-left: 10%; // left: calc(50% - 460px);
         text-shadow: 1px 1px 7px #424242;
 
 
@@ -484,10 +488,9 @@ body {
 
     .subtitle {
         position: absolute;
-        width: 80%;
+        width: 100%;
         height: auto;
         text-shadow: 1px 1px 4px #313131;
-        margin-left: 10%; // left: calc(50% - 460px);
         top: 17.5rem;
         text-align: center;
         color: $banner-color;
@@ -2593,23 +2596,39 @@ body {
     }
 
     .banner {
-        // .banner-bg {
-        //     height: 540px;
-        // }
+        .banner-bg {
+            // height: 540px;
+            display: none;
+        }
+
+        .banner-bg-small {
+            display: inline;
+            min-height: 400px;
+            height: auto;
+            width: 100%;
+        }
 
         .title {
-            font-size: 3em;
-            top: 8rem;
-            // top: 134px;
-            line-height: 1.2em;
+            // font-size: 7vw;
+            font-size: calc(8px + 6vw);
+            width: 100%;
+            margin-left: 0%;
+            line-height: 1em;
+            top: 12rem;
         }
 
         .subtitle {
-            top: 10rem;
+            // font-size: 3vw;
+            font-size: calc(7px + 2.5vw);
+            width: 100%;
+            margin-left: 0%;
+            top: 14rem;
+            line-height: 10vw;
         }
 
+
         .get-started {
-            top: 15rem;
+            top: 19rem;
         }
 
     }
@@ -3227,10 +3246,11 @@ body {
 
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
     .banner {
         .subtitle {
-            display: none;
+
+            line-height: 1.2rem;
         }
     }
 
@@ -3247,44 +3267,18 @@ body {
 
     .banner {
 
-        .banner-bg {
-            width: 700px;
-            height: auto;
-        }
+        .get-started {}
 
         .title {
-            position: absolute;
-            top: 70px !important;
-            // right: 30px;
-            width: 100%;
-            margin-left: 0px;
-            line-height: 2rem !important;
-            height: fit-content;
-            // width: fit-content;
-            font-size: 1.8em;
+            top: 6rem;
         }
 
         .subtitle {
-            height: fit-content;
-            width: 250px;
-            // position: absolute;
-            // bottom: 50px;
-            text-align: center;
-            // right: 30px !important;
-            line-height: 1em;
-            top: 110px;
-            // left: unset;
-            font-size: 1.2em;
-            left: calc(50% - 125px);
+            top: 8rem;
         }
 
         .get-started {
-            // position: absolute;
-            top: 167px;
-            height: 40px;
-            left: calc(50% - 104px);
-            // right: 30px;
-            // left: unset;
+            top: 12rem;
         }
     }
 

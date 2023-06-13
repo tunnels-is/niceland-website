@@ -16,6 +16,7 @@ const PrivateVPNPage = () => {
         <>
             <BannerNew
                 image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/buisness-banner.webp"}
+                mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/business-banner-mobile.webp"}
                 title={"Enterprise VPN"}
                 subtitle={"Deploy NicelandVPN at scale"}
                 showLink={true}

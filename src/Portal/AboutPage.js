@@ -16,8 +16,9 @@ const AboutPage = () => {
         <>
             <BannerNew
                 image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/about-banner.webp"}
+                mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/about-banner-mobile.webp"}
                 title={"Learn About Niceland"}
-                subtitle={""}
+                subtitle={"And its residents"}
                 showLink={true}
                 linkText={"Get NicelandVPN"}
                 linkPath={"/download"}

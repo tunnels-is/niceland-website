@@ -8,6 +8,7 @@ const BannerNew = (props) => {
     <>
       <div className={`banner`} >
         <img className="banner-bg" src={props.image}></img>
+        <img className="banner-bg-small" src={props.mobileImage}></img>
         <div className={`title font-banner-title `}>{props.title}</div>
 
         <div className={`subtitle font-banner-subtitle`}>{props.subtitle}</div>

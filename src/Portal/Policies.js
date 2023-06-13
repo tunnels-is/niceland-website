@@ -13,6 +13,7 @@ const Policies = () => {
 
             <BannerNew
                 image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/privacy-banner.webp"}
+                mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/privacy-banner-mobile.webp"}
                 title={"Read Our Privacy Policy"}
                 subtitle={"More details can be found in the terms and conditions"}
                 showLink={true}

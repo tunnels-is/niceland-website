@@ -13,6 +13,7 @@ const DownloadPage = () => {
         <>
             <BannerNew
                 image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner.webp"}
+                mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner-mobile.webp"}
                 title={"Experience Niceland"}
                 subtitle={"On MacOS, Windows and Linux"}
                 showLink={true}
