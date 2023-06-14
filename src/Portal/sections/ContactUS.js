@@ -5,12 +5,11 @@ const ContactUS = (props) => {
   return (
     <div className={`contact-us grid-row-${props.row} inherit-grid bg-${props.bg}`}>
       <div className="title font-section-title">
-        Contact us for a custom offer
+        Contact Us For A Custom Offer
       </div>
       <div className="subtitle font-section-subtitle">
         <a href="mailto:support@nicelandvpn.is">
-
-          support@nicelandvpn.is
+          support @ nicelandvpn.is
         </a>
       </div>
     </div>

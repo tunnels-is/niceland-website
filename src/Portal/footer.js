@@ -33,8 +33,8 @@ const Footer = (props) => {
                         </Link>
                     </div>
                     <div className="item">
-                        <Link to={"/beta"}>
-                            Beta
+                        <Link to={"/business"}>
+                            For Business
                         </Link>
                     </div>
                 </div>

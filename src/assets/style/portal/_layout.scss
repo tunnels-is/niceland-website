@@ -857,13 +857,16 @@ body {
 
 .contact-us {
     padding-top: 100px;
+    grid-template-columns: repeat(12, 10vw);
+    gap: 0px 0px;
     // padding-bottom: 80px;
 
     .title {
         grid-row: 1;
-        grid-column-start: 1;
-        grid-column-end: 13;
+        grid-column-start: 3;
+        grid-column-end: 11;
         margin-bottom: 20px;
+        // width: 100%;
 
         text-align: center;
         height: fit-content;
@@ -875,13 +878,14 @@ body {
         grid-column-end: 11;
 
         text-align: center;
-        height: 82px;
-        margin-bottom: 40px;
+        // height: 82px;
+        // margin-bottom: 40px;
         font-size: 2em;
 
         a {
             text-decoration: none;
             color: $c-1;
+            word-wrap: break-word;
         }
 
         a:hover {
@@ -1343,6 +1347,7 @@ body {
         font-size: 3em;
         color: $c-7;
         font-weight: bold;
+        text-align: center;
     }
 
     .tab {
@@ -1806,8 +1811,8 @@ body {
 
     .title {
         grid-row: 1;
-        grid-column-start: 1;
-        grid-column-end: 13;
+        grid-column-start: 3;
+        grid-column-end: 11;
 
         text-align: center;
         height: 52px;
@@ -2587,13 +2592,36 @@ body {
 
 }
 
+
+@media screen and (max-width: 860px) {
+    .pricing-tabs {
+        .tab {
+            margin-top: 20px;
+        }
+    }
+
+    .contact-us {
+        // padding-top: 10vw;
+
+        .title {
+            // font-size: 12vw;
+            // line-height: 1em;
+        }
+
+        .subtitle {
+            // font-size: 8vw;
+            // line-height: 1em;
+        }
+    }
+}
+
 @media screen and (max-width: 955px) {
 
     .policy-section {
         grid-template-columns: repeat(12, auto);
-
-
     }
+
+
 
     .banner {
         .banner-bg {
