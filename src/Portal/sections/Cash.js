@@ -20,7 +20,7 @@ const Cash = (props) => {
           <div className="title">Euros</div>
           <>
             <div className="price teal">
-              <span className="price-new">€40</span>
+              <span className="price-new">40€</span>
               {/* <span className="month">/month</span> */}
             </div>
             <div className="text orange commitment">6 months</div>
@@ -42,7 +42,7 @@ const Cash = (props) => {
           <div className="title">USD</div>
           <>
             <div className="price teal">
-              <span className="price-new">$40</span>
+              <span className="price-new">40$</span>
               {/* <span className="month">/month</span> */}
             </div>
             <div className="text orange commitment">6 months</div>
