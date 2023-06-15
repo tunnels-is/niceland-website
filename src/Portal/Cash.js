@@ -8,6 +8,7 @@ import Notice from "./NoticeBanner";
 import Download from "./sections/Download";
 import BannerPricing from "./BannervPricing";
 import BannerCash from "./BannervCash";
+import BannerNew from "./BannerNew";
 
 const CashPage = (props) => {
   window.scrollTo(0, 0);
@@ -17,7 +18,15 @@ const CashPage = (props) => {
   return (
     <>
       {/* <Banner></Banner> */}
-      <BannerCash></BannerCash>
+      <BannerNew
+        image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/pricing-banner.webp"}
+        mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/pricing-banner-mobile.webp"}
+        title={"Nice Subscription Options"}
+        subtitle={"With official launch discounts!"}
+        showLink={true}
+        linkText={"Get NicelandVPN"}
+        linkPath={"/download"}
+      />
       {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <Cash row={1} bg={1}></Cash>
       <Download row={"2"} bg={"2"}></Download>

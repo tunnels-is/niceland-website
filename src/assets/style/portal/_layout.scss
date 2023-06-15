@@ -1332,6 +1332,50 @@ body {
     padding-bottom: 0px !important;
 }
 
+.pricing-desc {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    padding-top: 120px;
+    grid-template-columns: repeat(12, auto);
+
+    .title {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 13;
+        margin-bottom: 20px;
+        color: black;
+
+        text-align: center;
+        height: fit-content;
+    }
+
+    .subtitle {
+        grid-row: 2;
+        grid-column-start: 3;
+        grid-column-end: 11;
+
+        text-align: center;
+        height: fit-content;
+        margin-bottom: 30px;
+        color: black;
+    }
+
+    .benefits {
+        grid-row: 3;
+        grid-column-start: 3;
+        grid-column-end: 11;
+        text-align: center;
+        // margin-top: 50px;
+
+        color: black;
+
+        .item {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    }
+}
+
 .pricing-tabs {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -1449,14 +1493,14 @@ body {
 
         .title {
             height: 30px;
-            width: 130px;
+            width: 100%;
             margin-top: 25px;
             margin-bottom: 25px;
             /* justify-content: center; */
             text-align: center;
             font-weight: bold;
             font-size: 2em;
-            margin-left: calc(50% - 65px);
+            // margin-left: calc(50% - 65px);
 
             color: $c-0;
 
@@ -1482,7 +1526,7 @@ body {
         .launch {
             color: $c-4;
             font-size: 1.1em;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
             text-align: center;
             width: 100% !important;
             font-weight: bold;
@@ -1493,29 +1537,51 @@ body {
 
         .price {
             width: 100%;
-            margin-bottom: 20px;
             text-align: center;
             font-size: 1.6em;
             font-weight: bold;
             // float: left;
         }
 
-        .price-title {
-            text-decoration: line-through;
-            color: $c-2;
-            margin-right: 10px;
-            text-decoration-thickness: 3px;
-            text-decoration-color: red;
-            -moz-text-decoration-color: red;
-            // text-decoration-style: dashed;
+        .price-old {
+
+            color: grey;
+            text-align: center;
+
+            .value {
+                margin-bottom: 20px;
+                // text-decoration: underline;
+                // text-decoration-thickness: 1px;
+                // text-decoration-color: red;
+                // -moz-text-decoration-color: red;
+                text-align: center;
+                font-size: 0.7em !important;
+                float: left;
+                width: 100%;
+                color: grey
+            }
+
         }
 
-        .month {
-            // float: left;
-            margin-left: 10px;
-            font-size: 0.8em;
-            color: $c-0;
+        .price-current {
+            margin-bottom: 20px;
+
+
+            .value {
+                width: 100%;
+                // padding-left: 2%;
+                text-align: center;
+                font-size: 2.2em !important;
+                float: left;
+                margin-bottom: -5px;
+            }
+
+            .month {
+                font-size: 0.8em;
+                color: $c-0;
+            }
         }
+
 
         .text {
             text-align: center;
@@ -3279,6 +3345,12 @@ body {
         .subtitle {
 
             line-height: 1.2rem;
+        }
+    }
+
+    .pricing-desc {
+        .title {
+            font-size: 15vw;
         }
     }
 
