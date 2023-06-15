@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useNavigate, } from "react-router-dom";
 
 const Pricing = (props) => {
-  // window.scrollTo(0, 0);
 
   const [tab, setTab] = useState(1)
   const navigate = useNavigate()
@@ -26,7 +25,7 @@ const Pricing = (props) => {
       <div className={`pricing grid-row-${props.row} inherit-grid ${props.class} bg-${props.bg}`} >
 
         <div className="sub sub-1" onClick={() => LoadPaymentWindow(1)}>
-          <div className="title">Nice Price</div>
+          <div className="title">Nice</div>
           <span className="launch">20% Launch Discount!</span>
 
           <div className="price price-old teal">
@@ -44,7 +43,7 @@ const Pricing = (props) => {
         </div>
 
         <div className="sub sub-2" onClick={() => LoadPaymentWindow(2)}>
-          <div className="title">Nicer Price</div>
+          <div className="title">Nicer</div>
           <span className="launch">20% Launch Discount!</span>
           {tab === 1 &&
             <>
@@ -80,7 +79,7 @@ const Pricing = (props) => {
 
         <div className="sub sub-3" onClick={() => LoadPaymentWindow(3)}>
           {/* <div className="discount">Save 40%</div> */}
-          <div className="title">Nicest Price</div>
+          <div className="title">Nicest</div>
           <span className="launch">20% Launch Discount!</span>
           {tab === 1 &&
             <>
