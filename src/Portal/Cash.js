@@ -27,7 +27,6 @@ const CashPage = (props) => {
         linkText={"Get NicelandVPN"}
         linkPath={"/download"}
       />
-      {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <Cash row={1} bg={1}></Cash>
       <Download row={"2"} bg={"2"}></Download>
 
