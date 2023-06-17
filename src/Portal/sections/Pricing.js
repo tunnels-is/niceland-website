@@ -61,14 +61,14 @@ const Pricing = (props) => {
           {tab === 2 &&
             <>
               <div className="price price-old teal">
-                <span className="value">Before 8.5 USD</span>
+                <span className="value">Before 8 USD</span>
               </div>
               <div className="price price-current teal">
-                <span className="value">6.8</span>
+                <span className="value">6.4</span>
                 <span className="month">USD per month</span>
                 <span className="month"></span>
               </div>
-              <div className="text orange commitment">$40.8 billed every 6 months</div>
+              <div className="text orange commitment">38.4 USD billed every 6 months</div>
             </>
           }
 
@@ -97,14 +97,14 @@ const Pricing = (props) => {
           {tab === 2 &&
             <>
               <div className="price price-old teal">
-                <span className="value">Before 6.5 USD</span>
+                <span className="value">Before 6 USD</span>
               </div>
               <div className="price price-current teal">
-                <span className="value">5.2</span>
+                <span className="value">4.8</span>
                 <span className="month">USD per month</span>
                 <span className="month"></span>
               </div>
-              <div className="text orange commitment">$62.4 billed every 12 months</div>
+              <div className="text orange commitment">57.6 USD billed every 12 months</div>
             </>
           }
           <div className="seperator-text"></div>
