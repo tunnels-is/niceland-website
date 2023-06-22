@@ -16,7 +16,7 @@ const DownloadPage = () => {
                 mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner-mobile.webp"}
                 title={"Experience Niceland"}
                 subtitle={"On MacOS, Windows and Linux"}
-                showLink={true}
+                showLink={false}
                 linkText={"Get NicelandVPN"}
                 linkPath={"/download"}
             />
