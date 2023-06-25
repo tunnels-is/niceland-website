@@ -11,7 +11,7 @@ const MainFeatures = (props) => {
         Core Principles
       </div>
 
-      <div className="s1 box">
+      <div className="s1 box box-shadow">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-no-logging.png"></img>
         <div className="item-title font-section-item-title">No Logging</div>
         <div className="description font-section-description">
@@ -26,7 +26,7 @@ const MainFeatures = (props) => {
       </div>
 
 
-      <div className="s2 box">
+      <div className="s2 box box-shadow">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-anon-mask.png"></img>
         <div className="item-title font-section-item-title">Anonymity</div>
         <div className="description font-section-description">
@@ -41,7 +41,7 @@ const MainFeatures = (props) => {
       </div>
 
 
-      <div className="s3 box">
+      <div className="s3 box box-shadow">
         <img className="img" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-good.png"></img>
         <div className="item-title font-section-item-title"> Quality</div>
         <div className="description font-section-description">

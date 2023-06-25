@@ -3,6 +3,11 @@ html {
     overflow-x: hidden;
 }
 
+#root {
+
+    // display: grid !important;
+}
+
 :root {
     position: relative;
     overflow-x: hidden;
@@ -767,6 +772,8 @@ body {
 }
 
 .countries {
+    border-top: 1px solid $c-6;
+    border-bottom: 1px solid $c-6;
     padding-top: 120px;
     padding-bottom: 120px;
 
@@ -1168,6 +1175,8 @@ body {
 }
 
 .main-features {
+    border-top: 1px solid $c-6;
+    border-bottom: 1px solid $c-6;
     padding-top: 120px;
     padding-bottom: 120px;
     grid-column-start: 2;
@@ -1245,6 +1254,8 @@ body {
 
 
 .first-features {
+    border-top: 1px solid $c-6;
+    border-bottom: 1px solid $c-6;
     grid-column-start: 1;
     grid-column-end: 13;
     padding-top: 120px;
@@ -2037,71 +2048,157 @@ body {
     }
 }
 
+.box-shadow {
 
-// .pricing {
-//     grid-column-start: 1;
-//     grid-column-end: 13;
-//     margin-top: 120px;
-//     margin-bottom: 120px;
+    box-shadow: 1px 3px 7px 0px #0000007a;
+}
 
-//     .title {
-//         grid-row: 1;
-//         grid-column-start: 3;
-//         grid-column-end: 11;
+.guides {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    align-items: flex-start;
 
-//         text-align: center;
-//         height: 52px;
-//         margin-bottom: 20px;
-//     }
+    .input {
+        border: none;
+        border-bottom: 1px solid $c-7;
+        border-radius: 0px !important;
+        background: none !important;
+        margin-bottom: 50px !important;
+    }
 
-//     .subtitle {
-//         grid-row: 2;
-//         grid-column-start: 3;
-//         grid-column-end: 11;
+    .input:focus {
+        outline: none !important;
+    }
 
-//         text-align: center;
-//         height: 52px;
-//         margin-bottom: 20px;
-//         color: $learn-more-button-color;
+    .link {
+        grid-column-start: 1;
+        grid-column-end: 13;
+        text-decoration: none;
+        text-align: left;
+        color: $c-1;
+        // border: 1px solid $c-6;
+        background-color: $c-5;
+        border-radius: 5px;
+        width: fit-content;
+        // min-width: 300px;
+        width: 50vw;
+        height: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
+        padding-top: 15px;
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: 700;
+        font-size: 2.8em;
+        line-height: 1em;
+        // text-align: left;
 
-//         font-family: $font-family;
-//         font-style: $font-style;
-//         font-weight: 700;
-//         font-size: 1.3em;
-//         text-align: center;
-//         text-decoration: none;
-//     }
+    }
 
-//     .box {
-//         padding: 20px;
-//         background-color: $c-0;
-//         height: 505px;
-//         position: relative;
-//     }
+    .link-text {
+        text-align: center;
+        width: 100%;
+    }
 
-//     .s1 {
-//         // grid-row: 3/5;
-//         grid-row: 3;
-//         grid-column-start: 1;
-//         grid-column-end: 5;
-//         border: 1px solid black;
-//     }
+    .link:hover {
+        background-color: $c-6;
+        // border: 1px solid $c-2;
 
-//     .s2 {
-//         grid-row: 3;
-//         grid-column-start: 5;
-//         grid-column-end: 9;
-//         border: 1px solid black;
-//         height: 575px !important;
-//     }
+        // .link-text:after {
+        //     transform: scaleX(1);
+        //     transform-origin: 0% 50%;
+        // }
+    }
 
-//     .s3 {
-//         grid-row: 3;
-//         grid-column-start: 9;
-//         grid-column-end: 13;
-//         border: 1px solid black;
-//     }
-// }
+    .arrow {
+        height: auto;
+        width: 30px;
+        color: $c-2;
+    }
+
+    .link:hover {
+        .arrow {
+            animation: lefttoright 1s infinite;
+        }
+    }
+}
+
+.banner-replacement {
+    height: 120px !important;
+    width: 100%;
+    background-color: $c-1;
+}
+
+.guide-loader {
+
+
+    grid-template-columns: repeat(10, 100px);
+    gap: 0px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    align-items: center;
+    text-align: left !important;
+
+    .column-alignment {
+        grid-column-start: 2;
+        grid-column-end: 10;
+        width: 100%;
+    }
+
+    .guide-title {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: 700;
+        font-size: 3.8em;
+        line-height: 1em;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .title {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: 700;
+        font-size: 2.2em;
+        line-height: 1em;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        // font-size: 1.2em;
+        text-decoration: underline;
+    }
+
+    .text {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: normal;
+        font-size: 1.2em;
+        line-height: 1.2em;
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .html-content {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        // min-height: 300px !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        // border: 1px solid grey;
+    }
+}
+
 
 .download {
     grid-column-start: 1;
@@ -2154,8 +2251,12 @@ body {
 
 
 
+    .box:hover {
+        background-color: $c-6;
+    }
+
     .box {
-        width: 410px;
+        width: 360px;
         height: 230px;
         background-color: $c-5 ;
         display: flex;
@@ -2660,9 +2761,32 @@ body {
 
 
 @media screen and (max-width: 860px) {
+    .guides {
+        .link {
+            width: 70vw;
+            font-size: 5vw;
+        }
+    }
+
     .pricing-tabs {
         .tab {
             margin-top: 20px;
+        }
+    }
+
+    .guide-loader {
+        grid-template-columns: repeat(12, 10vw);
+        gap: 0;
+
+        .column-alignment {
+            grid-column-start: 3;
+            grid-column-end: 10;
+            width: 100%;
+        }
+
+        .html-content {
+            height: 50vw;
+            min-height: none !important;
         }
     }
 
@@ -3445,6 +3569,16 @@ body {
 }
 
 @media screen and (max-width: 370px) {
+
+    .guides {
+        grid-template-columns: repeat(2, 50vw);
+        gap: 0;
+
+        .link {
+            // width: 70vw;
+            font-size: 10vw;
+        }
+    }
 
     .footer {
         gap: 0 0px;

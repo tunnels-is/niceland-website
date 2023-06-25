@@ -328,7 +328,52 @@ var STORE = {
                 short: "Being able to forward specific routes/IP Addresses and not others is a feature requested by many system administrators and we are happy to announce that it is officially on the roadmap.",
                 long: "",
             },
-        }
+        },
+        Guides: [
+            {
+                title: "Getting Started With Niceland VPN",
+                tag: "getting-started",
+                content: [
+                    "title:::Step 1: Downloading Niceland",
+                    "html:::Download Niceland VPN by clicking <a target='_blank' href='/#/download'>this link</a>",
+                    // "html:::<h1> meomowoemwome </h1>",
+
+                    "title:::Step 2: Installing On Window",
+                    "text:::Double click the Niceland VPN installer that you donwloaded in step 1",
+
+                    "title:::Step 2: Installing On MacOS",
+                    "text:::Unzip the file you downloaded in step 1 and move the Niceland VPN app to your 'Applications' folder",
+
+                    "title:::Step 2: Installing On Linux",
+                    "text:::DEBIAN: $ dpkg -I [filename]",
+                    "text:::PACMAN: $ pacman -S [filename]",
+
+                    "title:::Step 3: Creating Your Account",
+                    "text:::Account are created inside the Niceland VPN app.",
+                    "text:::The login screen will open up once Niceland is started, press the Register button",
+                    "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/login-screen.png",
+                    "text:::Affiliate codes are placed in the 'code' input which is highlighted in the image. When you are done filling in your information press confirm",
+                    "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/registration-screen.png",
+
+                    "title:::Step 4: Choosing A Subscription",
+                    "html:::Detailed subscription information can be seen by clicking <a target='_blank' href='/#/pricing'>this link</a>",
+                    "text:::Payments for subscriptions are made inside the Niceland VPN app for security reasons. Once you have picked the subscription you want, you can click the subscription notification in the top-left corner of the app to see the subscription list.",
+                    "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/sub-screen.PNG",
+                    "text:::Discount codes are placed in the 'code' input. Affiliate codes that were used during registration will automatically be placed in the 'code' input. However, if you have a discount code you can replace the affiliate code with your new discount code.",
+                    "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/payment-form.png",
+
+                    "title:::Step 5: Connecting To Niceland",
+                    "text:::Connecting to Niceland VPN is as simple as selecting the country you want.",
+                    "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/country-selection.png",
+                    "text:::When the connection has been made you will be able to see the VPN you are connected to and a button to disconnect.",
+                    "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connected-screen.png",
+
+                    // "title:::Full video Guide",
+                    // 'html:::<iframe width="100%" height="300px" src="https://www.youtube.com/embed/fONu7T-KR34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                ]
+            },
+
+        ]
     },
     GetAndSaveDomain: function () {
         let host = window.location.host

@@ -23,7 +23,7 @@ const AboutHome = (props) => {
 
       </div>
 
-      <Link className="learn-more-button" to={"/about"}>
+      <Link className="learn-more-button" to={"/features"}>
         Learn More
         <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
       </Link>

@@ -6,7 +6,7 @@ const Download = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className={`download grid-row-${props.row} inherit-grid`}>
+    <div id="download" className={`download grid-row-${props.row} inherit-grid`}>
 
       <div className="download-title font-section-title">
         Register in the app!
@@ -18,7 +18,7 @@ const Download = (props) => {
         </a>
       </div>
 
-      <div className="s1 box">
+      <div className="s1 box box-shadow">
 
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-win11.svg"></img>
         <div className="title">
@@ -29,7 +29,7 @@ const Download = (props) => {
         </div>
       </div>
 
-      <div className="s2 box">
+      <div className="s2 box box-shadow">
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/mac.svg"></img>
         <div className="title">
           <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/download/v1.0.3/NicelandVPN-1.0.3-apple-macos.zip">
@@ -38,7 +38,7 @@ const Download = (props) => {
         </div>
       </div>
 
-      <div className="s3 box">
+      <div className="s3 box box-shadow">
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-linux.png"></img>
         <div className="title">
           <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">

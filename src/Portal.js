@@ -21,6 +21,8 @@ import Countries from "./Portal/sections/Countries";
 import CountriesPage from "./Portal/CountriesPage";
 import PricingPage from "./Portal/Pricing";
 import CashPage from "./Portal/Cash";
+import GuidePage from "./Portal/GuidePage";
+import GuideLoaderPage from "./Portal/GuideLoaderPage";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -49,12 +51,15 @@ const LaunchPortal = () => {
             <Route path="/" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
 
             <Route path="slider/:dir/:code" element={<SliderSmall />} />
+
             <Route path="support" element={<SupportPage setError={setError} setSuccess={setSuccess} />} />
             <Route path="cash" element={<CashPage setError={setError} setSuccess={setSuccess} />} />
             <Route path="features" element={<FeaturesPage setError={setError} setSuccess={setSuccess} />} />
             <Route path="pricing" element={<Pricing setError={setError} setSuccess={setSuccess} />} />
             <Route path="about" element={<AboutPage setError={setError} setSuccess={setSuccess} />} />
             <Route path="download" element={<DownloadPage setError={setError} setSuccess={setSuccess} />} />
+            <Route path="guide/:tag" element={<GuideLoaderPage setError={setError} setSuccess={setSuccess} />} />
+            <Route path="guides" element={<GuidePage setError={setError} setSuccess={setSuccess} />} />
             <Route path="policies" element={<Policies setError={setError} setSuccess={setSuccess} />} />
             <Route path="countries" element={<CountriesPage setError={setError} setSuccess={setSuccess} />} />
             <Route path="pricing" element={<PricingPage setError={setError} setSuccess={setSuccess} />} />

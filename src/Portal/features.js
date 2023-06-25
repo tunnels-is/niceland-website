@@ -13,7 +13,7 @@ import AboutTechnical from "./sections/AboutTechnical";
 import BannerNew from "./BannerNew";
 
 const FeaturesPage = () => {
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   return (
     <>
@@ -79,6 +79,7 @@ const FeaturesPage = () => {
 
       <MainFeatures row={"2"} bg={"2"} button={false}></MainFeatures>
       <AboutBusinessVPN row={"10"} bg={"1"} button={true}></AboutBusinessVPN>
+      <Countries row={13} bg={2}></Countries>
 
       <XXXXFeatures row={"10"} bg={"1"} class={"no-bottom-padding"}
         title={"On The Horizon"}
@@ -108,7 +109,6 @@ const FeaturesPage = () => {
         STORE.Content.Features["RouteOnlyVPN"],
       ]}></XXXXFeatures>
 
-      <Countries row={13} bg={2}></Countries>
 
 
       <Download row={"14"} bg={"2"}></Download>

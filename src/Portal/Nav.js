@@ -36,11 +36,11 @@ const Nav = (props) => {
 
                 <div className="mobile-items">
                     <Link className={`mobile-item font-mobile-menu-item ${path === "" ? "active" : ""}`} to={"/"} onClick={() => setMenu(!menu)}>Home</Link>
+                    <Link className={`mobile-item font-mobile-menu-item ${path === "features" ? "active" : ""}`} to={"/features"} onClick={() => setMenu(!menu)}>Features</Link>
+                    <Link className={`mobile-item font-mobile-menu-item ${path === "guides" ? "active" : ""}`} to={"/guides"} onClick={() => setMenu(!menu)}>Guides</Link>
                     <Link className={`mobile-item font-mobile-menu-item ${path === "download" ? "active" : ""}`} to={"/download"} onClick={() => setMenu(!menu)}>Download</Link>
                     {/* <Link className={`mobile-item font-mobile-menu-item ${path === "pricing" ? "active" : ""}`} to={"/pricing"} onClick={() => setMenu(!menu)}>Pricing</Link> */}
-                    <Link className={`mobile-item font-mobile-menu-item ${path === "features" ? "active" : ""}`} to={"/features"} onClick={() => setMenu(!menu)}>Features</Link>
                     <Link className={`mobile-item font-mobile-menu-item ${path === "pricing" ? "active" : ""}`} to={"/pricing"} onClick={() => setMenu(!menu)}>Pricing</Link>
-                    <Link className={`mobile-item font-mobile-menu-item ${path === "about" ? "active" : ""}`} to={"/about"} onClick={() => setMenu(!menu)}>About</Link>
                     <Link className={`mobile-item font-mobile-menu-item ${path === "business" ? "active" : ""}`} to={"/business"} onClick={() => setMenu(!menu)}>Business</Link>
                 </div>
             </div>
@@ -51,11 +51,11 @@ const Nav = (props) => {
                     <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/logo-white-orange-bg.svg"></img>
                 </Link>
                 <div className="items margin-transition">
+                    <Link className={`item font-menu-item ${path === "features" ? "active" : ""}`} to={"/features"}>Features</Link>
+                    <Link className={`item font-menu-item ${path === "guides" ? "active" : ""}`} to={"/guides"}>Guides</Link>
                     <Link className={`item font-menu-item ${path === "download" ? "active" : ""}`} to={"/download"}>Download</Link>
                     {/* <Link className={`item font-menu-item ${path === "pricing" ? "active" : ""}`} to={"/pricing"}>Pricing</Link> */}
-                    <Link className={`item font-menu-item ${path === "features" ? "active" : ""}`} to={"/features"}>Features</Link>
                     <Link className={`item font-menu-item ${path === "pricing" ? "active" : ""}`} to={"/pricing"}>Pricing</Link>
-                    <Link className={`item font-menu-item ${path === "about" ? "active" : ""}`} to={"/about"}>About</Link>
                     <Link className={`item font-menu-item ${path === "business" ? "active" : ""}`} to={"/business"}>Business</Link>
                 </div>
             </div>
