@@ -339,10 +339,10 @@ var STORE = {
                     // "html:::<h1> meomowoemwome </h1>",
 
                     "title:::Step 2: Installing On Window",
-                    "text:::Double click the Niceland VPN installer that you donwloaded in step 1",
+                    "text:::Double click the Niceland VPN installer that you donwloaded in Step 1.",
 
                     "title:::Step 2: Installing On MacOS",
-                    "text:::Unzip the file you downloaded in step 1 and move the Niceland VPN app to your 'Applications' folder",
+                    "text:::Unzip the file you downloaded in step 1 and move the Niceland VPN app to your 'Applications' folder.",
 
                     "title:::Step 2: Installing On Linux",
                     "text:::DEBIAN: $ dpkg -I [filename]",
@@ -350,9 +350,9 @@ var STORE = {
 
                     "title:::Step 3: Creating Your Account",
                     "text:::Account are created inside the Niceland VPN app.",
-                    "text:::The login screen will open up once Niceland is started, press the Register button",
+                    "text:::The login screen will open up once Niceland is started, press the Register button.",
                     "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/login-screen.png",
-                    "text:::Affiliate codes are placed in the 'code' input which is highlighted in the image. When you are done filling in your information press confirm",
+                    "text:::Affiliate codes are placed in the 'code' input which is highlighted in the image. When you are done filling in your information, press confirm.",
                     "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/registration-screen.png",
 
                     "title:::Step 4: Choosing A Subscription",
@@ -365,7 +365,7 @@ var STORE = {
                     "title:::Step 5: Connecting To Niceland",
                     "text:::Connecting to Niceland VPN is as simple as selecting the country you want.",
                     "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/country-selection.png",
-                    "text:::When the connection has been made you will be able to see the VPN you are connected to and a button to disconnect.",
+                    "text:::When the connection has been made, you will be able to see the VPN you are connected to and a button to disconnect.",
                     "image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connected-screen.png",
 
                     // "title:::Full video Guide",
