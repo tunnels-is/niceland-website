@@ -86,6 +86,9 @@ const Footer = (props) => {
                     <div className="item">
                         <a href="https://t.me/+hTRZ3W3YyuQwZGFk" target={"_blank"}>Telegram</a>
                     </div>
+                    <div className="item">
+                        <a href="https://matrix.to/#/#nicelandvpn:matrix.org" target={"_blank"}>Element/Matrix</a>
+                    </div>
                 </div>
 
                 <div className="s4">
