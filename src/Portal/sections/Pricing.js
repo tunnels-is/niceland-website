@@ -44,11 +44,11 @@ const Pricing = (props) => {
 
         <div className="sub sub-2" onClick={() => LoadPaymentWindow(2)}>
           <div className="title">Nicer</div>
-          <span className="launch">20% Launch Discount!</span>
           {tab === 1 &&
             <>
+              <span className="launch">32% Launch Discount!</span>
               <div className="price price-old teal">
-                <span className="value">Before 8.5 USD</span>
+                {/* <span className="value">Before 8.5 USD</span> */}
               </div>
               <div className="price price-current teal">
                 <span className="value">6.8</span>
@@ -60,8 +60,9 @@ const Pricing = (props) => {
           }
           {tab === 2 &&
             <>
+              <span className="launch">36% Launch Discount!</span>
               <div className="price price-old teal">
-                <span className="value">Before 8 USD</span>
+                {/* <span className="value">Before 8 USD</span> */}
               </div>
               <div className="price price-current teal">
                 <span className="value">6.4</span>
@@ -80,11 +81,11 @@ const Pricing = (props) => {
         <div className="sub sub-3" onClick={() => LoadPaymentWindow(3)}>
           {/* <div className="discount">Save 40%</div> */}
           <div className="title">Nicest</div>
-          <span className="launch">20% Launch Discount!</span>
           {tab === 1 &&
             <>
+              <span className="launch">48% Launch Discount!</span>
               <div className="price price-old teal">
-                <span className="value">Before 6.5 USD</span>
+                {/* <span className="value">Before 6.5 USD</span> */}
               </div>
               <div className="price price-current teal">
                 <span className="value">5.2</span>
@@ -96,8 +97,8 @@ const Pricing = (props) => {
           }
           {tab === 2 &&
             <>
+              <span className="launch">52% Launch Discount!</span>
               <div className="price price-old teal">
-                <span className="value">Before 6 USD</span>
               </div>
               <div className="price price-current teal">
                 <span className="value">4.8</span>
