@@ -9,7 +9,7 @@ const ContactUS = (props) => {
       </div>
       <div className="subtitle font-section-subtitle">
         <a href="mailto:support@nicelandvpn.is">
-          support @ nicelandvpn.is
+          contact @ nicelandvpn.is
         </a>
       </div>
     </div>

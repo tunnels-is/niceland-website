@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Euros",
+        "period": 1,
+        "type": 4,
+        "discount": 0,
+        "price": 40
+    },
+    {
+        "name": "USD",
+        "period": 1,
+        "type": 4,
+        "discount": 0,
+        "price": 40
+    }
+]

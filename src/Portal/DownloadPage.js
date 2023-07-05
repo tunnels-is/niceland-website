@@ -17,8 +17,8 @@ const DownloadPage = () => {
                 title={"Experience Niceland"}
                 subtitle={"On MacOS, Windows and Linux"}
                 showLink={true}
-                linkText={"All Features"}
-                linkPath={"/features"}
+                linkText={"Free Trial"}
+                linkPath={"/register"}
             />
 
             <Download row={"1"} bg={"1"}></Download>

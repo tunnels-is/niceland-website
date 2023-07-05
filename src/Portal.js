@@ -1,5 +1,5 @@
-import { BrowserRouter, HashRouter, Link, Route, Router, Routes, useLocation, useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import FeaturesPage from "./Portal/features";
 import SupportPage from "./Portal/Support";
@@ -12,17 +12,16 @@ import STORE from "./store";
 import "./assets/style/portal.scss"
 import AboutPage from "./Portal/AboutPage";
 import DownloadPage from "./Portal/DownloadPage";
-import Beta from "./Portal/Beta";
 import Policies from "./Portal/Policies";
 import SliderSmall from "./Portal/sliders/Small";
-import Payment from "./Portal/sections/Payment";
 import BusinessVPNPage from "./Portal/BusinessVPNPage";
-import Countries from "./Portal/sections/Countries";
 import CountriesPage from "./Portal/CountriesPage";
 import PricingPage from "./Portal/Pricing";
 import CashPage from "./Portal/Cash";
 import GuidePage from "./Portal/GuidePage";
 import GuideLoaderPage from "./Portal/GuideLoaderPage";
+import PaymentPage from "./Portal/PaymentPage";
+import RegisterPage from "./Portal/RegisterPage";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -51,6 +50,11 @@ const LaunchPortal = () => {
             <Route path="/" element={<HomePage setError={setError} setSuccess={setSuccess} />} />
 
             <Route path="slider/:dir/:code" element={<SliderSmall />} />
+
+            <Route path="register" element={<RegisterPage setError={setError} setSuccess={setSuccess} />} />
+            <Route path="code/:paramCode" element={<RegisterPage setError={setError} setSuccess={setSuccess} />} />
+
+            <Route path="payment" element={<PaymentPage setError={setError} setSuccess={setSuccess} />} />
 
             <Route path="support" element={<SupportPage setError={setError} setSuccess={setSuccess} />} />
             <Route path="cash" element={<CashPage setError={setError} setSuccess={setSuccess} />} />

@@ -23,8 +23,8 @@ const HomePage = () => {
         title={"Welcome To Niceland"}
         subtitle={"The Global Mesh-Network VPN"}
         showLink={true}
-        linkText={"Get NicelandVPN"}
-        linkPath={"/download"}
+        linkText={"Free Trial"}
+        linkPath={"/register"}
       />
       {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <AboutHome row={"1"} bg={"1"}></AboutHome>

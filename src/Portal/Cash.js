@@ -3,7 +3,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { BsCheck2All } from "react-icons/bs"
 import Banner from "./Banner";
 import Cash from "./sections/Cash";
-import Payment from "./sections/Payment";
+import Payment from "./PaymentPage";
 import Notice from "./NoticeBanner";
 import Download from "./sections/Download";
 import BannerPricing from "./BannervPricing";

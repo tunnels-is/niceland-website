@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Nice",
+        "period": 1,
+        "type": 1,
+        "discount": 20,
+        "original": 10,
+        "price": 8,
+        "fullPrice": 8,
+        "commitment": 1
+    },
+    {
+        "name": "Nicer",
+        "period": 1,
+        "type": 2,
+        "discount": 32,
+        "original": 8,
+        "price": 6.8,
+        "fullPrice": 6.8,
+        "commitment": 1
+    },
+    {
+        "name": "Nicest",
+        "period": 1,
+        "type": 3,
+        "discount": 48,
+        "original": 0,
+        "price": 5.2,
+        "fullPrice": 5.2,
+        "commitment": 1
+    },
+    {
+        "name": "Nicer",
+        "period": 2,
+        "type": 2,
+        "discount": 36,
+        "original": 0,
+        "fullPrice": 38.4,
+        "price": 6.4,
+        "commitment": 6
+    },
+    {
+        "name": "Nicest",
+        "period": 2,
+        "type": 3,
+        "discount": 52,
+        "original": 0,
+        "fullPrice": 57.6,
+        "price": 4.8,
+        "commitment": 12
+    }
+]

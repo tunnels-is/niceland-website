@@ -20,8 +20,8 @@ const GuidePage = () => {
                 title={"Guides And FAQ"}
                 subtitle={"Use our guides to navigate Niceland"}
                 showLink={true}
-                linkText={"Get NicelandVPN"}
-                linkPath={"/download"}
+                linkText={"Free Trial"}
+                linkPath={"/register"}
             />
 
             <Guides row={"1"} bg={"1"}></Guides>

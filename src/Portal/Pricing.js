@@ -3,7 +3,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { BsCheck2All } from "react-icons/bs"
 import Banner from "./Banner";
 import Pricing from "./sections/Pricing";
-import Payment from "./sections/Payment";
+import Payment from "./PaymentPage";
 import Notice from "./NoticeBanner";
 import Download from "./sections/Download";
 import BannerPricing from "./BannervPricing";
@@ -23,8 +23,8 @@ const PricingPage = (props) => {
         title={"Nice Subscription Options"}
         subtitle={"With official launch discounts!"}
         showLink={true}
-        linkText={"Get NicelandVPN"}
-        linkPath={"/download"}
+        linkText={"Free Trial"}
+        linkPath={"/register"}
       />
       {/* <Notice row={"1"} bg={"1"}></Notice> */}
       <Pricing row={1} bg={1}></Pricing>

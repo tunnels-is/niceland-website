@@ -20,8 +20,8 @@ const PrivateVPNPage = () => {
                 title={"Enterprise VPN"}
                 subtitle={"Deploy NicelandVPN at scale"}
                 showLink={true}
-                linkText={"Get NicelandVPN"}
-                linkPath={"/download"}
+                linkText={"Free Trial"}
+                linkPath={"/register"}
             />
             <AboutBusinessVPN row={"1"} bg={1}></AboutBusinessVPN>
             <BusinessVPN row={"1"} bg={1}></BusinessVPN>

@@ -9,13 +9,14 @@ const Download = (props) => {
     <div id="download" className={`download grid-row-${props.row} inherit-grid`}>
 
       <div className="download-title font-section-title">
-        Register in the app!
+        Available Downloads
       </div>
       <div className="subtitle font-section-subtitle">
 
         <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">
           Click here for all available downloads
         </a>
+
       </div>
 
       <div className="s1 box box-shadow">
@@ -23,7 +24,7 @@ const Download = (props) => {
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-win11.svg"></img>
         <div className="title">
 
-          <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/download/v1.0.4/NicelandVPN-1.0.4-windows.exe">
+          <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/download/v1.0.5/NicelandVPN-1.0.5-windows.exe">
             Download for Windows
           </a>
         </div>
@@ -32,7 +33,7 @@ const Download = (props) => {
       <div className="s2 box box-shadow">
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/mac.svg"></img>
         <div className="title">
-          <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/download/v1.0.4/NicelandVPN-1.0.4-apple-macos.zip">
+          <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/download/v1.0.5/NicelandVPN-1.0.5-apple-macos.zip">
             Download for MacOS
           </a>
         </div>
