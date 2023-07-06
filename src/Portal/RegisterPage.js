@@ -322,7 +322,7 @@ const RegisterPage = () => {
 
             {rinputs["code"] &&
               <div className="register-item">
-                <label for="code" class="label">{rerrors["code"] ? <span className="error">{rerrors["code"]}</span> : "Affiliate"}</label>
+                <label for="code" class="label">{rerrors["code"] ? <span className="error">{rerrors["code"]}</span> : "Code"}</label>
                 <input type="code" value={rinputs["code"]} class="input" id="code" onChange={handleRInputChange} />
               </div>
             }
