@@ -1899,14 +1899,17 @@ body {
         // max-width: 400px;
         padding-left: 100px;
         padding-right: 100px;
-        padding-top: 50px;
+        // padding-top: 50px;
         padding-bottom: 50px;
         margin-left: calc(50% - 250px);
+        // filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.521));
+        box-shadow: 1px 3px 7px 0px #0000007a;
 
         display: flex;
         flex-direction: column;
         background-color: $c-5;
         border: 1px solid $c-6;
+        border-top: none !important;
         margin-bottom: 100px;
 
         .affiliate-code {
@@ -1936,6 +1939,8 @@ body {
                 float: left;
                 width: 100%;
                 height: 30px;
+                word-break: break-all;
+                resize: none;
             }
 
             input:focus {
@@ -1950,11 +1955,15 @@ body {
 
         .token-warning-color {
             color: red !important;
-
         }
 
         .token-input {
-            width: 115% !important;
+            // width: 115% !important;
+            height: 40px !important;
+        }
+
+        .register-item-margin-adjust {
+            margin-bottom: 20px !important;
         }
 
         .error {
@@ -1968,14 +1977,31 @@ body {
 
     }
 
+    .register-form-account-exists {
+        padding-top: 50px !important;
+    }
+
+    .notification {
+
+        // position: relative;
+        // top: -100px;
+        margin-bottom: 100px;
+        text-align: center;
+        height: 20px;
+        width: 100%;
+        color: black;
+        font-size: 1.3em;
+    }
+
     .account-exists {
         position: relative;
         top: 0px;
         height: 20px;
-        width: 502px;
+        width: 100%;
         margin-bottom: 30px;
-        margin-left: calc(50% - 250px);
+        // margin-left: calc(50% - 250px);
         text-align: center;
+
 
         .link {
             font-size: 1.2em;
@@ -1992,34 +2018,35 @@ body {
     .tab-wrapper {
         position: relative;
         top: 0px;
-        height: 40px;
-        width: 502px;
-        margin-bottom: 10px;
-        margin-left: calc(50% - 250px);
+        height: 50px;
+        width: 500px;
+        margin-bottom: 40px;
+        margin-left: -100px;
+        // margin-left: calc(50% - 250px);
+        font-size: 1.2em;
         text-align: center;
 
         .active {
-            background-color: $c-1 !important;
-            border: 1px solid $c-1;
+            background-color: $c-5 !important;
+            text-decoration: underline;
         }
 
         .email-tab {
+            padding-top: 15px !important;
             background-color: $c-6;
             color: $c-7;
-            border: 1px solid $c-6;
-            border-right: none;
-            width: 229px;
+            width: calc(50% - 20px);
             float: left;
             padding: 10px;
             cursor: pointer;
         }
 
         .anon-tab {
+            padding-top: 15px !important;
             padding: 10px;
             background-color: $c-6;
             color: $c-7;
-            border: 1px solid $c-6;
-            width: 229px;
+            width: calc(50% - 20px);
             float: left;
             cursor: pointer;
         }
@@ -3659,6 +3686,79 @@ body {
 
 }
 
+@media screen and (max-width: 520px) {
+    .font-section-title {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: 700;
+        font-size: 13vw;
+        line-height: 1em;
+    }
+
+    .payment-wrapper {
+        .payment-form {
+            width: 100% !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            padding-bottom: 50px !important;
+            padding-top: 50px !important;
+            padding-left: 10px !important;
+            padding-right: 20px !important;
+        }
+    }
+
+    .register-wrapper {
+        .register-form {
+            width: 100% !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            padding-bottom: 50px !important;
+
+            .register-item {
+                padding-left: 10px !important;
+                padding-right: 20px !important;
+            }
+
+            .token-warning {
+                height: 22% !important;
+                margin-bottom: 20px !important;
+            }
+        }
+
+        .account-exists {
+            width: 100% !important;
+            margin: 0px !important;
+            margin-bottom: 30px !important;
+
+            .link {
+                font-size: 7vw !important;
+            }
+        }
+
+        .tab-wrapper {
+            width: 100% !important;
+            margin: 0px !important;
+            margin-bottom: 30px !important;
+            font-size: 5vw;
+
+            .email-tab {
+                width: calc(50% - 2px) !important;
+                padding: 0px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .anon-tab {
+                width: calc(50% - 1px) !important;
+                padding: 0px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+        }
+    }
+}
+
 @media screen and (max-width: 670px) {
 
 
@@ -3774,6 +3874,11 @@ body {
             grid-row: 1;
             grid-column-start: 1;
             grid-column-end: 13;
+            font-size: 10vw;
+        }
+
+        .subtitle {
+            font-size: 8vw;
         }
 
         .discord {

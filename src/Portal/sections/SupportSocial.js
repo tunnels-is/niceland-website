@@ -10,9 +10,9 @@ const SupportSocial = (props) => {
       <div className="title font-section-title">
         Communities
       </div>
-      <div className="subtitle font-section-subtitle">
+      {/* <div className="subtitle font-section-subtitle">
         Find us on any of these platforms
-      </div>
+      </div> */}
 
       <div className="box slack">
         <a href="https://join.slack.com/t/nicelandvpn/shared_invite/zt-1rfv4ks6d-A5lLr9W4FdjEzlmZXwrMzw" target={"_blank"}>

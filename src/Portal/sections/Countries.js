@@ -11,6 +11,7 @@ var countries = [
   { code: "hk", name: "Hong Kong" },
   { code: "nl", name: "Netherlands" },
   { code: "ca", name: "Canada" },
+  { code: "fr", name: "France" },
   { code: "pl", name: "Poland" },
 ]
 const Countries = (props) => {

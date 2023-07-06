@@ -24,8 +24,9 @@ const useForm = () => {
 
 
 
-  const GENERATE_TOKEN = () => {
-    if (!tokenreg) {
+  const GENERATE_TOKEN = (toggle) => {
+    if (toggle) {
+
       let token = uuidv4()
       setTokenreg(true)
       setRInputs(rinputs => ({ ...rinputs, ["email"]: token }));
@@ -40,9 +41,9 @@ const useForm = () => {
     let errors = {}
     let hasErrors = false
 
-    console.log("SUBMITTING")
-    console.dir(rinputs)
-    console.log("SUBMITTING")
+    // console.log("SUBMITTING")
+    // console.dir(rinputs)
+    // console.log("SUBMITTING")
 
     if (!rinputs["email"] || rinputs["email"] === "") {
       errors["email"] = "Email / Username missing"
@@ -99,7 +100,7 @@ const useForm = () => {
       const r = await CLIENT.post("https://pay.nicelandvpn.is/user/create", JSON.stringify(rinputs));
       const xd = await r.data
 
-      console.dir(xd)
+      // console.dir(xd)
 
       STORE.SessionCache.Set("x", rinputs["email"])
       STORE.Cache.Set("code", rinputs["code"])
@@ -107,7 +108,7 @@ const useForm = () => {
       setSuccess(true)
 
     } catch (error) {
-      console.dir(error)
+      // console.dir(error)
       let errors = {}
       if (error.response?.status === 406) {
         if (error.response?.data) {
@@ -191,7 +192,7 @@ const RegisterPage = () => {
       const r = await CLIENT.get("https://pay.nicelandvpn.is/count/" + tag);
       const xd = await r.data
     } catch (error) {
-      console.dir(error)
+      // console.dir(error)
     }
 
   }
@@ -251,7 +252,7 @@ const RegisterPage = () => {
             </span>
           </div>
 
-          <div className="register-form">
+          <div className="register-form register-form-account-exists">
             <div className="register-item">
               <label for="email" class="label">Email / Username</label>
               <input type="email" value={rinputs["email"]} class="input" id="email" onChange={handleRInputChange} />
@@ -268,18 +269,22 @@ const RegisterPage = () => {
 
       {!accExists &&
         <>
+          <div className="notification" >
+            All new accounts get a 24 hour free trial which start on your first connect <br />
+          </div>
+
           <div className="account-exists" >
             <span className="link" onClick={() => AccountExists(true)}>
               Already have an account ?
             </span>
           </div>
 
-          <div className="tab-wrapper">
-            <div className={`email-tab ${tokenreg ? "" : "active"}`} onClick={() => GENERATE_TOKEN()}>Email Registration</div>
-            <div className={`anon-tab ${tokenreg ? "active" : ""}`} onClick={() => GENERATE_TOKEN()}>Anonymous Registration</div>
-          </div>
 
           <div className="register-form">
+            <div className="tab-wrapper">
+              <div className={`email-tab ${tokenreg ? "" : "active"}`} onClick={() => GENERATE_TOKEN(false)}>Email</div>
+              <div className={`anon-tab ${tokenreg ? "active" : ""}`} onClick={() => GENERATE_TOKEN(true)}>Anonymous</div>
+            </div>
 
             {rerrors["response"] &&
               <div className="register-item">
@@ -295,10 +300,10 @@ const RegisterPage = () => {
               </div>
             }
 
-            <div className="register-item">
+            <div className={`register-item ${tokenreg ? "register-item-margin-adjust" : ""}`}>
               <label for="email" class="label">{rerrors["email"] ? <span className="error">{rerrors["email"]}</span> : emailLabel}</label>
               {tokenreg &&
-                <input type="email" value={rinputs["email"]} class="input token-input" id="email" onChange={handleRInputChange} />
+                <textarea type="email" value={rinputs["email"]} class="input token-input" id="email" onChange={handleRInputChange} />
               }
               {!tokenreg &&
                 <input type="email" value={rinputs["email"]} class="input" id="email" onChange={handleRInputChange} />
