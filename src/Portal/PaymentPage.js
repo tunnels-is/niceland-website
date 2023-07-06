@@ -70,10 +70,6 @@ const useForm = () => {
     let errors = {}
     let hasErrors = false
 
-    console.log("SUBMITTING")
-    console.dir(inputs)
-    console.log("SUBMITTING")
-
 
     if (!inputs["email"] || inputs["email"] === "") {
       errors["email"] = "Email/Username missing please re-open the payment form"
@@ -133,12 +129,9 @@ const useForm = () => {
       const r = await CLIENT.post("https://pay.nicelandvpn.is/verify", JSON.stringify(form));
       const xd = await r.data
 
-      console.dir(xd)
       setResponse(xd)
 
     } catch (error) {
-      console.dir(error)
-      console.dir(error)
       let errors = {}
       if (error.response?.data) {
         errors["response"] = error.response.data
@@ -196,7 +189,6 @@ const PaymentPage = () => {
   useEffect(() => {
     if (!inputs["email"]) {
       let user = STORE.SessionCache.Get("x")
-      console.log("x", user)
       if (user) {
         handleInputChange({ target: { id: "email", value: user } })
       }
