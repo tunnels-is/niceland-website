@@ -174,23 +174,22 @@ const RegisterPage = () => {
   const { navigate, loading, rresponse, setRResponse, rerrors, setRErrors, rinputs, setRInputs, success, handleRInputChange, Register, tokenreg, setTokenreg, GENERATE_TOKEN, AccountExists, accExists, UpdateAccountEmail } = useForm();
 
   let { paramCode } = useParams()
-  console.log(paramCode)
-  if (paramCode) {
-    STORE.Cache.Set("code", paramCode)
-  }
+  // console.log(paramCode)
+  // if (paramCode) {
+  //   STORE.Cache.Set("code", paramCode)
+  // }
 
   const SEND_COUNT = async (tag) => {
 
-    let counterCheck = STORE.SessionCache.GetBool("counter")
-    if (counterCheck) {
-      return
-    } else {
-      STORE.SessionCache.Set("counter", true)
-    }
+    // let counterCheck = STORE.SessionCache.GetBool("counter")
+    // if (counterCheck) {
+    //   return
+    // } else {
+    //   STORE.SessionCache.Set("counter", true)
+    // }
 
     try {
       const r = await CLIENT.get("https://pay.nicelandvpn.is/count/" + tag);
-      const xd = await r.data
     } catch (error) {
       // console.dir(error)
     }
@@ -201,13 +200,20 @@ const RegisterPage = () => {
     let code = ""
     if (paramCode) {
       code = paramCode
+
+      let sessionCode = STORE.Cache.Get("code")
+      if (sessionCode !== code) {
+        STORE.Cache.Set("code", code)
+        STORE.SessionCache.Set("counter", false)
+        SEND_COUNT(code)
+      }
+
     } else {
       code = STORE.Cache.Get("code")
     }
 
     if (!rinputs["code"] && code) {
       handleRInputChange({ target: { id: "code", value: code } })
-      SEND_COUNT(code)
     }
 
   }, [])
