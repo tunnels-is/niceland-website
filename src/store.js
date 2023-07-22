@@ -133,7 +133,7 @@ var STORE = {
             "NoPersistanceService": {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
                 icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/computer-desk.svg",
-                title: "None-Persistant Software",
+                title: "None-Persistent Software",
                 short: "Nicelands APP was designed to not leave any running background services on your device once the app has been closed. This makes Niceland's footprint on your device even smaller.",
                 long: "",
             },
@@ -244,9 +244,9 @@ var STORE = {
                 long: "",
             },
             // TO BE ANNOUNCED / LAUNCHED
-            "PersistantSessions": {
+            "PersistentSessions": {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
-                title: "Persistant Sessions",
+                title: "Persistent Sessions",
                 short: "Niceland offers users the ability to purchause persistent session on VPN servers. This means that even when disconnected, Niceland saves you a spot on your selected VPN server.",
                 long: "",
             },
