@@ -41,7 +41,7 @@ const Pricing = (props) => {
           <div className="text orange commitment">{sub.commitment} month commitment</div>
         }
         {sub.period === 2 &&
-          <div className="text orange commitment">{sub.fullPrice} USD billed every 6 months</div>
+          <div className="text orange commitment">{sub.fullPrice} USD billed every {sub.commitment} months</div>
         }
 
         <div className="text">30 Day money-back guarantee</div>
