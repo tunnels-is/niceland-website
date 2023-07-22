@@ -88,6 +88,14 @@ const useForm = () => {
       errors["year"] = "Expiration year missing"
       hasErrors = true
     }
+
+    if (inputs["year"] && inputs["year"] !== "") {
+      if (inputs["year"].length > 2) {
+        errors["year"] = "Year should only be two digits"
+        hasErrors = true
+      }
+    }
+
     if (!inputs["CVC"] || inputs["CVC"] === "") {
       errors["CVC"] = "CVC missing"
       hasErrors = true
@@ -247,8 +255,8 @@ const PaymentPage = () => {
           </div>
 
           <div className="payment-item-small">
-            <input type="text" value={inputs["month"]} class="input input-small" id="month" onChange={handleInputChange} placeholder="Month" />
-            <input type="text" value={inputs["year"]} class="input input-small" id="year" onChange={handleInputChange} placeholder="Year" />
+            <input type="text" value={inputs["month"]} class="input input-small" id="month" onChange={handleInputChange} placeholder="MM" />
+            <input type="text" value={inputs["year"]} class="input input-small" id="year" onChange={handleInputChange} placeholder="YY" />
             <input type="text" value={inputs["CVC"]} class="input input-small" id="CVC" onChange={handleInputChange} placeholder="CVC" />
           </div>
 
