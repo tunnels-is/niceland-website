@@ -17,7 +17,7 @@
         "original": 8,
         "price": 6.8,
         "fullPrice": 6.8,
-        "commitment": 1
+        "commitment": 6
     },
     {
         "name": "Nicest",
@@ -27,7 +27,7 @@
         "original": 0,
         "price": 5.2,
         "fullPrice": 5.2,
-        "commitment": 1
+        "commitment": 12
     },
     {
         "name": "Nicer",
