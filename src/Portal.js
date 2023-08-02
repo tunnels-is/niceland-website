@@ -52,6 +52,7 @@ const LaunchPortal = () => {
             <Route path="slider/:dir/:code" element={<SliderSmall />} />
 
             <Route path="register" element={<RegisterPage setError={setError} setSuccess={setSuccess} />} />
+
             <Route path="code/:paramCode" element={<RegisterPage setError={setError} setSuccess={setSuccess} />} />
 
             <Route path="payment" element={<PaymentPage setError={setError} setSuccess={setSuccess} />} />

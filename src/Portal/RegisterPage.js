@@ -279,12 +279,6 @@ const RegisterPage = () => {
             All new accounts get a 24 hour free trial which start on your first connect <br />
           </div>
 
-          <div className="account-exists" >
-            <span className="link" onClick={() => AccountExists(true)}>
-              Already have an account ?
-            </span>
-          </div>
-
 
           <div className="register-form">
             <div className="tab-wrapper">
