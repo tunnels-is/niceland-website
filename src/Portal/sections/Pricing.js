@@ -249,7 +249,6 @@ const useForm = () => {
       hasErrors = true
     }
 
-    let sub = STORE.SessionCache.GetObject("sub")
     if (!sub) {
       errors["card"] = "Subscription information missing, please select your subscription again from the pricing page"
       hasErrors = true
@@ -354,9 +353,9 @@ const Pricing = (props) => {
   }, [])
 
 
-  console.table(inputs)
-  console.table(errors)
-  console.table(sub)
+  // console.table(inputs)
+  // console.table(errors)
+  // console.table(sub)
 
   return (
     <>
