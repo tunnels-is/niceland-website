@@ -35,7 +35,7 @@ var STORE = {
             "AnonymousMetaData": {
                 // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-anon-mask.png",
                 icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/file-vault.svg",
-                title: "Anonymous Meta Data",
+                title: "Anonymous MetaData",
                 short: "Session data and meta-data is something many VPN users are worried about. Niceland is designed with a custom Tag-Routing protocol which keeps any session information anonymous. Additionally Niceland does not keep any session data or meta data after users have disconnected.",
                 long: "",
             },
