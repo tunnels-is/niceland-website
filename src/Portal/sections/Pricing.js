@@ -180,7 +180,7 @@ const useForm = () => {
     try {
       setLoading(true)
 
-      const r = await CLIENT.post("https://pay.nicelandvpn.is/affiliate", JSON.stringify(form));
+      const r = await CLIENT.post("https://pay.nicelandvpn.is:444/affiliate", JSON.stringify(form));
       const xd = await r.data
 
       setAffiliate(xd)
@@ -276,7 +276,7 @@ const useForm = () => {
 
     try {
 
-      const r = await CLIENT.post("https://pay.nicelandvpn.is/verify", JSON.stringify(form));
+      const r = await CLIENT.post("https://pay.nicelandvpn.is:444/verify", JSON.stringify(form));
       const xd = await r.data
 
       setResponse(xd)

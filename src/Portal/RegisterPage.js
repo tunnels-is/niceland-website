@@ -97,7 +97,7 @@ const useForm = () => {
     setLoading(true)
     try {
 
-      const r = await CLIENT.post("https://pay.nicelandvpn.is/user/create", JSON.stringify(rinputs));
+      const r = await CLIENT.post("https://pay.nicelandvpn.is:444/user/create", JSON.stringify(rinputs));
       const xd = await r.data
 
       // console.dir(xd)
@@ -189,7 +189,7 @@ const RegisterPage = () => {
     // }
 
     try {
-      const r = await CLIENT.get("https://pay.nicelandvpn.is/count/" + tag);
+      const r = await CLIENT.get("https://pay.nicelandvpn.is:444/count/" + tag);
     } catch (error) {
       // console.dir(error)
     }
