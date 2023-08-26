@@ -84,7 +84,7 @@ const FeaturesPage = () => {
       <XXXXFeatures row={"10"} bg={"1"} class={"no-bottom-padding"}
         title={"On The Horizon"}
         features={[
-          STORE.Content.Features["PersistantSessions"],
+          STORE.Content.Features["PersistentSessions"],
           STORE.Content.Features["CryptoPayments"],
           STORE.Content.Features["GamingMode"],
           STORE.Content.Features["IncreasedMinimumBandwidth"]
