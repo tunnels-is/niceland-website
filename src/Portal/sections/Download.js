@@ -5,6 +5,18 @@ const Download = (props) => {
 
   const navigate = useNavigate();
 
+  function handleWindowsClick() {
+    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.3/NicelandVPN-Windows.exe', '_blank');
+  }
+  
+  function handleMacClick() {
+    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.3/NicelandVPN-MacOS.zip', '_blank');
+  }
+  
+  function handleLinuxClick() {
+    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/latest', '_blank');
+  }
+
   return (
     <div id="download" className={`download grid-row-${props.row} inherit-grid`}>
 
@@ -19,32 +31,23 @@ const Download = (props) => {
 
       </div>
 
-      <div className="s1 box box-shadow">
-
+      <div className="s1 box box-shadow" onClick={handleWindowsClick} style={{cursor: 'pointer'}}>
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-win11.svg"></img>
         <div className="title">
-
-          <a target="_blank" href="https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.3/NicelandVPN-Windows.exe">
             Download for Windows
-          </a>
         </div>
       </div>
-
-      <div className="s2 box box-shadow">
+      <div className="s2 box box-shadow" onClick={handleMacClick} style={{cursor: 'pointer'}}>
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/mac.svg"></img>
         <div className="title">
-          <a target="_blank" href="https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.3/NicelandVPN-MacOS.zip">
             Download for MacOS
-          </a>
         </div>
       </div>
 
-      <div className="s3 box box-shadow">
+      <div className="s3 box box-shadow" onClick={handleLinuxClick} style={{cursor: 'pointer'}}>
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-linux.png"></img>
-        <div className="title">
-          <a target="_blank" href="https://github.com/tunnels-is/nicelandvpn-desktop/releases/latest">
+        <div className="title">      
             Download for Linux
-          </a>
         </div>
       </div>
 
