@@ -19,7 +19,10 @@ const Countries = (props) => {
   return (
     <div className={`countries grid-row-${props.row} inherit-grid bg-${props.bg}`}>
       <div className="title font-section-title">
-        Available Countries
+        Available World Wide
+        <div className="subtitle font-section-subtitle">
+          VPN Server Locations
+        </div>
       </div>
 
 
