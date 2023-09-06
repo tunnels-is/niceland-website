@@ -347,7 +347,12 @@ const Pricing = (props) => {
 
     let code = STORE.Cache.Get("code")
     if (!inputs["discountcode"] && code) {
-      handleInputChange({ target: { id: "discountcode", value: code } })
+      if (code === undefined || inputs["discountcode"] === undefined || inputs["discountcode"] === "undefined" || code === "undefined") {
+
+      } else {
+
+        handleInputChange({ target: { id: "discountcode", value: code } })
+      }
     }
 
   }, [])

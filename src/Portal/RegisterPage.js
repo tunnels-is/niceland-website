@@ -232,7 +232,7 @@ const RegisterPage = () => {
           Registration complete!
           <br />
           <br />
-          You can now pick a subscription on the
+          You can now login in the APP or pick a subscription on the
           {` `}
           <Link to={"/pricing"}>
             Subscription
