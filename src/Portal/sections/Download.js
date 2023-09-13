@@ -6,13 +6,13 @@ const Download = (props) => {
   const navigate = useNavigate();
 
   function handleWindowsClick() {
-    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.3/NicelandVPN-Windows.exe', '_blank');
+    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.4/NicelandVPN-Windows.exe', '_blank');
   }
-  
+
   function handleMacClick() {
-    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.3/NicelandVPN-MacOS.zip', '_blank');
+    window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.4/NicelandVPN-MacOS.zip', '_blank');
   }
-  
+
   function handleLinuxClick() {
     window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/latest', '_blank');
   }
@@ -31,23 +31,23 @@ const Download = (props) => {
 
       </div>
 
-      <div className="s1 box box-shadow" onClick={handleWindowsClick} style={{cursor: 'pointer'}}>
+      <div className="s1 box box-shadow" onClick={handleWindowsClick} style={{ cursor: 'pointer' }}>
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-win11.svg"></img>
         <div className="title">
-            Download for Windows
+          Download for Windows
         </div>
       </div>
-      <div className="s2 box box-shadow" onClick={handleMacClick} style={{cursor: 'pointer'}}>
+      <div className="s2 box box-shadow" onClick={handleMacClick} style={{ cursor: 'pointer' }}>
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/mac.svg"></img>
         <div className="title">
-            Download for MacOS
+          Download for MacOS
         </div>
       </div>
 
-      <div className="s3 box box-shadow" onClick={handleLinuxClick} style={{cursor: 'pointer'}}>
+      <div className="s3 box box-shadow" onClick={handleLinuxClick} style={{ cursor: 'pointer' }}>
         <img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-linux.png"></img>
-        <div className="title">      
-            Download for Linux
+        <div className="title">
+          Download for Linux
         </div>
       </div>
 
