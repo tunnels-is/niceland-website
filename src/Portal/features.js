@@ -77,6 +77,11 @@ const FeaturesPage = () => {
         STORE.Content.Features["GEOUnblocking"],
       ]}></XXXXFeatures>
 
+      <XXXXFeatures row={"8"} bg={"1"} class={"no-top-padding"} features={[
+        STORE.Content.Features["OpenSource"],
+        STORE.Content.Features["PrivateVPN"],
+      ]}></XXXXFeatures>
+
       <MainFeatures row={"2"} bg={"2"} button={false}></MainFeatures>
       <AboutBusinessVPN row={"10"} bg={"1"} button={true}></AboutBusinessVPN>
       <Countries row={13} bg={2}></Countries>
@@ -91,24 +96,18 @@ const FeaturesPage = () => {
         ]}></XXXXFeatures>
 
       <XXXXFeatures row={"11"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
-        STORE.Content.Features["PrivateVPN"],
         STORE.Content.Features["AndroidAPP"],
         STORE.Content.Features["iOSAPP"],
         STORE.Content.Features["SecurityAudit"],
+        STORE.Content.Features["PortForwarding"],
       ]}></XXXXFeatures>
 
       <XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
         STORE.Content.Features["DetailedDocs"],
-        STORE.Content.Features["OpenSource"],
         STORE.Content.Features["StandAloneCLI"],
-        STORE.Content.Features["LinuxSecuritySigning"]
-      ]}></XXXXFeatures>
-
-      <XXXXFeatures row={"13"} bg={"1"} class={"no-top-padding"} features={[
-        STORE.Content.Features["PortForwarding"],
+        STORE.Content.Features["LinuxSecuritySigning"],
         STORE.Content.Features["RouteOnlyVPN"],
       ]}></XXXXFeatures>
-
 
 
       <Download row={"14"} bg={"2"}></Download>

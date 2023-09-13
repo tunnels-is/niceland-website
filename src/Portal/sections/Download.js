@@ -25,7 +25,7 @@ const Download = (props) => {
       </div>
       <div className="subtitle font-section-subtitle">
 
-        <a target="_blank" href="https://github.com/tunnels-is/nicelandVPN/releases/latest">
+        <a target="_blank" href="https://github.com/tunnels-is/nicelandvpn-desktop/releases/latest">
           Click here for all available downloads
         </a>
 
