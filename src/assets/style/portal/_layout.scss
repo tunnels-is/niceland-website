@@ -145,8 +145,8 @@ body {
   font-family: $font-family;
   font-style: $font-style;
   font-weight: 400;
-  font-size: 1.1em;
-  line-height: 20px;
+  font-size: 1em;
+  line-height: 150%;
 }
 
 .font-footer-links {
@@ -1272,7 +1272,6 @@ body {
     .description {
       margin-top: 20px;
       height: auto;
-      line-height: 150%;
     }
 
     .learn-more-button {
@@ -1359,7 +1358,6 @@ body {
     .description {
       margin-top: 10px;
       text-align: center;
-      line-height: 150%;
       // padding: 5px;
     }
 
@@ -2354,7 +2352,6 @@ body {
       // margin-left: 62px;
       // padding: 5px;
       float: left;
-      line-height: 150%;
     }
 
 
@@ -2437,7 +2434,6 @@ body {
 
     .description {
       margin-top: 20px;
-      line-height: 150%;
       // padding: 5px;
     }
 
@@ -3496,7 +3492,6 @@ body {
 
       .description {
         margin-top: 0px;
-        line-height: 150%;
       }
     }
 
@@ -3615,7 +3610,6 @@ body {
 
       .description {
         margin-top: 10px;
-        line-height: 150%;
       }
     }
 
