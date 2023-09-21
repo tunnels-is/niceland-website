@@ -30,7 +30,7 @@ const FeaturesPage = () => {
 
       <AboutFeatures row={"1"} bg={"1"}></AboutFeatures>
 
-      <FirstFeatures row={"3"} bg={"2"}
+      <FirstFeatures row={"2"} bg={"2"}
         features={[
           STORE.Content.Features["NoLogging"],
           STORE.Content.Features["SandboxedUserActions"],
@@ -38,7 +38,7 @@ const FeaturesPage = () => {
         ]}
       ></FirstFeatures>
 
-      <AboutTechnical row={"4"} bg={"1"}></AboutTechnical>
+      <AboutTechnical row={"3"} bg={"1"}></AboutTechnical>
 
       <XXXXFeatures row={"4"} bg={"1"} class={"no-bottom-padding"}
         title={"Feature Overview"}
@@ -70,16 +70,22 @@ const FeaturesPage = () => {
         STORE.Content.Features["NoPersistanceService"]
       ]}></XXXXFeatures>
 
-      <XXXXFeatures row={"8"} bg={"1"} class={"no-top-padding"} features={[
+      <XXXXFeatures row={"8"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
         STORE.Content.Features["CrossContinent"],
         STORE.Content.Features["CustomDNS"],
         STORE.Content.Features["SandboxedUserActions"],
         STORE.Content.Features["GEOUnblocking"],
       ]}></XXXXFeatures>
 
-      <XXXXFeatures row={"8"} bg={"1"} class={"no-top-padding"} features={[
+      <XXXXFeatures row={"9"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
         STORE.Content.Features["OpenSource"],
         STORE.Content.Features["PrivateVPN"],
+        STORE.Content.Features["DomainBlocking"],
+        STORE.Content.Features["FirewallPenetration"],
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"10"} bg={"1"} class={"no-top-padding"} features={[
+        STORE.Content.Features["FastIPTurnover"],
       ]}></XXXXFeatures>
 
       <MainFeatures row={"2"} bg={"2"} button={false}></MainFeatures>
@@ -107,6 +113,10 @@ const FeaturesPage = () => {
         STORE.Content.Features["StandAloneCLI"],
         STORE.Content.Features["LinuxSecuritySigning"],
         STORE.Content.Features["RouteOnlyVPN"],
+      ]}></XXXXFeatures>
+
+      <XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
+        STORE.Content.Features["HardwareCompatibility"],
       ]}></XXXXFeatures>
 
 

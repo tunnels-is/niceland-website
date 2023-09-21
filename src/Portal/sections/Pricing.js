@@ -10,36 +10,36 @@ import { CLIENT } from "../../lib/api";
 const subs = [
   {
     ix: 0,
-    price: 8,
+    price: 10,
     OPrice: 10,
-    P2Price: 8,
+    P2Price: 10,
     OP2Price: 10,
     title: "1 Month",
     type: 1,
-    discount: 20,
-    P2discount: 20
+    discount: 0,
+    P2discount: 0
   },
   {
     ix: 1,
-    price: 6.4,
+    price: 8,
     OPrice: 8,
-    P2Price: 36,
-    OP2Price: 48,
+    P2Price: 42,
+    OP2Price: 42,
     title: "6 Months",
     type: 2,
-    discount: 20,
-    P2discount: 25
+    discount: 0,
+    P2discount: 0
   },
   {
     ix: 2,
-    price: 4.8,
+    price: 6,
     OPrice: 6,
-    P2Price: 54,
-    OP2Price: 72,
+    P2Price: 60,
+    OP2Price: 60,
     title: "12 Months",
     type: 3,
-    discount: 20,
-    P2discount: 25
+    discount: 0,
+    P2discount: 0
   },
 
 ]
@@ -81,7 +81,7 @@ const useForm = () => {
     let newSub = { ...subs[index] }
     // }
 
-    if (!inputs["discountcode"] || inputs["discountcode"] === "") {
+    if (!inputs["discountcode"] || inputs["discountcode"] === "" || inputs["discountcode"] === "undefined") {
       console.log("CLEARING AFFILIATE")
       setAffiliate(undefined)
       setDiscount(0)
@@ -357,18 +357,18 @@ const Pricing = (props) => {
 
   }, [])
 
-
-  // console.table(inputs)
-  // console.table(errors)
-  // console.table(sub)
+  if (response) {
+    return (
+      <div className="row payment-wrapper">
+        {response.cardVerificationRawResponse &&
+          <div className="" dangerouslySetInnerHTML={{ __html: response.cardVerificationRawResponse }}></div>
+        }
+      </div>
+    )
+  }
 
   return (
     <>
-      <div className={`pricing-tabs grid-row-${props.row} inherit-grid bg-${props.bg}`} >
-        <div className="announcement">Limited Time 20% Launch Discount!</div>
-      </div>
-
-
 
       <div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
         <div className="sub-select"> 1. Select your subscription</div>
@@ -376,7 +376,7 @@ const Pricing = (props) => {
         <div className="sub sub-1" onClick={() => SetSub(0, 1)} >
           <div className="title">1 Month</div>
           <div className="price price-current teal">
-            <span className="value">8</span>
+            <span className="value">10</span>
             <span className="month">USD per month</span>
           </div>
         </div>
@@ -384,7 +384,7 @@ const Pricing = (props) => {
         <div className="sub sub-1" onClick={() => SetSub(1, 1)}>
           <div className="title">6 Months</div>
           <div className="price price-current teal">
-            <span className="value">6.4</span>
+            <span className="value">8</span>
             <span className="month">USD per month</span>
           </div>
         </div>
@@ -392,7 +392,7 @@ const Pricing = (props) => {
         <div className="sub sub-1" onClick={() => SetSub(2, 1)}>
           <div className="title">12 Months</div>
           <div className="price price-current teal">
-            <span className="value">4.8</span>
+            <span className="value">6</span>
             <span className="month">USD per month</span>
           </div>
         </div>
@@ -405,126 +405,101 @@ const Pricing = (props) => {
         </div>
       </div>
 
-      {response &&
-        <>
-          <div className="row payment-wrapper">
-            {response.cardVerificationRawResponse &&
-              <div className="" dangerouslySetInnerHTML={{ __html: response.cardVerificationRawResponse }}></div>
-            }
-          </div>
-        </>
-      }
+      <div className="row payment-wrapper">
 
-      {!response &&
-        <div className="row payment-wrapper">
+        <div className="payment-tabs">
+          <div className={`monthly ${period === 1 ? "active" : ""}`} onClick={() => SetSub(sub.ix, 1)}>Monthly</div>
+          <div className={`upfront ${period === 2 ? "active" : ""}`} onClick={() => SetSub(sub.ix, 2)}>Up-front</div>
+        </div>
 
-          <div className="payment-tabs">
-            <div className={`monthly ${period === 1 ? "active" : ""}`} onClick={() => SetSub(sub.ix, 1)}>Monthly</div>
-            <div className={`upfront ${period === 2 ? "active" : ""}`} onClick={() => SetSub(sub.ix, 2)}>Up-front</div>
-          </div>
+        <div className="payment-form">
 
-          <div className="payment-form">
+          {discount !== 0 &&
+            <div className="discount">{discount}% Discount from code {inputs["discountcode"]}</div>
+          }
 
-            {discount !== 0 &&
-              <div className="discount">{discount}% Discount from code {inputs["discountcode"]}</div>
-            }
-            {(discount === 0 && period === 2 && sub.type !== 1) &&
-              <div className="discount">25% Launch Discount</div>
-            }
-            {(discount === 0 && period === 2 && sub.type === 1) &&
-              <div className="discount">20% Launch Discount</div>
-            }
-            {(discount === 0 && period === 1) &&
-              <div className="discount">20% Launch Discount</div>
-            }
-
-            {period === 1 &&
+          {/* {period === 1 &&
               <div className="sub-price-original">{sub.OPrice} USD</div>
             }
             {period === 2 &&
               <div className="sub-price-original">{sub.OP2Price} USD</div>
-            }
-            <div className="sub-type">{sub.title}</div>
+            } */}
+          <div className="sub-type">{sub.title}</div>
 
-            {period === 1 &&
-              <div className="sub-price">{sub.price} USD</div>
-            }
-            {period === 2 &&
-              <div className="sub-price">{sub.P2Price} USD</div>
-            }
+          {period === 1 &&
+            <div className="sub-price">{sub.price} USD</div>
+          }
+          {period === 2 &&
+            <div className="sub-price">{sub.P2Price} USD</div>
+          }
 
-            <div className="seperator"></div>
+          <div className="seperator"></div>
 
-            {errors["response"] &&
-              <div className="payment-item">
-                <label for="response" className="label error">{errors["response"]}</label>
-              </div>
-            }
-
+          {errors["response"] &&
             <div className="payment-item">
-              <label for="email" class="label">{errors["email"] ? <span className="error">{errors["email"]}</span> : "Email or Username"}</label>
-              <input type="email" value={inputs["email"]} class="input" id="email" onChange={handleInputChange} />
+              <label for="response" className="label error">{errors["response"]}</label>
             </div>
+          }
 
-            <div className="payment-item">
-              <label for="card" class="label">Card Information</label>
-              <input type="card" value={inputs["card"]} class="input" id="card" onChange={handleCardinputChange} placeholder="Card Number" />
-            </div>
-
-            <div className="payment-item-small">
-              <input type="text" value={inputs["month"]} class="input input-small" id="month" onChange={handleInputChange} placeholder="MM" />
-
-              <input type="text" value={inputs["year"]} class="input input-small" id="year" onChange={handleInputChange} placeholder="YY" />
-
-              <input type="text" value={inputs["CVC"]} class="input input-small" id="CVC" onChange={handleInputChange} placeholder="CVC" />
-            </div>
-
-            <div className="payment-item">
-              <label for="discountcode" class="label">{errors["discountcode"] ? <span className="error">{errors["discountcode"]}</span> : "Discount / Affiliate Code"}</label>
-              <input type="discountcode" value={inputs["discountcode"]} class="input" id="discountcode" onChange={handleInputChange} />
-            </div>
-            {(inputs["discountcode"] && inputs["discountcode"] !== "") &&
-              <div className="getcode confirm-button" onClick={() => GetAffiliateDiscount()}>Get Code Discount</div>
-            }
-
-            <label for="month" class="label label-small">{errors["card"] ? <span className="error">{errors["card"]}</span> : ""}</label>
-            <label for="month" class="label label-small">{errors["month"] ? <span className="error">{errors["month"]}</span> : ""}</label>
-            <label for="month" class="label label-small">{errors["year"] ? <span className="error">{errors["year"]}</span> : ""}</label>
-            <label for="month" class="label label-small">{errors["CVC"] ? <span className="error">{errors["CVC"]}</span> : ""}</label>
-
-
-            <br />
-            <label className="label terms">By pressing confirm you accept our {` `}
-              <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/tunnels-is/media/master/terms/terms.pdf" target="_blank">
-                Terms And Conditions
-              </a>
-            </label>
-            {period === 1 &&
-              <label className="label terms">Monthly subscriptions are binding for the duration of the subscription</label>
-            }
-
-
-            {loading &&
-              <PulseLoader
-                size={20}
-                color={"#0E918D"}
-              ></PulseLoader>
-            }
-
-            {!loading &&
-              <div className="confirm-button" onClick={() => handleSubmit()}>
-                Confirm
-                <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
-              </div>
-            }
-
+          <div className="payment-item">
+            <label for="email" class="label">{errors["email"] ? <span className="error">{errors["email"]}</span> : "Email or Username"}</label>
+            <input type="email" value={inputs["email"]} class="input" id="email" onChange={handleInputChange} />
           </div>
 
+          <div className="payment-item">
+            <label for="card" class="label">Card Information</label>
+            <input type="card" value={inputs["card"]} class="input" id="card" onChange={handleCardinputChange} placeholder="Card Number" />
+          </div>
+
+          <div className="payment-item-small">
+            <input type="text" value={inputs["month"]} class="input input-small" id="month" onChange={handleInputChange} placeholder="MM" />
+
+            <input type="text" value={inputs["year"]} class="input input-small" id="year" onChange={handleInputChange} placeholder="YY" />
+
+            <input type="text" value={inputs["CVC"]} class="input input-small" id="CVC" onChange={handleInputChange} placeholder="CVC" />
+          </div>
+
+          <div className="payment-item">
+            <label for="discountcode" class="label">{errors["discountcode"] ? <span className="error">{errors["discountcode"]}</span> : "Discount / Affiliate Code"}</label>
+            <input type="discountcode" value={inputs["discountcode"]} class="input" id="discountcode" onChange={handleInputChange} />
+          </div>
+          {(inputs["discountcode"] && inputs["discountcode"] !== "") &&
+            <div className="getcode confirm-button" onClick={() => GetAffiliateDiscount()}>Get Code Discount</div>
+          }
+
+          <label for="month" class="label label-small">{errors["card"] ? <span className="error">{errors["card"]}</span> : ""}</label>
+          <label for="month" class="label label-small">{errors["month"] ? <span className="error">{errors["month"]}</span> : ""}</label>
+          <label for="month" class="label label-small">{errors["year"] ? <span className="error">{errors["year"]}</span> : ""}</label>
+          <label for="month" class="label label-small">{errors["CVC"] ? <span className="error">{errors["CVC"]}</span> : ""}</label>
 
 
-        </div >
-      }
+          <br />
+          <label className="label terms">By pressing confirm you accept our {` `}
+            <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/tunnels-is/media/master/terms/terms.pdf" target="_blank">
+              Terms And Conditions
+            </a>
+          </label>
+          {period === 1 &&
+            <label className="label terms">Monthly subscriptions are binding for the duration of the subscription</label>
+          }
 
+
+          {loading &&
+            <PulseLoader
+              size={20}
+              color={"#0E918D"}
+            ></PulseLoader>
+          }
+
+          {!loading &&
+            <div className="confirm-button" onClick={() => handleSubmit()}>
+              Confirm
+              <ImArrowRight2 className="arrow" size={15}></ImArrowRight2>
+            </div>
+          }
+
+        </div>
+      </div >
 
       <div className={`pricing-desc grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
 
@@ -540,8 +515,9 @@ const Pricing = (props) => {
           <div className="item">Reddit</div>
         </div>
       </div>
-    </>
 
+
+    </>
 
   );
 }

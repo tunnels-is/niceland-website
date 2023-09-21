@@ -158,6 +158,28 @@ var STORE = {
         short: "User registration and payments are only possible within the Niceland VPN app. This is to increase security and to prevent malicious web browser activity interacting with Nicelands Users.",
         long: "",
       },
+      "DomainBlocking": {
+        // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
+        icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/red-notifications.svg",
+        title: "Optional Domain Blocking",
+        short: "Niceland VPN uses various domain blocking lists to improve the browsing experience of it's users. These block lists include things like Ads, Malware, Adult Content, Fake news, Gamling and various other content types that users might want to avoid while browsing the internet.",
+        long: "",
+      },
+      "FastIPTurnover": {
+        // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
+        icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/speedtest.svg",
+        title: "Fast IP Turnover",
+        short: "VPN server IP Addresses get blocked all the time. To combat this NicelandVPN was designed to run on smaller servers that can easily be replaced. Rotating IP Addresses is often not enough since they are likely on the same network, hence switching servers completely is a more efficient tactic.",
+        long: "",
+      },
+      "FirewallPenetration": {
+        // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
+        icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/secure-server.svg",
+        title: "Firewall Penetration",
+        short: "NicelandVPN runs on a custom routing protocol that is designed to penetrate firewalls. While using NicelandVPN all of your network traffic looks like you are talking to a website (HTTPS).",
+        long: "",
+      },
+
       // BUSINESS VPN FEATURES
 
       "BUSINESS-SimpleSetup": {
@@ -306,7 +328,7 @@ var STORE = {
       },
       "StandAloneCLI": {
         // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
-        title: "Stand Alone CLI",
+        title: "Stand Alone CLI / TUI",
         short: "Niceland VPN will be available as a stand-alone and portable CLI application soon after launch. We want terminal lovers to to be able to launch the VPN without the need of a GUI.",
         long: "",
       },
@@ -326,6 +348,12 @@ var STORE = {
         // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
         title: "Custom Route VPN",
         short: "Being able to forward specific routes/IP Addresses and not others is a feature requested by many system administrators and we are happy to announce that it is officially on the roadmap.",
+        long: "",
+      },
+      "HardwareCompatibility": {
+        // icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
+        title: "Hardware Compatibility",
+        short: "Running VPNs on a router or modem is common these days. We want that to be the case for NicelandVPN as well. ",
         long: "",
       },
     },
