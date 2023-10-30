@@ -1,10 +1,7 @@
 import React from "react";
-import BannerV1 from "./Banner";
-import Notice from "./NoticeBanner";
 import AboutHome from "./sections/aboutHome";
 import Download from "./sections/Download";
 import MainFeatures from "./sections/MainFeatures";
-import SecondFeatures from "./sections/SecondFeatures";
 import SupportSocial from "./sections/SupportSocial";
 import FirstFeatures from "./sections/FirstFeatures";
 import STORE from "../store";
@@ -14,6 +11,7 @@ import BannerNew from "./BannerNew";
 const HomePage = () => {
 
 	window.scrollTo(0, 0);
+
 	return (
 		<>
 			{/* <BannerV1 ></BannerV1> */}

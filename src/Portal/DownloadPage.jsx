@@ -2,7 +2,7 @@ import React from "react";
 import BannerV4 from "./Bannerv4";
 import Notice from "./NoticeBanner";
 import Download from "./sections/Download";
-import SupportSocial from "./sections/SupportSocial.js";
+import SupportSocial from "./sections/SupportSocial";
 import BannerNew from "./BannerNew";
 
 

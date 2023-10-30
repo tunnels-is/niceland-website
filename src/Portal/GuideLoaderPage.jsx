@@ -1,6 +1,6 @@
 import React from "react";
 import Download from "./sections/Download";
-import SupportSocial from "./sections/SupportSocial.js";
+import SupportSocial from "./sections/SupportSocial";
 import BannerNew from "./BannerNew";
 import { Link, useParams } from "react-router-dom";
 import STORE from "../store";

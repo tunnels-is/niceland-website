@@ -4,7 +4,7 @@ import BannerV5 from "./Bannerv5";
 import Notice from "./NoticeBanner";
 import About from "./sections/about";
 import Download from "./sections/Download";
-import SupportSocial from "./sections/SupportSocial.js";
+import SupportSocial from "./sections/SupportSocial";
 import BannerNew from "./BannerNew";
 
 
