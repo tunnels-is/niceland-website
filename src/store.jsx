@@ -3,8 +3,13 @@ import moment from "moment";
 const DATA = "data_";
 
 var STORE = {
+	PayPalInputs: {},
 	Config: {
 		CLIENT: "https://nicelandvpn.is", // local client
+		COUNTER_URL: "https://pay.nicelandvpn.is:444/count/",
+		REGISTER_URL: "https://pay.nicelandvpn.is:444/user/create",
+		AFFILIATE_URL: "https://pay.nicelandvpn.is:444/affiliate",
+		PAYMENT_URL: "https://pay.nicelandvpn.is:444/paypal/payment",
 
 		APITimeout: 20000,
 		// API: "https://api.sveinn.is/", // disabling for now to use our test api

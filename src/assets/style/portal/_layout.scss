@@ -1542,17 +1542,35 @@ body {
 
 
   .sub-select {
-    margin-bottom: 40px;
-    font-size: 2em;
+    margin-bottom: 100px;
     color: $c-7;
-    font-weight: bold;
     text-align: center;
     width: 100%;
   }
 
 	.active-sub {
 		width: 360px !important;
+		padding-bottom: 0px !important;
 	}
+
+		.loader{
+			width: 100%;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+			.success {
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				color:$c-7;
+		text-decoration: underline;
+
+			}
+				.sub-id{
+					color:$c-1;
+				}
 
 
   .sub {
@@ -1649,15 +1667,52 @@ body {
       }
     }
 
+
     .account-form {
       height: fit-content;
       width: 100%;
-      margin-top: 25px;
+			margin-top: 45px;
       margin-bottom: 10px;
       text-align: center;
       font-weight: bold;
       font-size: 1em;
       color: $c-3;
+			width: 320px;
+			margin-left:20px;
+
+			.error {
+				color:$c-error;
+				margin-bottom:10px;
+				font-size:1.1em;
+			}
+
+
+			.register {
+				margin-bottom:10px;
+			}
+
+			.paypal-blocker {
+				width: 100%;
+			  height: 156px;
+				float: left;
+				position: absolute;
+				left: 0px;
+				margin-top: -10px;
+				z-index:1000;
+			}
+
+			.input {
+				width: calc(100% - 10px);
+				outline: none;
+				border: none;
+				padding:0px;
+				margin-bottom:15px;
+				border-radius:5px;
+				height:40px;
+				padding-left:10px;
+				background: $c-6;
+				color:$c-7;
+			}
     }
 
     .title-support {
@@ -1972,12 +2027,30 @@ body {
   color: white;
   font-family: $font-family;
 
+  .register-title {
+    margin-bottom: 10px;
+    color: $c-7;
+    text-align: center;
+    width: 100%;
+  }
+
   .success {
-    font-size: 2em;
     color: $c-7;
     width: 100%;
     text-align: center;
     cursor: pointer;
+		text-decoration: underline;
+  }
+
+  .account {
+		margin-bottom:30px;
+    font-size: 4em;
+    color: $c-1;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+		font-weight:bold;
+		margin-top:10px;
   }
 
   .register-form {

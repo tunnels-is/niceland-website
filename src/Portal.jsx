@@ -1,5 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import FeaturesPage from "./Portal/features";
 import SupportPage from "./Portal/Support";
@@ -21,9 +21,7 @@ import CashPage from "./Portal/Cash";
 import GuidePage from "./Portal/GuidePage";
 import GuideLoaderPage from "./Portal/GuideLoaderPage";
 import PaymentPage from "./Portal/PaymentPage";
-import RegisterPage from "./Portal/RegisterPage";
 
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 const root = createRoot(document.getElementById('root'));
 
@@ -33,7 +31,7 @@ const LaunchPortal = () => {
 	let locationHash = window.location.hash
 	let slider = false
 	if (locationHash.includes("slider")) {
-		slider = true
+		slider = truzze
 	}
 
 	return (
@@ -47,20 +45,18 @@ const LaunchPortal = () => {
 					<Routes>
 						<Route path="/" element={<HomePage />} />
 						<Route path="slider/:dir/:code" element={<SliderSmall />} />
-						<Route path="register" element={<RegisterPage />} />
-						<Route path="code/:paramCode" element={<RegisterPage />} />
+						<Route path="code/:paramCode" element={<PricingPage />} />
 						<Route path="payment" element={<PaymentPage />} />
 						<Route path="support" element={<SupportPage />} />
+						<Route path="signup" element={<PricingPage />} />
 						<Route path="cash" element={<CashPage />} />
 						<Route path="features" element={<FeaturesPage />} />
-						<Route path="pricing" element={<Pricing />} />
 						<Route path="about" element={<AboutPage />} />
 						<Route path="download" element={<DownloadPage />} />
 						<Route path="guide/:tag" element={<GuideLoaderPage />} />
 						<Route path="guides" element={<GuidePage />} />
 						<Route path="policies" element={<Policies />} />
 						<Route path="countries" element={<CountriesPage />} />
-						<Route path="pricing" element={<PricingPage />} />
 						<Route path="business" element={<BusinessVPNPage />} />
 						<Route path="*" element={<HomePage />} />
 					</Routes>
