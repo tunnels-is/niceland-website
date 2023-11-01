@@ -51,7 +51,7 @@ const FeaturesPage = () => {
 				STORE.Content.Features["PaymentProcessor"],
 				STORE.Content.Features["OffsitePaymentProcessing"],
 				STORE.Content.Features["ProtectedKeys"],
-				STORE.Content.Features["CookiePolicy"]
+				STORE.Content.Features["FirewallPenetration"],
 			]}></XXXXFeatures>
 
 			<XXXXFeatures row={"6"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
@@ -79,7 +79,6 @@ const FeaturesPage = () => {
 				STORE.Content.Features["OpenSource"],
 				STORE.Content.Features["PrivateVPN"],
 				STORE.Content.Features["DomainBlocking"],
-				STORE.Content.Features["FirewallPenetration"],
 			]}></XXXXFeatures>
 
 

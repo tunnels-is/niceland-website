@@ -19,7 +19,87 @@ var STORE = {
 			"Content-Type": "application/json",
 			"Accept": "*/*",
 		},
+		subs: [
+			{
+				Title: "1 Month",
+				Price: 10,
+				MonthlyPrice: 10,
+				PlanID: "P-9K167296Y33065421MU6PH3Q",
+			},
+			{
+				Title: "6 Month",
+				Price: 30,
+				MonthlyPrice: 8,
+				PlanID: "P-9K167296Y33065421MU6PH3Q",
+			},
+			{
+				Title: "12 Month",
+				Price: 50,
+				MonthlyPrice: 6,
+				PlanID: "P-9K167296Y33065421MU6PH3Q",
+			}
+		],
+		affiliateCodes: {
+			"Y2FwdGl293402304ZXA=": undefined,
+			"a2V5YjFuZA==": "bazinga",
+			"Y2FwdG=": undefined,
+			"a2V5YjFuZA==": "meow",
+			"Y2FwdGluY2342llskdjfs29kZX": undefined,
+			"bHVraQ==": "heyyyyyy",
+			"Y2FwdGluY29kZXLKAJSL2342A=": undefined,
+			"ZG91a2ll": "wazup",
+			"Y2FwdGluLSKA9800Y29kZXA=": undefined,
+			"dGhlZGV2ZGFk": "a thing",
+			"Y2FwdGlu=": undefined,
+			"Y2FwdGluY2SKJALS9kZXI=": "some text",
+			"eGlsaW4=": "meowington",
+			"AWxsb2EAKHSAS=": false,
+			"AWxsb2lK$K#KE=": false,
+			"AWxsHAHA2E=": false,
+			"ZWxsb2E=": "???",
+			"bW15aGVt": null,
+			"bWF5aGVt": "!!!",
+			"Y2FwdGFpbmNvZGVy": "yikes!",
+			"AWxsb3E=": false,
+			"AWxab2E=": false,
+			"AWxsA2E=": false,
+		},
+		affiliateSubs: [
+			{
+				Title: "1 Month",
+				Price: 8,
+				MonthlyPrice: 7,
+				PlanID: "P-9K167296Y33065421MU6PH3Q",
+			},
+			{
+				Title: "6 Month",
+				Price: 20,
+				MonthlyPrice: 5,
+				PlanID: "P-9K167296Y33065421MU6PH3Q",
+			},
+			{
+				Title: "12 Month",
+				Price: 30,
+				MonthlyPrice: 4,
+				PlanID: "P-9K167296Y33065421MU6PH3Q",
+			}
+		]
 
+	},
+	PrintCodes() {
+		Object.keys(STORE.Config.affiliateCodes).forEach(c => {
+			try {
+				console.log(c, atob(c))
+			} catch (e) {
+			}
+		});
+	},
+	GoodJobFindingThis(honey) {
+		if (STORE.Config.affiliateCodes[btoa(honey)]) {
+			return true
+		} else {
+			return false
+		}
 	},
 	LoadNewCSSToStore: function(newCSS) {
 		STORE.CSS = {
@@ -79,13 +159,6 @@ var STORE = {
 				short: "Encryption key exchanges between users and the VPN is protected by an additional layer of encryption. This means that the public keys are not visible in network inspection.",
 				long: "",
 			},
-			"CookiePolicy": {
-				// icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
-				icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/red-notifications.svg",
-				title: "NO COOKIES!",
-				short: "Niceland does not use any cookies on its website or in it's apps. We are against the use of cookies for tracking users on the internet.",
-				long: "",
-			},
 			"DNSLeaks": {
 				// icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
 				icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/umbrella.svg",
@@ -119,7 +192,7 @@ var STORE = {
 				// icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
 				icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/icons/speedtest.svg",
 				title: "Minimum Bandwidth Guarantee",
-				short: "Instead of over-crowding servers with users, Niceland only places a limited number of users on each server and with our custom built algorithms we ensure every user has enough bandwidth to enjoy the internet without interruption.",
+				short: "Instead of over-crowding servers with users, Niceland only places a limited number of users on each server. With our custom built algorithms we do our best to ensure every user has enough bandwidth to enjoy the internet without interruption.",
 				long: "",
 			},
 			"Multithreading": {
