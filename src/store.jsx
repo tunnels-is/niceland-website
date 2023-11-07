@@ -6,10 +6,10 @@ var STORE = {
 	PayPalInputs: {},
 	Config: {
 		CLIENT: "https://nicelandvpn.is", // local client
-		COUNTER_URL: "https://pay.nicelandvpn.is:444/count/",
-		REGISTER_URL: "https://pay.nicelandvpn.is:444/user/create",
-		AFFILIATE_URL: "https://pay.nicelandvpn.is:444/affiliate",
-		PAYMENT_URL: "https://pay.nicelandvpn.is:444/paypal/payment",
+		COUNTER_URL: "https://pay.nicelandvpn.is/count/",
+		REGISTER_URL: "https://pay.nicelandvpn.is/user/create",
+		AFFILIATE_URL: "https://pay.nicelandvpn.is/affiliate",
+		PAYMENT_URL: "https://pay.nicelandvpn.is/paypal/payment",
 
 		APITimeout: 20000,
 		// API: "https://api.sveinn.is/", // disabling for now to use our test api
@@ -22,21 +22,41 @@ var STORE = {
 		subs: [
 			{
 				Title: "1 Month",
-				Price: 10,
-				MonthlyPrice: 10,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
+				Price: 8,
+				MonthlyPrice: 8,
+				PlanID: "P-3FW74401RS8667544MVFAZIA",
 			},
 			{
 				Title: "6 Month",
-				Price: 30,
+				Price: 48,
 				MonthlyPrice: 8,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
+				PlanID: "P-82E28119HP335430FMVFAZPA",
 			},
 			{
 				Title: "12 Month",
-				Price: 50,
-				MonthlyPrice: 6,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
+				Price: 96,
+				MonthlyPrice: 8,
+				PlanID: "P-5FC01002GY495425MMVFAZVI",
+			}
+		],
+		Xsubs: [
+			{
+				Title: "1 Month",
+				Price: 8,
+				MonthlyPrice: 8,
+				PlanID: "P-98Y38386GR808045RMVFAOFQ"
+			},
+			{
+				Title: "6 Month",
+				Price: 48,
+				MonthlyPrice: 8,
+				PlanID: "P-9Y538716DY467284FMVFAO6Y",
+			},
+			{
+				Title: "12 Month",
+				Price: 96,
+				MonthlyPrice: 8,
+				PlanID: "P-8SF73924G00434629MVFAPTQ"
 			}
 		],
 		affiliateCodes: {

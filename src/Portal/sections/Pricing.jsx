@@ -44,6 +44,7 @@ const useForm = () => {
 		let errors = {}
 		let hasErrors = false
 		console.log("REGISTER!")
+		console.dir(inputs)
 
 		if (!inputs["email"] || inputs["email"] === "") {
 			errors["email"] = "Email / Username missing"
@@ -97,24 +98,23 @@ const useForm = () => {
 		setLoading(true)
 		try {
 
-			// await CLIENT.post(STORE.Config.REGISTER_URL, JSON.stringify(inputs));
+			let data = {
+				email: inputs["email"],
+				password: inputs["password"],
+				password2: inputs["password2"],
+			}
+
+			await CLIENT.post(STORE.Config.REGISTER_URL, JSON.stringify(data));
 			console.log("DONE!")
 			STORE.SessionCache.Set("email", inputs["email"])
 			setEmailExists(inputs["email"])
 		} catch (error) {
 			console.dir(error)
-			// let errors = {}
-			// if (error.response?.status === 406) {
-			// 	if (error.response?.data) {
-			// 		errors["code"] = "Invalid Affiliate code"
-			// 		setErrors({ ...errors })
-			// 	}
-			// } else {
-			// 	if (error.response?.data) {
-			// 		errors["response"] = error.response.data
-			// 		setErrors({ ...errors })
-			// 	}
-			// }
+			let errors = {}
+			if (error.response?.data) {
+				errors["response"] = error.response.data
+				setErrors({ ...errors })
+			}
 		}
 
 
@@ -122,18 +122,18 @@ const useForm = () => {
 	}
 
 	const sendSubscriptionInfoToServer = async (paymentData, sub) => {
-		// console.log("SENDING PAYMENT TO SERVER")
-		// console.dir(paymentData)
-		// console.dir(sub)
-		// console.dir(inputs)
-		// console.dir(extras)
-		// console.dir(STORE)
-		// console.log("------------------------------------")
+		console.log("SENDING PAYMENT TO SERVER")
+		console.dir(paymentData)
+		console.dir(sub)
+		console.dir(inputs)
+		console.dir(STORE)
+		console.log("------------------------------------")
+
+		let data = {}
 
 		try {
 			setLoading(true)
 			console.log("SENDING....")
-			let data = {}
 			data.SubID = paymentData.subscriptionID
 			data.PlanID = sub.PlanID
 			data.OrderID = paymentData.orderID
@@ -141,23 +141,21 @@ const useForm = () => {
 			data.Code = STORE.PayPalInputs.code
 			console.dir(data)
 			console.log("------------------------------------")
-			//
-			// 	const r = await CLIENT.post(STORE.Config.PAYMENT_URL, JSON.stringify(data));
-			// 	if (r.status === 200) {
-			setSubscribed(data)
-			STORE.SessionCache.SetObject("sub", data)
-			// 	} else {
-			// 		setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
-			// 	}
-			//
+
+			const r = await CLIENT.post(STORE.Config.PAYMENT_URL, JSON.stringify(data));
+			if (r.status === 200) {
+				setSubscribed(data)
+				STORE.SessionCache.SetObject("sub", data)
+			} else {
+				setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
+			}
+
 		} catch (e) {
-			// 	console.dir(e)
-			// 	setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
+			console.dir(e)
+			setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
 		}
 
-		setTimeout(() => {
-			setLoading(false)
-		}, 3000)
+		setLoading(false)
 	}
 
 	const handleInputChange = (event) => {
@@ -273,7 +271,7 @@ const Pricing = (props) => {
 	return (
 		<PayPalScriptProvider
 			options={{
-				clientId: "ARu0ah6wiGeeixl8mumAmM769VUoen733ztYJ7TbDOpCgxeYjIBGXRlpi_8aj4EdEmQ59PfLJVQRQ4DP",
+				clientId: "Ad5U4FHpdTN5XZXEax9tNHNioLQJ13KJPnSKqTUlEhus219iXua-EN17hWyC2iWOLXg0pzThE2FzGIHL",
 				vault: true,
 				intent: "subscription",
 			}}
@@ -452,6 +450,21 @@ const Pricing = (props) => {
 											});
 										}}
 										onApprove={(data, details) => {
+											//Code
+											// : 
+											// undefined
+											// Email
+											// : 
+											// "test_user_1"
+											// OrderID
+											// : 
+											// "22303905RB539603P"
+											// PlanID
+											// : 
+											// "P-3FW74401RS8667544MVFAZIA"
+											// SubID
+											// : 
+											// "I-V9YWEP633RL8"
 											sendSubscriptionInfoToServer(data, sub)
 										}}
 										onError={(err) => {
