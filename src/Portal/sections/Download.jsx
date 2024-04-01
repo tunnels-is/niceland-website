@@ -3,7 +3,7 @@ import React from "react";
 const Download = (props) => {
 
 	function handleWindowsClick() {
-		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v2.0.0/NicelandVPN-Windows.exe', '_blank');
+		window.open("https://github.com/tunnels-is/NicelandVPN/releases/download/v2.0.0/NicelandVPN-Windows.exe", '_blank');
 	}
 
 	function handleMacClick() {
@@ -12,7 +12,7 @@ const Download = (props) => {
 	}
 
 	function handleLinuxClick() {
-		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/latest', '_blank');
+		window.open("https://github.com/tunnels-is/NicelandVPN/releases/latest", '_blank');
 	}
 
 	return (
