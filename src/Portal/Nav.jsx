@@ -41,13 +41,11 @@ const Nav = (props) => {
 					<Link className={`mobile-item font-mobile-menu-item ${path === "download" ? "active" : ""}`} to={"/download"} onClick={() => setMenu(!menu)}>Download</Link>
 					{/* <Link className={`mobile-item font-mobile-menu-item ${path === "signup" ? "active" : ""}`} to={"/signup"} onClick={() => setMenu(!menu)}>Pricing</Link> */}
 					<Link className={`mobile-item font-mobile-menu-item ${path === "business" ? "active" : ""}`} to={"/business"} onClick={() => setMenu(!menu)}>Business</Link>
-					<Link className={`mobile-item font-mobile-menu-item ${path === "guides" ? "active" : ""}`} to={"/guides"} onClick={() => setMenu(!menu)}>Guides</Link>
 				</div>
 			</div>
 
 			<div className={`big-menu ${fixed ? "fixed-menu" : ""}`}>
 				<Link className={`item font-menu-item logo-link pos-transition`} to={"/"}>
-					{/* Home */}
 					<img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/logo-white-orange-bg.svg"></img>
 				</Link>
 				<div className="items margin-transition">
@@ -56,7 +54,6 @@ const Nav = (props) => {
 					<Link className={`item font-menu-item ${path === "download" ? "active" : ""}`} to={"/download"}>Download</Link>
 					{/* <Link className={`item font-menu-item ${path === "signup" ? "active" : ""}`} to={"/signup"}>Pricing</Link> */}
 					<Link className={`item font-menu-item ${path === "business" ? "active" : ""}`} to={"/business"}>Business</Link>
-					<Link className={`item font-menu-item ${path === "guides" ? "active" : ""}`} to={"/guides"}>Guides</Link>
 				</div>
 			</div>
 		</>

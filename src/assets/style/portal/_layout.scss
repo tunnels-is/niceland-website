@@ -551,6 +551,7 @@ body {
 
     top: 23rem;
   }
+
 }
 
 
@@ -746,7 +747,7 @@ body {
 
     text-align: center;
     height: fit-content;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .subtitle {
@@ -799,6 +800,11 @@ body {
     grid-row: 4;
     grid-column-start: 8;
     grid-column-end: 8;
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
   }
 
 
@@ -834,6 +840,8 @@ body {
     .subtitle {
       font-size: 0.6em;
     }
+
+    margin-bottom:60px;
   }
 
   .subtitle {
@@ -1539,7 +1547,6 @@ body {
   grid-column-start: 1;
   grid-column-end: 13;
   padding-top: 100px;
-  // padding-bottom: 120px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1641,7 +1648,11 @@ body {
     margin-left: 20px;
     padding-top: 10px;
     float: left;
-    width: 260px;
+    width: fit-content;
+    max-width: 350px;
+    min-width: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
     height: fit-content;
     padding-bottom: 20px;
     margin-bottom: 40px;
@@ -1659,7 +1670,7 @@ body {
     }
 
     .title {
-      height: 30px;
+      height: fit-content;
       width: 100%;
       margin-top: 25px;
       margin-bottom: 10px;
@@ -1699,7 +1710,7 @@ body {
         font-size: 2.2em !important;
         float: left;
         color: $c-1;
-        padding-top: 30px !important;
+        padding-top: 10px !important;
       }
 
       .value-text {

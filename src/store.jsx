@@ -19,22 +19,28 @@ var STORE = {
 			"Content-Type": "application/json",
 			"Accept": "*/*",
 		},
+		otherPayments: [
+			{
+				Title: "Anonymous License Key",
+				Price: 9,
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd"
+			}
+		],
 		subs: [
 			{
 				Title: "1 Month",
 				Price: 9,
-				// URL: "https://nicelandvpn.lemonsqueezy.com/checkout/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3"
-				URL:"https://nicelandvpn.lemonsqueezy.com/checkout/buy/ead6328e-004a-4316-b86f-3811be1b7bc0"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3"
 			},
 			{
 				Title: "6 Month",
 				Price: 49,
-				URL: "https://nicelandvpn.lemonsqueezy.com/checkout/buy/de1ca9fa-5051-41ae-9fe5-0f019aa3b706"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361"
 			},
 			{
 				Title: "12 Month",
 				Price: 69,
-				URL: "https://nicelandvpn.lemonsqueezy.com/checkout/buy/4ab9e340-d24f-4baf-8ecb-99650e177d7b"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a"
 			}
 
 		],

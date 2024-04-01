@@ -21,22 +21,22 @@ const HomePage = () => {
 				title={"Welcome To Niceland"}
 				subtitle={"The Global Mesh-Network VPN"}
 				showLink={true}
-				linkText={"Free Trial"}
-				linkPath={"/register"}
+				linkText={"Register Here!"}
+				linkPath={"/signup"}
 			/>
-			{/* <Notice row={"1"} bg={"1"}></Notice> */}
+
 			<AboutHome row={"1"} bg={"1"}></AboutHome>
 			<MainFeatures row={"2"} bg={"2"} button={true}></MainFeatures>
 			<Countries row={4} bg={1}></Countries>
+
 			<FirstFeatures row={"3"} bg={"2"}
 				features={[
 					STORE.Content.Features["NoLogging"],
-					STORE.Content.Features["FastIPTurnover"],
+					STORE.Content.Features["GuaranteedBandwidth"],
 					STORE.Content.Features["AnonymousAccounts"],
 				]}
 			></FirstFeatures>
-			{/* <SecondFeatures row={"3"} bg={"1"}></SecondFeatures> */}
-			{/* <Pricing row={3} bg={"1"}></Pricing> */}
+
 			<Download row={"5"} bg={"1"}></Download>
 			<SupportSocial row={"6"} bg={"2"}></SupportSocial>
 		</>

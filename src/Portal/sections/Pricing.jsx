@@ -4,7 +4,6 @@ import PulseLoader from "react-spinners/PulseLoader";
 import { CLIENT } from "../../lib/api";
 import STORE from "../../store";
 import { v4 as uuidv4 } from 'uuid';
-import { ImArrowRight2 } from "react-icons/im"
 
 
 
@@ -18,15 +17,6 @@ const useForm = () => {
 	const [emailExists, setEmailExists] = useState(undefined)
 	const [validCode, setValidCode] = useState(false)
 
-	const validateAffiliateCode = (event) => {
-		if (STORE.GoodJobFindingThis(event.target.value)) {
-			setValidCode(true)
-			inputs["code"] = event.target.value
-			updateAllInputs(inputs)
-		} else {
-			setValidCode(false)
-		}
-	}
 
 	const GENERATE_TOKEN = (toggle) => {
 		if (toggle) {
@@ -119,43 +109,6 @@ const useForm = () => {
 		setLoading(false)
 	}
 
-	const sendSubscriptionInfoToServer = async (paymentData, sub) => {
-		console.log("SENDING PAYMENT TO SERVER")
-		console.dir(paymentData)
-		console.dir(sub)
-		console.dir(inputs)
-		console.dir(STORE)
-		console.log("------------------------------------")
-
-		let data = {}
-
-		try {
-			setLoading(true)
-			console.log("SENDING....")
-			data.SubID = paymentData.subscriptionID
-			data.PlanID = sub.PlanID
-			data.OrderID = paymentData.orderID
-			data.Email = STORE.PayPalInputs.email
-			data.Code = STORE.PayPalInputs.code
-			console.dir(data)
-			console.log("------------------------------------")
-
-			const r = await CLIENT.post(STORE.Config.PAYMENT_URL, JSON.stringify(data));
-			if (r.status === 200) {
-				setSubscribed(data)
-				STORE.SessionCache.SetObject("sub", data)
-			} else {
-				setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
-			}
-
-		} catch (e) {
-			console.dir(e)
-			setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
-		}
-
-		setLoading(false)
-	}
-
 	const handleInputChange = (event) => {
 		let newInputs = { ...inputs, [event.target.id]: event.target.value, "error": "" }
 		setInputs({ ...newInputs });
@@ -170,22 +123,14 @@ const useForm = () => {
 
 	return {
 		loading,
-		activeSub,
 		setActiveSub,
-		errors,
-		handleInputChange,
 		inputs,
 		updateAllInputs,
-		sendSubscriptionInfoToServer,
 		subscribed,
 		setSubscribed,
 		setEmailExists,
 		emailExists,
-		GENERATE_TOKEN,
-		Register,
 		tokenreg,
-		validCode,
-		validateAffiliateCode,
 	};
 }
 
@@ -193,22 +138,14 @@ const Pricing = (props) => {
 
 	const {
 		loading,
-		activeSub,
 		setActiveSub,
-		errors,
-		handleInputChange,
 		inputs,
 		updateAllInputs,
-		sendSubscriptionInfoToServer,
 		subscribed,
 		setSubscribed,
 		setEmailExists,
 		emailExists,
-		GENERATE_TOKEN,
-		Register,
 		tokenreg,
-		validCode,
-		validateAffiliateCode,
 	} = useForm();
 
 	let { paramCode } = useParams()
@@ -225,48 +162,50 @@ const Pricing = (props) => {
 
 	useEffect(() => {
 
-		window.createLemonSqueezy();
+		// window.createLemonSqueezy();
 
-		let email = STORE.SessionCache.Get("email")
-		if (email && email.length > 5) {
-			console.log("UPDATING ALL INPUTS...", inputs)
-			inputs["email"] = email
-			updateAllInputs(inputs)
-			setEmailExists(email)
-		}
-
-		let code = STORE.Cache.Get("code")
-		let finalCode = ""
-		if (code && (code !== "undefined" && code !== "null")) {
-			finalCode = code
-		}
-		if (paramCode && (paramCode !== "undefined" && paramCode !== "null")) {
-			finalCode = paramCode
-			STORE.Cache.Set("code", code)
-			SEND_COUNT(code)
-		}
-		if (finalCode !== "") {
-			inputs["code"] = code
-			updateAllInputs(inputs)
-		}
-
-		let sub = STORE.SessionCache.GetObject("sub")
-		if (sub) {
-			setSubscribed(sub)
-		}
+		// let email = STORE.SessionCache.Get("email")
+		// if (email && email.length > 5) {
+		// 	console.log("UPDATING ALL INPUTS...", inputs)
+		// 	inputs["email"] = email
+		// 	updateAllInputs(inputs)
+		// 	setEmailExists(email)
+		// }
+		//
+		// let code = STORE.Cache.Get("code")
+		// let finalCode = ""
+		// if (code && (code !== "undefined" && code !== "null")) {
+		// 	finalCode = code
+		// }
+		// if (paramCode && (paramCode !== "undefined" && paramCode !== "null")) {
+		// 	finalCode = paramCode
+		// 	STORE.Cache.Set("code", code)
+		// 	SEND_COUNT(code)
+		// }
+		// if (finalCode !== "") {
+		// 	inputs["code"] = code
+		// 	updateAllInputs(inputs)
+		// }
+		//
+		// let sub = STORE.SessionCache.GetObject("sub")
+		// if (sub) {
+		// 	setSubscribed(sub)
+		// }
 
 	}, [])
 
-	let emailLabel = "Email"
-	if (tokenreg) {
-		emailLabel = "Username"
-	}
+	// let emailLabel = "Email"
+	// if (tokenreg) {
+	// 	emailLabel = "Username"
+	// }
 
 	let subs = STORE.Config.subs
+	let other = STORE.Config.otherPayments
 
 	return (
 		<>
 
+			{/** 
 			{emailExists &&
 				<div className="register-wrapper">
 					<div className="success font-section-title">
@@ -343,46 +282,25 @@ const Pricing = (props) => {
 			}
 
 
+						<a href={sub.URL + '?checkout[email]=' + "your@email.com"} target="_blank" className="">
+
 			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
 				<a href="https://nicelandvpn.lemonsqueezy.com/checkout/buy/52ea75ec-ec08-4c8e-a372-b74adbe1c0b5?embed=1" className="lemonsqueezy-button">Buy 1 month license</a>
 			</div>
-
+			**/}
 
 
 			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
-
 				<div className="sub-select font-section-title">
-
-					{!subscribed &&
-						<div className="title">
-							Select your subscription
-						</div>
-					}
-					{loading &&
-						<div className="loader">
-							<PulseLoader
-								size={20}
-								color={"#0E918D"}
-							></PulseLoader>
-						</div>
-					}
-					{subscribed &&
-						<div>
-							<div className="success">
-								Subscription ID<br />
-							</div>
-							<div className="sub-id">
-								{subscribed.SubID}
-							</div>
-						</div>
-					}
+					<div className="title">
+						Select your subscription
+					</div>
 				</div>
 
-				{(!subscribed && emailExists) && subs.map((sub) => {
-
+				{subs.map((sub) => {
 					return (
-						<a href={sub.URL + '?checkout[email]=' + emailExists} target="_blank" className="">
-							<div className={`sub sub-1`} onClick={() => setActiveSub(sub)} >
+						<a href={sub.URL} target="_blank">
+							<div className={`sub`} >
 								<div className="title">{sub.Title}</div>
 								<div className="price price-current teal">
 									<span className="value">
@@ -390,7 +308,31 @@ const Pricing = (props) => {
 										<span className="value-text">USD</span>
 									</span>
 								</div>
+							</div>
+						</a>
+					)
 
+				})}
+			</div>
+
+			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
+				<div className="sub-select font-section-title">
+					<div className="title">
+						Other Options
+					</div>
+				</div>
+
+				{other.map((sub) => {
+					return (
+						<a href={sub.URL} target="_blank">
+							<div className={`sub`} >
+								<div className="title">{sub.Title}</div>
+								<div className="price price-current teal">
+									<span className="value">
+										{sub.Price}
+										<span className="value-text">USD</span>
+									</span>
+								</div>
 							</div>
 						</a>
 					)

@@ -53,8 +53,6 @@ const LaunchPortal = () => {
 						<Route path="features" element={<FeaturesPage />} />
 						<Route path="about" element={<AboutPage />} />
 						<Route path="download" element={<DownloadPage />} />
-						<Route path="guide/:tag" element={<GuideLoaderPage />} />
-						<Route path="guides" element={<GuidePage />} />
 						<Route path="policies" element={<Policies />} />
 						<Route path="countries" element={<CountriesPage />} />
 						<Route path="business" element={<BusinessVPNPage />} />

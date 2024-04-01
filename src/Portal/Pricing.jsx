@@ -12,10 +12,10 @@ const PricingPage = () => {
 				image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/pricing-banner.webp"}
 				mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/pricing-banner-mobile.webp"}
 				title={"Subscribe To Niceland"}
-				subtitle={""}
+				subtitle={"Buy your license key today and register in the app!"}
 				showLink={false}
-				linkText={"Free Trial"}
-				linkPath={"/register"}
+				linkText={"Register Here!"}
+				linkPath={"/signup"}
 			/>
 			<Pricing row={1} bg={1}></Pricing>
 			<Download row={"2"} bg={"2"}></Download>
