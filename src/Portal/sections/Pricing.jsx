@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PulseLoader from "react-spinners/PulseLoader";
 import { CLIENT } from "../../lib/api";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import STORE from "../../store";
 import { v4 as uuidv4 } from 'uuid';
 import { ImArrowRight2 } from "react-icons/im"
@@ -103,7 +102,6 @@ const useForm = () => {
 				password: inputs["password"],
 				password2: inputs["password2"],
 			}
-
 			await CLIENT.post(STORE.Config.REGISTER_URL, JSON.stringify(data));
 			console.log("DONE!")
 			STORE.SessionCache.Set("email", inputs["email"])
@@ -224,7 +222,10 @@ const Pricing = (props) => {
 		}
 	}
 
+
 	useEffect(() => {
+
+		window.createLemonSqueezy();
 
 		let email = STORE.SessionCache.Get("email")
 		if (email && email.length > 5) {
@@ -261,21 +262,10 @@ const Pricing = (props) => {
 		emailLabel = "Username"
 	}
 
-	let subs = []
-	if (validCode) {
-		subs = STORE.Config.affiliateSubs
-	} else {
-		subs = STORE.Config.subs
-	}
+	let subs = STORE.Config.subs
 
 	return (
-		<PayPalScriptProvider
-			options={{
-				clientId: "Ad5U4FHpdTN5XZXEax9tNHNioLQJ13KJPnSKqTUlEhus219iXua-EN17hWyC2iWOLXg0pzThE2FzGIHL",
-				vault: true,
-				intent: "subscription",
-			}}
-		>
+		<>
 
 			{emailExists &&
 				<div className="register-wrapper">
@@ -354,6 +344,12 @@ const Pricing = (props) => {
 
 
 			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
+				<a href="https://nicelandvpn.lemonsqueezy.com/checkout/buy/52ea75ec-ec08-4c8e-a372-b74adbe1c0b5?embed=1" className="lemonsqueezy-button">Buy 1 month license</a>
+			</div>
+
+
+
+			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
 
 				<div className="sub-select font-section-title">
 
@@ -380,134 +376,29 @@ const Pricing = (props) => {
 							</div>
 						</div>
 					}
-					{!subscribed &&
-						<div className="affiliate-wrapper">
-							<input
-								type="text"
-								id="code"
-								name="code"
-								value={inputs["code"]}
-								placeholder="Enter affiliate code.."
-								className={`input ${validCode ? "valid-input" : ""}`}
-								onChange={(e) => validateAffiliateCode(e)} />
-						</div>
-					}
 				</div>
 
-				{!subscribed && subs.map((sub) => {
-
-					let active = false
-					if (activeSub && sub.Title == activeSub.Title) {
-						active = true
-					}
+				{(!subscribed && emailExists) && subs.map((sub) => {
 
 					return (
-						<div className={`sub sub-1 ${active ? "active-sub" : ""}`} onClick={() => setActiveSub(sub)} >
-							<div className="title">{sub.Title}</div>
-							<div className="price price-current teal">
-								<span className="value">
-									{sub.Price}
-									<span className="value-text">USD</span>
-								</span>
-								<span className="month">
-									<span className="month-value">
-										{sub.MonthlyPrice}
+						<a href={sub.URL + '?checkout[email]=' + emailExists} target="_blank" className="">
+							<div className={`sub sub-1`} onClick={() => setActiveSub(sub)} >
+								<div className="title">{sub.Title}</div>
+								<div className="price price-current teal">
+									<span className="value">
+										{sub.Price}
+										<span className="value-text">USD</span>
 									</span>
-									USD /month
-								</span>
-							</div>
-
-							{active &&
-								<div className="account-form">
-									<input
-										type="email"
-										value={inputs["email"]}
-										class="input"
-										id="email"
-										placeholder="Email or Username"
-										onChange={handleInputChange}>
-									</input>
-
-									{inputs["error"] &&
-										<div className="error">{inputs["error"]}</div>
-									}
-									{(!inputs["email"] || inputs["email"].length < 5) &&
-										<div className="paypal-blocker" onClick={() => {
-											updateAllInputs({ ...inputs, error: "You need to enter your Email or Username" })
-										}}></div>
-									}
-
-									<PayPalButtons
-										createSubscription={(data, actions) => {
-											// console.log("CREATE SUB")
-											// console.log("----------------------")
-											// console.dir(data)
-											// console.dir(actions)
-											// console.dir(STORE)
-											// console.log("----------------------")
-											return actions.subscription.create({
-												'plan_id': sub.PlanID,
-											});
-										}}
-										onApprove={(data, details) => {
-											//Code
-											// : 
-											// undefined
-											// Email
-											// : 
-											// "test_user_1"
-											// OrderID
-											// : 
-											// "22303905RB539603P"
-											// PlanID
-											// : 
-											// "P-3FW74401RS8667544MVFAZIA"
-											// SubID
-											// : 
-											// "I-V9YWEP633RL8"
-											sendSubscriptionInfoToServer(data, sub)
-										}}
-										onError={(err) => {
-											console.log("ON ERROR")
-											console.log("----------------------")
-											console.dir(err)
-											console.dir(STORE)
-											console.log("----------------------")
-											SEND_COUNT("paypal-on-error")
-										}}
-										catchError={(err) => {
-											console.log("CATCH ERROR")
-											console.log("----------------------")
-											console.dir(err)
-											console.dir(STORE)
-											console.log("----------------------")
-											SEND_COUNT("paypal-catch-error")
-										}}
-										onCancel={(err) => {
-											console.log("ON CANCEL")
-											console.log("----------------------")
-											console.dir(err)
-											console.dir(STORE)
-											console.log("----------------------")
-											SEND_COUNT("paypal-cancel")
-										}}
-										style={{
-											shape: 'rect',
-											color: 'gold',
-											layout: 'vertical',
-											label: 'subscribe',
-										}}
-									/>
-
 								</div>
-							}
-						</div>
+
+							</div>
+						</a>
 					)
 
 				})}
 			</div>
 
-		</PayPalScriptProvider >
+		</>
 	);
 }
 

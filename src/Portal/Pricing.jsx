@@ -17,7 +17,6 @@ const PricingPage = () => {
 				linkText={"Free Trial"}
 				linkPath={"/register"}
 			/>
-			{/* <Notice row={"1"} bg={"1"}></Notice> */}
 			<Pricing row={1} bg={1}></Pricing>
 			<Download row={"2"} bg={"2"}></Download>
 		</>

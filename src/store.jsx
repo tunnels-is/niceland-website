@@ -22,88 +22,22 @@ var STORE = {
 		subs: [
 			{
 				Title: "1 Month",
-				Price: 8,
-				MonthlyPrice: 8,
-				PlanID: "P-3FW74401RS8667544MVFAZIA",
+				Price: 9,
+				// URL: "https://nicelandvpn.lemonsqueezy.com/checkout/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3"
+				URL:"https://nicelandvpn.lemonsqueezy.com/checkout/buy/ead6328e-004a-4316-b86f-3811be1b7bc0"
 			},
 			{
 				Title: "6 Month",
-				Price: 48,
-				MonthlyPrice: 8,
-				PlanID: "P-82E28119HP335430FMVFAZPA",
+				Price: 49,
+				URL: "https://nicelandvpn.lemonsqueezy.com/checkout/buy/de1ca9fa-5051-41ae-9fe5-0f019aa3b706"
 			},
 			{
 				Title: "12 Month",
-				Price: 96,
-				MonthlyPrice: 8,
-				PlanID: "P-5FC01002GY495425MMVFAZVI",
+				Price: 69,
+				URL: "https://nicelandvpn.lemonsqueezy.com/checkout/buy/4ab9e340-d24f-4baf-8ecb-99650e177d7b"
 			}
+
 		],
-		Xsubs: [
-			{
-				Title: "1 Month",
-				Price: 8,
-				MonthlyPrice: 8,
-				PlanID: "P-98Y38386GR808045RMVFAOFQ"
-			},
-			{
-				Title: "6 Month",
-				Price: 48,
-				MonthlyPrice: 8,
-				PlanID: "P-9Y538716DY467284FMVFAO6Y",
-			},
-			{
-				Title: "12 Month",
-				Price: 96,
-				MonthlyPrice: 8,
-				PlanID: "P-8SF73924G00434629MVFAPTQ"
-			}
-		],
-		affiliateCodes: {
-			"Y2FwdGl293402304ZXA=": undefined,
-			"a2V5YjFuZA==": "bazinga",
-			"Y2FwdG=": undefined,
-			"a2V5YjFuZA==": "meow",
-			"Y2FwdGluY2342llskdjfs29kZX": undefined,
-			"bHVraQ==": "heyyyyyy",
-			"Y2FwdGluY29kZXLKAJSL2342A=": undefined,
-			"ZG91a2ll": "wazup",
-			"Y2FwdGluLSKA9800Y29kZXA=": undefined,
-			"dGhlZGV2ZGFk": "a thing",
-			"Y2FwdGlu=": undefined,
-			"Y2FwdGluY2SKJALS9kZXI=": "some text",
-			"eGlsaW4=": "meowington",
-			"AWxsb2EAKHSAS=": false,
-			"AWxsb2lK$K#KE=": false,
-			"AWxsHAHA2E=": false,
-			"ZWxsb2E=": "???",
-			"bW15aGVt": null,
-			"bWF5aGVt": "!!!",
-			"Y2FwdGFpbmNvZGVy": "yikes!",
-			"AWxsb3E=": false,
-			"AWxab2E=": false,
-			"AWxsA2E=": false,
-		},
-		affiliateSubs: [
-			{
-				Title: "1 Month",
-				Price: 8,
-				MonthlyPrice: 7,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
-			},
-			{
-				Title: "6 Month",
-				Price: 20,
-				MonthlyPrice: 5,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
-			},
-			{
-				Title: "12 Month",
-				Price: 30,
-				MonthlyPrice: 4,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
-			}
-		]
 
 	},
 	PrintCodes() {
