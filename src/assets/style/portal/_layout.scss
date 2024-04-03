@@ -1553,6 +1553,27 @@ body {
   color: white;
   font-family: $font-family;
 
+  .guide-link {
+
+    a {
+      background: $c-5;
+      border-radius: 10px;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.521));
+      padding: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      color: $c-1 !important;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: $c-2 !important;
+      color: white !important;
+    }
+
+  }
+
+
   .title {
     margin-bottom: 30px;
   }

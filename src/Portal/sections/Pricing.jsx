@@ -289,6 +289,14 @@ const Pricing = (props) => {
 			</div>
 			**/}
 
+			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
+				<div className="sub-select font-section-title">
+					<div className="title guide-link">
+						<a href="#/help/getting-started" target="_blank"> Click here for a guide!</a>
+					</div>
+				</div>
+
+			</div >
 
 			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
 				<div className="sub-select font-section-title">

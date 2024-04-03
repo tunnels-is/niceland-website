@@ -21,6 +21,7 @@ import CashPage from "./Portal/Cash";
 import GuidePage from "./Portal/GuidePage";
 import GuideLoaderPage from "./Portal/GuideLoaderPage";
 import PaymentPage from "./Portal/PaymentPage";
+import Guides from "./Portal/sections/Guides";
 
 
 const root = createRoot(document.getElementById('root'));
@@ -51,6 +52,8 @@ const LaunchPortal = () => {
 						<Route path="signup" element={<PricingPage />} />
 						<Route path="cash" element={<CashPage />} />
 						<Route path="features" element={<FeaturesPage />} />
+						<Route path="help" element={<GuidePage />} />
+						<Route path="help/:tag" element={<GuideLoaderPage />} />
 						<Route path="about" element={<AboutPage />} />
 						<Route path="download" element={<DownloadPage />} />
 						<Route path="policies" element={<Policies />} />
