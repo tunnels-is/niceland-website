@@ -551,6 +551,7 @@ body {
 
     top: 23rem;
   }
+
 }
 
 
@@ -746,7 +747,7 @@ body {
 
     text-align: center;
     height: fit-content;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .subtitle {
@@ -799,6 +800,11 @@ body {
     grid-row: 4;
     grid-column-start: 8;
     grid-column-end: 8;
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
   }
 
 
@@ -834,6 +840,8 @@ body {
     .subtitle {
       font-size: 0.6em;
     }
+
+    margin-bottom:60px;
   }
 
   .subtitle {
@@ -1527,62 +1535,93 @@ body {
 
 
 .small-top-padding {
-	padding-top:20px !important;
+  padding-top: 20px !important;
 }
+
+.sub-iframe {
+  height: 100vp;
+  width: 100%;
+}
+
 .pricing {
   grid-column-start: 1;
   grid-column-end: 13;
   padding-top: 100px;
-  // padding-bottom: 120px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   color: white;
   font-family: $font-family;
 
-	.title {
-		margin-bottom:30px;
-	}
+  .guide-link {
 
-	.affiliate-wrapper {
-		display: flex;
+    a {
+      background: $c-5;
+      border-radius: 10px;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.521));
+      padding: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      color: $c-1 !important;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: $c-2 !important;
+      color: white !important;
+    }
+
+  }
+
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .affiliate-wrapper {
+    display: flex;
     flex-direction: column;
-		width: 300px;
-		height: fit-content;
-		margin:auto;
+    width: 300px;
+    height: fit-content;
+    margin: auto;
     justify-content: center;
-		border-bottom:2px solid black;
+    border-bottom: 2px solid black;
     // background: rgb(0, 0, 0);
     // background: $c-2;
-			
-		.text {
-			margin-right:20px;
-			font-size: 0.5em;
-			font-weight: bold;
-		}
-		.valid-input {
-			color:$c-1 !important;
-		}
-		.input {
-			font-weight: bold;
-			color:black;
-			font-size: 0.4em;
-			text-align: center;
-			width: 100%;
-			height:40px;
-			border:none;
-			outline:none;
-			border-radius: 10px;
-		}
-		.input::placeholder {
-			opacity: 1; /* Firefox */
-			color: gray;
-		}
 
-		.input::-ms-input-placeholder { /* Edge 12 -18 */
-			color: gray;
-		}
-	}
+    .text {
+      margin-right: 20px;
+      font-size: 0.5em;
+      font-weight: bold;
+    }
+
+    .valid-input {
+      color: $c-1 !important;
+    }
+
+    .input {
+      font-weight: bold;
+      color: black;
+      font-size: 0.4em;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+    }
+
+    .input::placeholder {
+      opacity: 1;
+      /* Firefox */
+      color: gray;
+    }
+
+    .input::-ms-input-placeholder {
+      /* Edge 12 -18 */
+      color: gray;
+    }
+  }
 
   .sub-select {
     margin-bottom: 50px;
@@ -1591,29 +1630,30 @@ body {
     width: 100%;
   }
 
-	.active-sub {
-		width: 360px !important;
-		padding-bottom: 0px !important;
-	}
+  .active-sub {
+    width: 360px !important;
+    padding-bottom: 0px !important;
+  }
 
-		.loader{
-			width: 100%;
-			text-align: center;
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
+  .loader {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-			.success {
-				text-align: center;
-				margin-top: 20px;
-				margin-bottom: 20px;
-				color:$c-7;
-		text-decoration: underline;
+  .success {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $c-7;
+    text-decoration: underline;
 
-			}
-				.sub-id{
-					color:$c-1;
-				}
+  }
+
+  .sub-id {
+    color: $c-1;
+  }
 
 
   .sub {
@@ -1629,8 +1669,12 @@ body {
     margin-left: 20px;
     padding-top: 10px;
     float: left;
-    width: 260px;
-    height:fit-content;
+    width: fit-content;
+    max-width: 350px;
+    min-width: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: fit-content;
     padding-bottom: 20px;
     margin-bottom: 40px;
 
@@ -1647,7 +1691,7 @@ body {
     }
 
     .title {
-      height: 30px;
+      height: fit-content;
       width: 100%;
       margin-top: 25px;
       margin-bottom: 10px;
@@ -1669,12 +1713,12 @@ body {
       // float: left;
     }
 
-		.price-small {
+    .price-small {
       text-align: center;
       font-size: 1em;
       font-weight: bold;
-			margin-top:20px !important;
-		}
+      margin-top: 20px !important;
+    }
 
 
     .price-current {
@@ -1687,25 +1731,26 @@ body {
         font-size: 2.2em !important;
         float: left;
         color: $c-1;
-				padding-top:30px !important;
+        padding-top: 10px !important;
       }
-			.value-text {
+
+      .value-text {
         font-size: 0.6em !important;
         color: $c-3;
-				margin-left:5px;
-			}
+        margin-left: 5px;
+      }
 
       .month {
         width: 100%;
-				text-align: center;
+        text-align: center;
         font-size: 0.8em;
         color: $c-3;
 
-      .month-value {
-        color: $c-1;
-        font-size: 1.2em;
-				margin-right:5px;
-			 }
+        .month-value {
+          color: $c-1;
+          font-size: 1.2em;
+          margin-right: 5px;
+        }
       }
     }
 
@@ -1713,48 +1758,48 @@ body {
     .account-form {
       height: fit-content;
       width: 100%;
-			margin-top: 45px;
+      margin-top: 45px;
       margin-bottom: 10px;
       text-align: center;
       font-weight: bold;
       font-size: 1em;
       color: $c-3;
-			width: 320px;
-			margin-left:20px;
+      width: 320px;
+      margin-left: 20px;
 
-			.error {
-				color:$c-error;
-				margin-bottom:10px;
-				font-size:1.1em;
-			}
+      .error {
+        color: $c-error;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
 
 
-			.register {
-				margin-bottom:10px;
-			}
+      .register {
+        margin-bottom: 10px;
+      }
 
-			.paypal-blocker {
-				width: 100%;
-			  height: 156px;
-				float: left;
-				position: absolute;
-				left: 0px;
-				margin-top: -10px;
-				z-index:1000;
-			}
+      .paypal-blocker {
+        width: 100%;
+        height: 156px;
+        float: left;
+        position: absolute;
+        left: 0px;
+        margin-top: -10px;
+        z-index: 1000;
+      }
 
-			.input {
-				width: calc(100% - 10px);
-				outline: none;
-				border: none;
-				padding:0px;
-				margin-bottom:15px;
-				border-radius:5px;
-				height:40px;
-				padding-left:10px;
-				background: $c-6;
-				color:$c-7;
-			}
+      .input {
+        width: calc(100% - 10px);
+        outline: none;
+        border: none;
+        padding: 0px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        height: 40px;
+        padding-left: 10px;
+        background: $c-6;
+        color: $c-7;
+      }
     }
 
     .title-support {
@@ -2081,18 +2126,18 @@ body {
     width: 100%;
     text-align: center;
     cursor: pointer;
-		text-decoration: underline;
+    text-decoration: underline;
   }
 
   .account {
-		margin-bottom:30px;
+    margin-bottom: 30px;
     font-size: 4em;
     color: $c-1;
     width: 100%;
     text-align: center;
     cursor: pointer;
-		font-weight:bold;
-		margin-top:10px;
+    font-weight: bold;
+    margin-top: 10px;
   }
 
   .register-form {
@@ -2135,7 +2180,7 @@ body {
       }
 
       .input {
-				padding-left: 10px;
+        padding-left: 10px;
         border: 1px solid $c-6;
         border-radius: 3px;
         background-color: $c-0;

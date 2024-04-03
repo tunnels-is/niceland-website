@@ -7,24 +7,24 @@ import BannerNew from "./BannerNew";
 
 
 const DownloadPage = () => {
-    window.scrollTo(0, 0);
+	window.scrollTo(0, 0);
 
-    return (
-        <>
-            <BannerNew
-                image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner.webp"}
-                mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner-mobile.webp"}
-                title={"Experience Niceland"}
-                subtitle={"On MacOS, Windows and Linux"}
-                showLink={true}
-                linkText={"Free Trial"}
-                linkPath={"/register"}
-            />
+	return (
+		<>
+			<BannerNew
+				image={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner.webp"}
+				mobileImage={"https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/banners/download-banner-mobile.webp"}
+				title={"Experience Niceland"}
+				subtitle={"On MacOS, Windows and Linux"}
+				showLink={true}
+				linkText={"Register Here"}
+				linkPath={"/signup"}
+			/>
 
-            <Download row={"1"} bg={"1"}></Download>
-            <SupportSocial row={"2"} bg={"1"}></SupportSocial>
-        </>
-    )
+			<Download row={"1"} bg={"1"}></Download>
+			<SupportSocial row={"2"} bg={"1"}></SupportSocial>
+		</>
+	)
 }
 
 export default DownloadPage;

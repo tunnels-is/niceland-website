@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PulseLoader from "react-spinners/PulseLoader";
 import { CLIENT } from "../../lib/api";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import STORE from "../../store";
 import { v4 as uuidv4 } from 'uuid';
-import { ImArrowRight2 } from "react-icons/im"
 
 
 
@@ -19,15 +17,6 @@ const useForm = () => {
 	const [emailExists, setEmailExists] = useState(undefined)
 	const [validCode, setValidCode] = useState(false)
 
-	const validateAffiliateCode = (event) => {
-		if (STORE.GoodJobFindingThis(event.target.value)) {
-			setValidCode(true)
-			inputs["code"] = event.target.value
-			updateAllInputs(inputs)
-		} else {
-			setValidCode(false)
-		}
-	}
 
 	const GENERATE_TOKEN = (toggle) => {
 		if (toggle) {
@@ -103,7 +92,6 @@ const useForm = () => {
 				password: inputs["password"],
 				password2: inputs["password2"],
 			}
-
 			await CLIENT.post(STORE.Config.REGISTER_URL, JSON.stringify(data));
 			console.log("DONE!")
 			STORE.SessionCache.Set("email", inputs["email"])
@@ -117,43 +105,6 @@ const useForm = () => {
 			}
 		}
 
-
-		setLoading(false)
-	}
-
-	const sendSubscriptionInfoToServer = async (paymentData, sub) => {
-		console.log("SENDING PAYMENT TO SERVER")
-		console.dir(paymentData)
-		console.dir(sub)
-		console.dir(inputs)
-		console.dir(STORE)
-		console.log("------------------------------------")
-
-		let data = {}
-
-		try {
-			setLoading(true)
-			console.log("SENDING....")
-			data.SubID = paymentData.subscriptionID
-			data.PlanID = sub.PlanID
-			data.OrderID = paymentData.orderID
-			data.Email = STORE.PayPalInputs.email
-			data.Code = STORE.PayPalInputs.code
-			console.dir(data)
-			console.log("------------------------------------")
-
-			const r = await CLIENT.post(STORE.Config.PAYMENT_URL, JSON.stringify(data));
-			if (r.status === 200) {
-				setSubscribed(data)
-				STORE.SessionCache.SetObject("sub", data)
-			} else {
-				setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
-			}
-
-		} catch (e) {
-			console.dir(e)
-			setInputs({ ...inputs, error: "Something went wrong during the subscription process, please contact customer support and give them your subscription ID: " + data.SubID })
-		}
 
 		setLoading(false)
 	}
@@ -172,22 +123,14 @@ const useForm = () => {
 
 	return {
 		loading,
-		activeSub,
 		setActiveSub,
-		errors,
-		handleInputChange,
 		inputs,
 		updateAllInputs,
-		sendSubscriptionInfoToServer,
 		subscribed,
 		setSubscribed,
 		setEmailExists,
 		emailExists,
-		GENERATE_TOKEN,
-		Register,
 		tokenreg,
-		validCode,
-		validateAffiliateCode,
 	};
 }
 
@@ -195,22 +138,14 @@ const Pricing = (props) => {
 
 	const {
 		loading,
-		activeSub,
 		setActiveSub,
-		errors,
-		handleInputChange,
 		inputs,
 		updateAllInputs,
-		sendSubscriptionInfoToServer,
 		subscribed,
 		setSubscribed,
 		setEmailExists,
 		emailExists,
-		GENERATE_TOKEN,
-		Register,
 		tokenreg,
-		validCode,
-		validateAffiliateCode,
 	} = useForm();
 
 	let { paramCode } = useParams()
@@ -224,59 +159,53 @@ const Pricing = (props) => {
 		}
 	}
 
+
 	useEffect(() => {
 
-		let email = STORE.SessionCache.Get("email")
-		if (email && email.length > 5) {
-			console.log("UPDATING ALL INPUTS...", inputs)
-			inputs["email"] = email
-			updateAllInputs(inputs)
-			setEmailExists(email)
-		}
+		// window.createLemonSqueezy();
 
-		let code = STORE.Cache.Get("code")
-		let finalCode = ""
-		if (code && (code !== "undefined" && code !== "null")) {
-			finalCode = code
-		}
-		if (paramCode && (paramCode !== "undefined" && paramCode !== "null")) {
-			finalCode = paramCode
-			STORE.Cache.Set("code", code)
-			SEND_COUNT(code)
-		}
-		if (finalCode !== "") {
-			inputs["code"] = code
-			updateAllInputs(inputs)
-		}
-
-		let sub = STORE.SessionCache.GetObject("sub")
-		if (sub) {
-			setSubscribed(sub)
-		}
+		// let email = STORE.SessionCache.Get("email")
+		// if (email && email.length > 5) {
+		// 	console.log("UPDATING ALL INPUTS...", inputs)
+		// 	inputs["email"] = email
+		// 	updateAllInputs(inputs)
+		// 	setEmailExists(email)
+		// }
+		//
+		// let code = STORE.Cache.Get("code")
+		// let finalCode = ""
+		// if (code && (code !== "undefined" && code !== "null")) {
+		// 	finalCode = code
+		// }
+		// if (paramCode && (paramCode !== "undefined" && paramCode !== "null")) {
+		// 	finalCode = paramCode
+		// 	STORE.Cache.Set("code", code)
+		// 	SEND_COUNT(code)
+		// }
+		// if (finalCode !== "") {
+		// 	inputs["code"] = code
+		// 	updateAllInputs(inputs)
+		// }
+		//
+		// let sub = STORE.SessionCache.GetObject("sub")
+		// if (sub) {
+		// 	setSubscribed(sub)
+		// }
 
 	}, [])
 
-	let emailLabel = "Email"
-	if (tokenreg) {
-		emailLabel = "Username"
-	}
+	// let emailLabel = "Email"
+	// if (tokenreg) {
+	// 	emailLabel = "Username"
+	// }
 
-	let subs = []
-	if (validCode) {
-		subs = STORE.Config.affiliateSubs
-	} else {
-		subs = STORE.Config.subs
-	}
+	let subs = STORE.Config.subs
+	let other = STORE.Config.otherPayments
 
 	return (
-		<PayPalScriptProvider
-			options={{
-				clientId: "Ad5U4FHpdTN5XZXEax9tNHNioLQJ13KJPnSKqTUlEhus219iXua-EN17hWyC2iWOLXg0pzThE2FzGIHL",
-				vault: true,
-				intent: "subscription",
-			}}
-		>
+		<>
 
+			{/** 
 			{emailExists &&
 				<div className="register-wrapper">
 					<div className="success font-section-title">
@@ -353,161 +282,73 @@ const Pricing = (props) => {
 			}
 
 
+						<a href={sub.URL + '?checkout[email]=' + "your@email.com"} target="_blank" className="">
+
 			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
+				<a href="https://nicelandvpn.lemonsqueezy.com/checkout/buy/52ea75ec-ec08-4c8e-a372-b74adbe1c0b5?embed=1" className="lemonsqueezy-button">Buy 1 month license</a>
+			</div>
+			**/}
 
+			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
 				<div className="sub-select font-section-title">
-
-					{!subscribed &&
-						<div className="title">
-							Select your subscription
-						</div>
-					}
-					{loading &&
-						<div className="loader">
-							<PulseLoader
-								size={20}
-								color={"#0E918D"}
-							></PulseLoader>
-						</div>
-					}
-					{subscribed &&
-						<div>
-							<div className="success">
-								Subscription ID<br />
-							</div>
-							<div className="sub-id">
-								{subscribed.SubID}
-							</div>
-						</div>
-					}
-					{!subscribed &&
-						<div className="affiliate-wrapper">
-							<input
-								type="text"
-								id="code"
-								name="code"
-								value={inputs["code"]}
-								placeholder="Enter affiliate code.."
-								className={`input ${validCode ? "valid-input" : ""}`}
-								onChange={(e) => validateAffiliateCode(e)} />
-						</div>
-					}
+					<div className="title guide-link">
+						<a href="#/help/getting-started" target="_blank"> Click here for a guide!</a>
+					</div>
 				</div>
 
-				{!subscribed && subs.map((sub) => {
+			</div >
 
-					let active = false
-					if (activeSub && sub.Title == activeSub.Title) {
-						active = true
-					}
+			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
+				<div className="sub-select font-section-title">
+					<div className="title">
+						Select your subscription
+					</div>
+				</div>
 
+				{subs.map((sub) => {
 					return (
-						<div className={`sub sub-1 ${active ? "active-sub" : ""}`} onClick={() => setActiveSub(sub)} >
-							<div className="title">{sub.Title}</div>
-							<div className="price price-current teal">
-								<span className="value">
-									{sub.Price}
-									<span className="value-text">USD</span>
-								</span>
-								<span className="month">
-									<span className="month-value">
-										{sub.MonthlyPrice}
+						<a href={sub.URL} target="_blank">
+							<div className={`sub`} >
+								<div className="title">{sub.Title}</div>
+								<div className="price price-current teal">
+									<span className="value">
+										{sub.Price}
+										<span className="value-text">USD</span>
 									</span>
-									USD /month
-								</span>
-							</div>
-
-							{active &&
-								<div className="account-form">
-									<input
-										type="email"
-										value={inputs["email"]}
-										class="input"
-										id="email"
-										placeholder="Email or Username"
-										onChange={handleInputChange}>
-									</input>
-
-									{inputs["error"] &&
-										<div className="error">{inputs["error"]}</div>
-									}
-									{(!inputs["email"] || inputs["email"].length < 5) &&
-										<div className="paypal-blocker" onClick={() => {
-											updateAllInputs({ ...inputs, error: "You need to enter your Email or Username" })
-										}}></div>
-									}
-
-									<PayPalButtons
-										createSubscription={(data, actions) => {
-											// console.log("CREATE SUB")
-											// console.log("----------------------")
-											// console.dir(data)
-											// console.dir(actions)
-											// console.dir(STORE)
-											// console.log("----------------------")
-											return actions.subscription.create({
-												'plan_id': sub.PlanID,
-											});
-										}}
-										onApprove={(data, details) => {
-											//Code
-											// : 
-											// undefined
-											// Email
-											// : 
-											// "test_user_1"
-											// OrderID
-											// : 
-											// "22303905RB539603P"
-											// PlanID
-											// : 
-											// "P-3FW74401RS8667544MVFAZIA"
-											// SubID
-											// : 
-											// "I-V9YWEP633RL8"
-											sendSubscriptionInfoToServer(data, sub)
-										}}
-										onError={(err) => {
-											console.log("ON ERROR")
-											console.log("----------------------")
-											console.dir(err)
-											console.dir(STORE)
-											console.log("----------------------")
-											SEND_COUNT("paypal-on-error")
-										}}
-										catchError={(err) => {
-											console.log("CATCH ERROR")
-											console.log("----------------------")
-											console.dir(err)
-											console.dir(STORE)
-											console.log("----------------------")
-											SEND_COUNT("paypal-catch-error")
-										}}
-										onCancel={(err) => {
-											console.log("ON CANCEL")
-											console.log("----------------------")
-											console.dir(err)
-											console.dir(STORE)
-											console.log("----------------------")
-											SEND_COUNT("paypal-cancel")
-										}}
-										style={{
-											shape: 'rect',
-											color: 'gold',
-											layout: 'vertical',
-											label: 'subscribe',
-										}}
-									/>
-
 								</div>
-							}
-						</div>
+							</div>
+						</a>
 					)
 
 				})}
 			</div>
 
-		</PayPalScriptProvider >
+			<div className={`pricing grid-row-${props.row} inherit-grid  bg-${props.bg}`} >
+				<div className="sub-select font-section-title">
+					<div className="title">
+						Other Options
+					</div>
+				</div>
+
+				{other.map((sub) => {
+					return (
+						<a href={sub.URL} target="_blank">
+							<div className={`sub`} >
+								<div className="title">{sub.Title}</div>
+								<div className="price price-current teal">
+									<span className="value">
+										{sub.Price}
+										<span className="value-text">USD</span>
+									</span>
+								</div>
+							</div>
+						</a>
+					)
+
+				})}
+			</div>
+
+		</>
 	);
 }
 

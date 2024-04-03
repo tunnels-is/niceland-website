@@ -7,17 +7,17 @@ import SupportSocial from "./sections/SupportSocial";
 
 const SupportPage = () => {
 
-    window.scrollTo(0, 0);
+	window.scrollTo(0, 0);
 
-    return (
-        <>
-            <BannerV3></BannerV3>
-            {/* <Notice row={"1"} bg={"1"}></Notice> */}
-            <SupportSocial row={"1"} bg={"1"}></SupportSocial>
-            <Download row={"2"} bg={"1"}></Download>
+	return (
+		<>
+			<BannerV3></BannerV3>
+			{/* <Notice row={"1"} bg={"1"}></Notice> */}
+			<SupportSocial row={"1"} bg={"1"}></SupportSocial>
+			<Download row={"2"} bg={"1"}></Download>
 
-        </>
-    )
+		</>
+	)
 }
 
 export default SupportPage;

@@ -19,91 +19,31 @@ var STORE = {
 			"Content-Type": "application/json",
 			"Accept": "*/*",
 		},
+		otherPayments: [
+			{
+				Title: "Anonymous License Key",
+				Price: 9,
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd"
+			}
+		],
 		subs: [
 			{
 				Title: "1 Month",
-				Price: 8,
-				MonthlyPrice: 8,
-				PlanID: "P-3FW74401RS8667544MVFAZIA",
+				Price: 9,
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3"
 			},
 			{
 				Title: "6 Month",
-				Price: 48,
-				MonthlyPrice: 8,
-				PlanID: "P-82E28119HP335430FMVFAZPA",
+				Price: 49,
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361"
 			},
 			{
 				Title: "12 Month",
-				Price: 96,
-				MonthlyPrice: 8,
-				PlanID: "P-5FC01002GY495425MMVFAZVI",
+				Price: 69,
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a"
 			}
+
 		],
-		Xsubs: [
-			{
-				Title: "1 Month",
-				Price: 8,
-				MonthlyPrice: 8,
-				PlanID: "P-98Y38386GR808045RMVFAOFQ"
-			},
-			{
-				Title: "6 Month",
-				Price: 48,
-				MonthlyPrice: 8,
-				PlanID: "P-9Y538716DY467284FMVFAO6Y",
-			},
-			{
-				Title: "12 Month",
-				Price: 96,
-				MonthlyPrice: 8,
-				PlanID: "P-8SF73924G00434629MVFAPTQ"
-			}
-		],
-		affiliateCodes: {
-			"Y2FwdGl293402304ZXA=": undefined,
-			"a2V5YjFuZA==": "bazinga",
-			"Y2FwdG=": undefined,
-			"a2V5YjFuZA==": "meow",
-			"Y2FwdGluY2342llskdjfs29kZX": undefined,
-			"bHVraQ==": "heyyyyyy",
-			"Y2FwdGluY29kZXLKAJSL2342A=": undefined,
-			"ZG91a2ll": "wazup",
-			"Y2FwdGluLSKA9800Y29kZXA=": undefined,
-			"dGhlZGV2ZGFk": "a thing",
-			"Y2FwdGlu=": undefined,
-			"Y2FwdGluY2SKJALS9kZXI=": "some text",
-			"eGlsaW4=": "meowington",
-			"AWxsb2EAKHSAS=": false,
-			"AWxsb2lK$K#KE=": false,
-			"AWxsHAHA2E=": false,
-			"ZWxsb2E=": "???",
-			"bW15aGVt": null,
-			"bWF5aGVt": "!!!",
-			"Y2FwdGFpbmNvZGVy": "yikes!",
-			"AWxsb3E=": false,
-			"AWxab2E=": false,
-			"AWxsA2E=": false,
-		},
-		affiliateSubs: [
-			{
-				Title: "1 Month",
-				Price: 8,
-				MonthlyPrice: 7,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
-			},
-			{
-				Title: "6 Month",
-				Price: 20,
-				MonthlyPrice: 5,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
-			},
-			{
-				Title: "12 Month",
-				Price: 30,
-				MonthlyPrice: 4,
-				PlanID: "P-9K167296Y33065421MU6PH3Q",
-			}
-		]
 
 	},
 	PrintCodes() {
@@ -462,40 +402,24 @@ var STORE = {
 				content: [
 					"title:::Step 1: Downloading Niceland",
 					"html:::Download Niceland VPN by clicking <a target='_blank' href='/#/download'>this link</a>",
-					// "html:::<h1> meomowoemwome </h1>",
 
-					"title:::Step 2: Installing On Window",
-					"text:::Double click the Niceland VPN installer that you donwloaded in Step 1.",
-
-					"title:::Step 2: Installing On MacOS",
-					"text:::Unzip the file you downloaded in step 1 and move the Niceland VPN app to your 'Applications' folder.",
-
-					"title:::Step 2: Installing On Linux",
-					"text:::DEBIAN: $ dpkg -I [filename]",
-					"text:::PACMAN: $ pacman -S [filename]",
+					"title:::Step 2: Opening Niceland",
+					"text:::On Windows and Linux you can simply run Niceland! no install needed. ",
+					"text:::On macOS you will need to drag the application to the applications folder.",
 
 					"title:::Step 3: Creating Your Account",
-					"text:::Account are created inside the Niceland VPN app.",
-					"text:::The login screen will open up once Niceland is started, press the Register button.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/login-screen.png",
-					"text:::Affiliate codes are placed in the 'code' input which is highlighted in the image. When you are done filling in your information, press confirm.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/registration-screen.png",
+					"text:::Accounts are created inside the Niceland VPN app not on the website. This is for security reasons.",
 
 					"title:::Step 4: Choosing A Subscription",
-					"html:::Detailed subscription information can be seen by clicking <a target='_blank' href='/#/pricing'>this link</a>",
-					"text:::Payments for subscriptions are made inside the Niceland VPN app for security reasons. Once you have picked the subscription you want, you can click the subscription notification in the top-left corner of the app to see the subscription list.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/sub-screen.PNG",
-					"text:::Discount codes are placed in the 'code' input. Affiliate codes that were used during registration will automatically be placed in the 'code' input. However, if you have a discount code you can replace the affiliate code with your new discount code.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/payment-form.png",
+					"html:::Detailed subscription information can be seen by clicking <a target='_blank' href='/#/signup'>this link</a>",
 
-					"title:::Step 5: Connecting To Niceland",
-					"text:::Connecting to Niceland VPN is as simple as selecting the country you want.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/country-selection.png",
-					"text:::When the connection has been made, you will be able to see the VPN you are connected to and a button to disconnect.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connected-screen.png",
+					"title:::Step 5: Activating Your License Key",
+					"text:::Once payment is complete, you will receive a License key.",
+					"text:::You can use this key inside the 'Settings' page in the app to activate your account.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/lkh.png",
 
-					// "title:::Full video Guide",
-					// 'html:::<iframe width="100%" height="300px" src="https://www.youtube.com/embed/fONu7T-KR34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+					"title:::Step 6: Connecting To Niceland",
+					"text:::Click a country of your choosing and select yes!",
 				]
 			},
 

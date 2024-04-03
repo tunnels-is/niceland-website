@@ -22,8 +22,8 @@ const FeaturesPage = () => {
 				title={"Features And Roadmap"}
 				subtitle={"Learn more about Niceland and what is to come"}
 				showLink={true}
-				linkText={"Get NicelandVPN"}
-				linkPath={"/download"}
+				linkText={"Register Here!"}
+				linkPath={"/signup"}
 			/>
 
 			<AboutFeatures row={"1"} bg={"1"}></AboutFeatures>
@@ -44,15 +44,8 @@ const FeaturesPage = () => {
 					STORE.Content.Features["NoLogging"],
 					STORE.Content.Features["AnonymousMetaData"],
 					STORE.Content.Features["AnonymousAccounts"],
-					STORE.Content.Features["CashPayments"]
+					STORE.Content.Features["ProtectedKeys"],
 				]}></XXXXFeatures>
-
-			<XXXXFeatures row={"5"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
-				STORE.Content.Features["PaymentProcessor"],
-				STORE.Content.Features["OffsitePaymentProcessing"],
-				STORE.Content.Features["ProtectedKeys"],
-				STORE.Content.Features["FirewallPenetration"],
-			]}></XXXXFeatures>
 
 			<XXXXFeatures row={"6"} bg={"1"} class={"no-top-padding  no-bottom-padding"} features={[
 				STORE.Content.Features["DNSLeaks"],
@@ -71,15 +64,10 @@ const FeaturesPage = () => {
 			<XXXXFeatures row={"8"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
 				STORE.Content.Features["CrossContinent"],
 				STORE.Content.Features["CustomDNS"],
-				STORE.Content.Features["FastIPTurnover"],
 				STORE.Content.Features["GEOUnblocking"],
-			]}></XXXXFeatures>
-
-			<XXXXFeatures row={"9"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
-				STORE.Content.Features["OpenSource"],
-				STORE.Content.Features["PrivateVPN"],
 				STORE.Content.Features["DomainBlocking"],
 			]}></XXXXFeatures>
+
 
 
 			<MainFeatures row={"2"} bg={"2"} button={false}></MainFeatures>
@@ -103,15 +91,13 @@ const FeaturesPage = () => {
 			]}></XXXXFeatures>
 
 			<XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
-				STORE.Content.Features["DetailedDocs"],
+				// STORE.Content.Features["DetailedDocs"],
 				STORE.Content.Features["StandAloneCLI"],
-				STORE.Content.Features["LinuxSecuritySigning"],
-				STORE.Content.Features["RouteOnlyVPN"],
+				STORE.Content.Features["HardwareCompatibility"],
+				// STORE.Content.Features["LinuxSecuritySigning"],
+				// STORE.Content.Features["RouteOnlyVPN"],
 			]}></XXXXFeatures>
 
-			<XXXXFeatures row={"12"} bg={"1"} class={"no-top-padding no-bottom-padding"} features={[
-				STORE.Content.Features["HardwareCompatibility"],
-			]}></XXXXFeatures>
 
 
 			<Download row={"14"} bg={"2"}></Download>

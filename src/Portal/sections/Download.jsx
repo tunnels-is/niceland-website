@@ -1,20 +1,18 @@
-import React, { useEffect, useState, useId } from "react";
-import { useNavigate, Navigate, Link } from "react-router-dom";
+import React from "react";
 
 const Download = (props) => {
 
-	const navigate = useNavigate();
-
 	function handleWindowsClick() {
-		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.4/NicelandVPN-Windows.exe', '_blank');
+		window.open("https://github.com/tunnels-is/NicelandVPN/releases/download/v2.0.0/NicelandVPN-Windows.exe", '_blank');
 	}
 
 	function handleMacClick() {
-		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v1.1.4/NicelandVPN-MacOS.zip', '_blank');
+		// window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v2.0.0/NicelandVPN-MacOS.zip', '_blank');
+		alert("soon!")
 	}
 
 	function handleLinuxClick() {
-		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/latest', '_blank');
+		window.open("https://github.com/tunnels-is/NicelandVPN/releases/latest", '_blank');
 	}
 
 	return (
@@ -40,7 +38,7 @@ const Download = (props) => {
 			<div className="s2 box box-shadow" onClick={handleMacClick} style={{ cursor: 'pointer' }}>
 				<img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/mac.svg"></img>
 				<div className="title">
-					MacOS
+					Releasing in a few days!
 				</div>
 			</div>
 
