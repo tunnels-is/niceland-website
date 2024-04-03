@@ -96,7 +96,7 @@ const Footer = (props) => {
 
 			</div>
 			<div className="bottom-row font-footer-links">
-				© 2023 NicelandVPN. All rights reserved.<br />
+				© 2024 NicelandVPN. All rights reserved.<br />
 			</div>
 		</div>
 	)
