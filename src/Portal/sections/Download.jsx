@@ -7,7 +7,7 @@ const Download = (props) => {
 	}
 
 	function handleMacClick() {
-		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v2.0.1/NicelandVPN-MacOS.zip', '_blank');
+		window.open('https://github.com/tunnels-is/NicelandVPN/releases/download/v2.0.1/NicelandVPN-MacOS.zip', '_blank');
 		// alert("soon!")
 	}
 
