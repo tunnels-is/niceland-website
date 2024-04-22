@@ -3,12 +3,12 @@ import React from "react";
 const Download = (props) => {
 
 	function handleWindowsClick() {
-		window.open("https://github.com/tunnels-is/NicelandVPN/releases/download/v2.0.0/NicelandVPN-Windows.exe", '_blank');
+		window.open("https://github.com/tunnels-is/NicelandVPN/releases/download/v2.0.1/NicelandVPN-Windows.exe", '_blank');
 	}
 
 	function handleMacClick() {
-		// window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v2.0.0/NicelandVPN-MacOS.zip', '_blank');
-		alert("soon!")
+		window.open('https://github.com/tunnels-is/nicelandvpn-desktop/releases/download/v2.0.1/NicelandVPN-MacOS.zip', '_blank');
+		// alert("soon!")
 	}
 
 	function handleLinuxClick() {
@@ -38,7 +38,7 @@ const Download = (props) => {
 			<div className="s2 box box-shadow" onClick={handleMacClick} style={{ cursor: 'pointer' }}>
 				<img className="icon" src="https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/mac.svg"></img>
 				<div className="title">
-					Releasing in a few days!
+					MacOS
 				</div>
 			</div>
 
