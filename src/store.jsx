@@ -312,7 +312,7 @@ var STORE = {
 			},
 			"CryptoPayments": {
 				// icon: "https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/temp-cash.png",
-				title: "Cypto Currency Payments",
+				title: "Crypto Currency Payments",
 				short: "We are currently looking into different crypto currency payment platforms. We want to support as many crypto currencies as possible, but Bitcoin, Etherum and Monero are a must.",
 				long: "",
 			},
