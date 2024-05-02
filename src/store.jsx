@@ -422,7 +422,112 @@ var STORE = {
 					"text:::Click a country of your choosing and select yes!",
 				]
 			},
+			{
+				title: "Configuring DNS Blocking",
+				tag: "dns-blocking",
+				content: [
+					"text:::Select DNS from the side-bar.",
+					"text:::On the Blocking card you can see all the categories you can block, click on those you want block to turn them on/off.",
+					"text:::Click the SAVE button that appeared on the top to save your configuration.",
+				]
+			},
+			{
+				title: "Configuring The Default Connection",
+				tag: "configuring-default-connection",
+				content: [
+					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
 
+					"title:::Step 1 Selecting an entry point",
+					"text:::Select Routers from the side-bar.",
+					"text:::Choose a server, click the Add To Connection button and select DEFAULT.", 
+
+					"title:::Step 2 Selecting an exit point",
+					"text:::Select Nodes from the sidebar.",
+					"text:::Choose a server, click the Add To Connection button and select DEFAULT.",
+
+					"title:::Step 3 Connecting",
+					"text:::Select Connections from the side-bar.",
+					"text:::Click the CONNECT button on the DEFAULT connection. A confirmation pop-up will appear asking you if you really want to connect there, click YES to connect.",
+					"text:::If the connection is successful a connection ready notification will appear.",
+
+					"title:::Step 4 Disconnecting",
+					"text:::When you wish to disconnect select Connections from the side-bar if you are not already there.",
+					"text:::Then click DISCONNECT on the DEFAULT connection card, a confirmation pop-up will appear click YES to disconnect",
+				]
+			},
+			{
+				title: "Enabling Two Factor Authentication",
+				tag: "enable-2-fa",
+				content: [
+					"text:::Select Settings from the side-bar.",
+					"text:::On the Account card click the Two-Factor Authentication button.",
+					"text:::Scan the QR code with an authenticator App, like Google Authenticator or Aegis.",
+					"text:::Below the QR code there is a form, you have to put in the code from the authenticator App on the first field and your password on the second field the third field is optional and can be ignored for now.",
+					"text:::Then click confirm to complete the process.",
+				]
+			},
+			{
+				title: "Enabling Advanced Mode",
+				tag: "enable-advanced-mode",
+				content: [
+					"text:::Select Settings from the side-bar.",
+					"text:::On the Congfigurations card click on the off next to Advanced Mode to turn it on and vice versa.",
+					"text:::Do not forget to click the SAVE button that appeared on the top to save your changes.",
+				]
+			},
+			{
+				title: "Enabling Debug and Info Logging",
+				tag: "enable-debug-logging",
+				content: [
+					"text:::Select Settings from the side-bar.",
+					"text:::On the Configurations card click on the off next to Debug Loggin and Info Logging to turn them on and vice versa.",
+					"text:::Click on the SAVE button that appeared on the top to save your changes.",
+				]
+			},
+			{
+				title: "Reseting NicelandVPN Settings to Default",
+				tag: "reseting-nicelandvpn-settings",
+				content: [
+					"text:::Select Settings from the side-bar.",
+					"text:::On the Configurations card click on Reset App button."
+				]
+			},
+			{
+				title: "Managing Logged in Devices",
+				tag: "manage-loggedin-devices",
+				content: [
+					"text:::You can log out any device you previously logged in by going to Settings in the side-bar and in the the Logins card you can click on logout on the devices you want."
+				]
+			},
+			{
+				title: "Registering an Anonymous Account",
+				tag: "register-anonymously",
+				content: [
+					"text:::On the login screen click on the Register Anonymously. On the first field in the form a token will appear save it somewhere or you will not be able to login, this acts like your username.",
+					"text:::Add your password on the second field and once again confirm your password on the third. Optionally you can add an affiliate code in the last field.",
+					"text:::Click the Register button to complete the process.",
+				]
+			},
+			{
+				title: "Changing DNS",
+				tag: "change-dns",
+				content: [
+					"text:::Select DNS from the side-bar.",
+					"text:::On the Settings card click on the field next to Primary delete the old IP and put the DNS IP you want. Do the same for the Secondary.",
+					"text:::Don't forget to click the SAVE button that appeared on the top to save your settings."
+				]
+			},
+			{
+				title: "Configuring the API IP and Port",
+				tag: "configure-api",
+				content: [
+					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
+
+					"text:::Select DNS fromt he side-bar.",
+					"text:::In the Settings card you can input the IP wou want in the Server IP field and the port right below it in the Server Port field.",
+					"text:::Click the SAVE button that appeared on the top to save your changes.",
+				]
+			},
 		]
 	},
 	GetAndSaveDomain: function() {
