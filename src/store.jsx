@@ -405,7 +405,7 @@ var STORE = {
 
 					"title:::Step 2: Opening Niceland",
 					"text:::On Windows and Linux you can simply run Niceland! no install needed. ",
-					"text:::On macOS you will need to drag the application to the applications folder.",
+					"text:::On MacOS you will need to drag the application to the applications folder.",
 
 					"title:::Step 3: Creating Your Account",
 					"text:::Accounts are created inside the Niceland VPN app not on the website. This is for security reasons.",
@@ -426,8 +426,13 @@ var STORE = {
 				title: "Configuring DNS Blocking",
 				tag: "dns-blocking",
 				content: [
+					"title:::Step 1 Getting into the DNS settings",
 					"text:::Select DNS from the side-bar.",
-					"text:::On the Blocking card you can see all the categories you can block, click on those you want block to turn them on/off.",
+
+					"title:::Step 2 Turning on/off block-lists",
+					"text:::On the Blocking card you can see all the categories you can block. Click on those you want to block to turn them off, click on them again to unblock them.",
+
+					"title:::Step 3 Saving your changes",
 					"text:::Click the SAVE button that appeared on the top to save your configuration.",
 				]
 			},
@@ -448,19 +453,24 @@ var STORE = {
 					"title:::Step 3 Connecting",
 					"text:::Select Connections from the side-bar.",
 					"text:::Click the CONNECT button on the DEFAULT connection. A confirmation pop-up will appear asking you if you really want to connect there, click YES to connect.",
-					"text:::If the connection is successful a connection ready notification will appear.",
+					"text:::When the connection is successful a connection ready notification will appear.",
 
 					"title:::Step 4 Disconnecting",
 					"text:::When you wish to disconnect select Connections from the side-bar if you are not already there.",
-					"text:::Then click DISCONNECT on the DEFAULT connection card, a confirmation pop-up will appear click YES to disconnect",
+					"text:::Then click DISCONNECT on the DEFAULT connection card, a confirmation pop-up will appear click YES to disconnect.",
 				]
 			},
 			{
 				title: "Enabling Two Factor Authentication",
 				tag: "enable-2-fa",
 				content: [
+					"title:::Step 1 Getting into the settings",
 					"text:::Select Settings from the side-bar.",
+
+					"title:::Step 2 Starting the 2-FA procedure ",
 					"text:::On the Account card click the Two-Factor Authentication button.",
+
+					"title:::Step 3 Scanning the QR code and confirming it",
 					"text:::Scan the QR code with an authenticator App, like Google Authenticator or Aegis.",
 					"text:::Below the QR code there is a form, you have to put in the code from the authenticator App on the first field and your password on the second field the third field is optional and can be ignored for now.",
 					"text:::Then click confirm to complete the process.",
@@ -470,8 +480,13 @@ var STORE = {
 				title: "Enabling Advanced Mode",
 				tag: "enable-advanced-mode",
 				content: [
+					"title:::Step 1 Getting into the settings",
 					"text:::Select Settings from the side-bar.",
-					"text:::On the Congfigurations card click on the off next to Advanced Mode to turn it on and vice versa.",
+
+					"title:::Step 2 Turning on/off advanced mode",
+					"text:::On the Configurations card click on the off next to Advanced Mode to turn it on and vice versa.",
+
+					"title:::Step 3 Save your changes",
 					"text:::Do not forget to click the SAVE button that appeared on the top to save your changes.",
 				]
 			},
@@ -479,32 +494,49 @@ var STORE = {
 				title: "Enabling Debug and Info Logging",
 				tag: "enable-debug-logging",
 				content: [
+					"title:::Step 1 Getting into the settings",
 					"text:::Select Settings from the side-bar.",
-					"text:::On the Configurations card click on the off next to Debug Loggin and Info Logging to turn them on and vice versa.",
+
+					"title:::Step 2 Turning on/off debug and info logging",
+					"text:::On the Configurations card click on the off next to Debug Logging and Info Logging to turn them on and vice versa.",
+
+					"title:::Step 3 Saving your changes",
 					"text:::Click on the SAVE button that appeared on the top to save your changes.",
 				]
 			},
 			{
-				title: "Reseting NicelandVPN Settings to Default",
-				tag: "reseting-nicelandvpn-settings",
+				title: "Resetting NicelandVPN Settings to Default",
+				tag: "resetting-nicelandvpn-settings",
 				content: [
+					"title:::Step 1 Getting into the settings",
 					"text:::Select Settings from the side-bar.",
-					"text:::On the Configurations card click on Reset App button."
+
+					"title:::Step 2 Resetting the App",
+					"text:::On the Configurations card click on Reset App button.",
 				]
 			},
 			{
 				title: "Managing Logged in Devices",
-				tag: "manage-loggedin-devices",
+				tag: "manage-logged-in-devices",
 				content: [
-					"text:::You can log out any device you previously logged in by going to Settings in the side-bar and in the the Logins card you can click on logout on the devices you want."
+					"title:::Step 1 Getting into the settings",
+					"text::: Select settings from the side-bar,",
+
+					"title:::Step 2 Logging out from other devices",
+					"text:::On the Logins card you can click on logout on each device you wish to log out from.",
 				]
 			},
 			{
 				title: "Registering an Anonymous Account",
 				tag: "register-anonymously",
 				content: [
+					"title:::Step 1 Getting your token",
 					"text:::On the login screen click on the Register Anonymously. On the first field in the form a token will appear save it somewhere or you will not be able to login, this acts like your username.",
+
+					"title:::Step 2 Adding and confirming your password",
 					"text:::Add your password on the second field and once again confirm your password on the third. Optionally you can add an affiliate code in the last field.",
+
+					"tile:::Completing the registration",
 					"text:::Click the Register button to complete the process.",
 				]
 			},
@@ -512,8 +544,13 @@ var STORE = {
 				title: "Changing DNS",
 				tag: "change-dns",
 				content: [
+					"title:::Step 1 Getting into the DNS settings",
 					"text:::Select DNS from the side-bar.",
+
+					"title:::Step 2 Changing the DNS",
 					"text:::On the Settings card click on the field next to Primary delete the old IP and put the DNS IP you want. Do the same for the Secondary.",
+
+					"title:::Step 3 Saving your changes",
 					"text:::Don't forget to click the SAVE button that appeared on the top to save your settings."
 				]
 			},
@@ -523,8 +560,13 @@ var STORE = {
 				content: [
 					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
 
-					"text:::Select DNS fromt he side-bar.",
-					"text:::In the Settings card you can input the IP wou want in the Server IP field and the port right below it in the Server Port field.",
+					"tile:::Step 1 Getting into the DNS settings",
+					"text:::Select DNS from the side-bar.",
+
+					"title:::Step 2 Changing the IP and Port",
+					"text:::In the Settings card you can input the IP you want in the Server IP field and the port right below it in the Server Port field.",
+
+					"title:::Step 3 Saving your changes",
 					"text:::Click the SAVE button that appeared on the top to save your changes.",
 				]
 			},
