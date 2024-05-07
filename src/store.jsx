@@ -522,6 +522,7 @@ var STORE = {
 
 					"title:::Step 2 Resetting the App",
 					"text:::On the Configurations card click on Reset App button.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_app.png",
 				]
 			},
 			{
@@ -545,6 +546,7 @@ var STORE = {
 
 					"title:::Step 2 Adding and confirming your password",
 					"text:::Add your password on the second field and once again confirm your password on the third. Optionally you can add an affiliate code in the last field.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/registering_anonymously.png",
 
 					"tile:::Completing the registration",
 					"text:::Click the Register button to complete the process.",
@@ -559,6 +561,7 @@ var STORE = {
 
 					"title:::Step 2 Changing the DNS",
 					"text:::On the Settings card click on the field next to Primary delete the old IP and put the DNS IP you want. Do the same for the Secondary.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/changing_dns.png",
 
 					"title:::Step 3 Saving your changes",
 					"text:::Don't forget to click the SAVE button that appeared on the top to save your settings."
@@ -575,6 +578,7 @@ var STORE = {
 
 					"title:::Step 2 Changing the IP and Port",
 					"text:::In the Settings card you can input the IP you want in the Server IP field and the port right below it in the Server Port field.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/changing_api_ip_port.png",
 
 					"title:::Step 3 Saving your changes",
 					"text:::Click the SAVE button that appeared on the top to save your changes.",
