@@ -431,6 +431,7 @@ var STORE = {
 
 					"title:::Step 2 Turning on/off block-lists",
 					"text:::On the Blocking card you can see all the categories you can block. Click on those you want to block to turn them off, click on them again to unblock them.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/dns_blocking.png",
 
 					"title:::Step 3 Saving your changes",
 					"text:::Click the SAVE button that appeared on the top to save your configuration.",
@@ -445,14 +446,18 @@ var STORE = {
 					"title:::Step 1 Selecting an entry point",
 					"text:::Select Routers from the side-bar.",
 					"text:::Choose a server, click the Add To Connection button and select DEFAULT.", 
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_entry_point.png",
 
 					"title:::Step 2 Selecting an exit point",
 					"text:::Select Nodes from the sidebar.",
 					"text:::Choose a server, click the Add To Connection button and select DEFAULT.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_exit_point.png",
 
 					"title:::Step 3 Connecting",
 					"text:::Select Connections from the side-bar.",
 					"text:::Click the CONNECT button on the DEFAULT connection. A confirmation pop-up will appear asking you if you really want to connect there, click YES to connect.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connecting.png",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connecting_confirm_dialog.png",
 					"text:::When the connection is successful a connection ready notification will appear.",
 
 					"title:::Step 4 Disconnecting",
@@ -469,11 +474,13 @@ var STORE = {
 
 					"title:::Step 2 Starting the 2-FA procedure ",
 					"text:::On the Account card click the Two-Factor Authentication button.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/2fa-1.png",
 
 					"title:::Step 3 Scanning the QR code and confirming it",
 					"text:::Scan the QR code with an authenticator App, like Google Authenticator or Aegis.",
 					"text:::Below the QR code there is a form, you have to put in the code from the authenticator App on the first field and your password on the second field the third field is optional and can be ignored for now.",
 					"text:::Then click confirm to complete the process.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/2fa-2.png",
 				]
 			},
 			{
@@ -485,6 +492,7 @@ var STORE = {
 
 					"title:::Step 2 Turning on/off advanced mode",
 					"text:::On the Configurations card click on the off next to Advanced Mode to turn it on and vice versa.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/advanced_mode.png",
 
 					"title:::Step 3 Save your changes",
 					"text:::Do not forget to click the SAVE button that appeared on the top to save your changes.",
@@ -499,6 +507,7 @@ var STORE = {
 
 					"title:::Step 2 Turning on/off debug and info logging",
 					"text:::On the Configurations card click on the off next to Debug Logging and Info Logging to turn them on and vice versa.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/info_debug_logging.png",
 
 					"title:::Step 3 Saving your changes",
 					"text:::Click on the SAVE button that appeared on the top to save your changes.",
@@ -524,6 +533,7 @@ var STORE = {
 
 					"title:::Step 2 Logging out from other devices",
 					"text:::On the Logins card you can click on logout on each device you wish to log out from.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/logout_devices.png",
 				]
 			},
 			{
