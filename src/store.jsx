@@ -560,7 +560,7 @@ var STORE = {
 				content: [
 					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
 
-					"tile:::Step 1 Getting into the DNS settings",
+					"title:::Step 1 Getting into the DNS settings",
 					"text:::Select DNS from the side-bar.",
 
 					"title:::Step 2 Changing the IP and Port",
@@ -568,6 +568,40 @@ var STORE = {
 
 					"title:::Step 3 Saving your changes",
 					"text:::Click the SAVE button that appeared on the top to save your changes.",
+				]
+			},
+			{
+				title: "Using ssh through NicelandVPN",
+				tag: "ssh-through-nicelandvpn",
+				content: [
+					"text:::If you have trouble with ssh connections use the following option:",
+					"html:::<code>ssh -o ServerAliveInternal=60</code>",
+				]
+			},
+			{
+				title: "Downloading and Running the CLI App",
+				tag: "running-nicelandvpn-cli",
+				content: [
+					"title:::Step 1 Downloading the CLI App",
+					"html:::Download the CLI binary for your platform from <a href='https://github.com/tunnels-is/NicelandVPN/releases/latest'>here</a>.",
+					"text:::For example if you are on windows you want to download the NicelandVPN-Windows-CLI.exe.",
+
+					"title:::Step 2 Move the binary to a convenient place",
+					"text:::We recommend to move the binary in it's own folder because it generates some files in the directory the binary is in on the first run.",
+					"text:::NicelandVPN makes a directory called files, inside it saves the configuration in config.json and also the logs.",
+
+					"title:::Step 3 Execute the CLI App",
+					"text:::You have to execute the CLI app with elevated privileges.",
+					`html:::
+					<ul>
+						<li>For windows:
+							<ul><li><code>Start-Process -FilePath C:\\path\\to\\NicelandVPN-Windows-CLI.exe -Verb RunAs</code></li></ul></li>
+						<li>For Linux and MacOS:
+							<ul><li><code>sudo ./NicelandVPN-Linux-CLI</code></li></ul></li>
+					</ul>`,
+					"title:::Step 4 Using the cli App",
+					"text:::When you execute the NicelandVPN CLI app you can use the web UI that runs by default in localhost:22222.",
+					"html:::If you want to learn how to change the defaults see <a href='#/help/configure-api'>here</a>",
 				]
 			},
 		]
