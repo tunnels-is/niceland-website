@@ -404,11 +404,11 @@ var STORE = {
 					"html:::Download Niceland VPN by clicking <a target='_blank' href='/#/download'>this link</a>",
 
 					"title:::Step 2: Opening Niceland",
-					"text:::On Windows and Linux you can simply run Niceland! no install needed. ",
-					"text:::On MacOS you will need to drag the application to the applications folder.",
+					"text:::On Windows and Linux, you can simply run Niceland! No install needed. ",
+					"text:::On MacOS, you will need to drag the application to the applications folder.",
 
 					"title:::Step 3: Creating Your Account",
-					"text:::Accounts are created inside the Niceland VPN app not on the website. This is for security reasons.",
+					"text:::Accounts are created inside the Niceland VPN app, not on the website. This is for security reasons.",
 
 					"title:::Step 4: Choosing A Subscription",
 					"html:::Detailed subscription information can be seen by clicking <a target='_blank' href='/#/signup'>this link</a>",
@@ -427,7 +427,7 @@ var STORE = {
 				tag: "dns-blocking",
 				content: [
 					"title:::Step 1 Getting into the DNS settings",
-					"text:::Select DNS from the side-bar.",
+					"text:::Select DNS from the sidebar.",
 
 					"title:::Step 2 Turning on/off block-lists",
 					"text:::On the Blocking card you can see all the categories you can block. Click on those you want to block to turn them off, click on them again to unblock them.",
@@ -444,7 +444,7 @@ var STORE = {
 					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
 
 					"title:::Step 1 Selecting an entry point",
-					"text:::Select Routers from the side-bar.",
+					"text:::Select Routers from the sidebar.",
 					"text:::Choose a server, click the Add To Connection button and select DEFAULT.", 
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_entry_point.png",
 
@@ -454,14 +454,14 @@ var STORE = {
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_exit_point.png",
 
 					"title:::Step 3 Connecting",
-					"text:::Select Connections from the side-bar.",
+					"text:::Select Connections from the sidebar.",
 					"text:::Click the CONNECT button on the DEFAULT connection. A confirmation pop-up will appear asking you if you really want to connect there, click YES to connect.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connecting.png",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connecting_confirm_dialog.png",
 					"text:::When the connection is successful a connection ready notification will appear.",
 
 					"title:::Step 4 Disconnecting",
-					"text:::When you wish to disconnect select Connections from the side-bar if you are not already there.",
+					"text:::When you wish to disconnect select Connections from the sidebar if you are not already there.",
 					"text:::Then click DISCONNECT on the DEFAULT connection card, a confirmation pop-up will appear click YES to disconnect.",
 				]
 			},
@@ -470,7 +470,7 @@ var STORE = {
 				tag: "enable-2-fa",
 				content: [
 					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the side-bar.",
+					"text:::Select Settings from the sidebar.",
 
 					"title:::Step 2 Starting the 2-FA procedure ",
 					"text:::On the Account card click the Two-Factor Authentication button.",
@@ -478,7 +478,7 @@ var STORE = {
 
 					"title:::Step 3 Scanning the QR code and confirming it",
 					"text:::Scan the QR code with an authenticator App, like Google Authenticator or Aegis.",
-					"text:::Below the QR code there is a form, you have to put in the code from the authenticator App on the first field and your password on the second field the third field is optional and can be ignored for now.",
+					"text:::Below the QR code there is a form. You have to put the code from the authenticator App in the first field and your password in the second field. The third field is optional and can be ignored for now.",
 					"text:::Then click confirm to complete the process.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/2fa-2.png",
 				]
@@ -488,14 +488,14 @@ var STORE = {
 				tag: "enable-advanced-mode",
 				content: [
 					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the side-bar.",
+					"text:::Select Settings from the sidebar.",
 
 					"title:::Step 2 Turning on/off advanced mode",
-					"text:::On the Configurations card click on the off next to Advanced Mode to turn it on and vice versa.",
+					"text:::On the Configurations card, click on the off next to Advanced Mode to turn it on and vice versa.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/advanced_mode.png",
 
 					"title:::Step 3 Save your changes",
-					"text:::Do not forget to click the SAVE button that appeared on the top to save your changes.",
+					"text:::Do not forget to click the SAVE button that appeared at the top to save your changes.",
 				]
 			},
 			{
@@ -503,14 +503,14 @@ var STORE = {
 				tag: "enable-debug-logging",
 				content: [
 					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the side-bar.",
+					"text:::Select Settings from the sidebar.",
 
 					"title:::Step 2 Turning on/off debug and info logging",
-					"text:::On the Configurations card click on the off next to Debug Logging and Info Logging to turn them on and vice versa.",
+					"text:::On the Configurations card, click on the off next to Debug Logging and Info Logging to turn them on and vice versa.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/info_debug_logging.png",
 
 					"title:::Step 3 Saving your changes",
-					"text:::Click on the SAVE button that appeared on the top to save your changes.",
+					"text:::Click on the SAVE button that appeared at the top to save your changes.",
 				]
 			},
 			{
@@ -518,10 +518,10 @@ var STORE = {
 				tag: "resetting-nicelandvpn-settings",
 				content: [
 					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the side-bar.",
+					"text:::Select Settings from the sidebar.",
 
 					"title:::Step 2 Resetting the App",
-					"text:::On the Configurations card click on Reset App button.",
+					"text:::On the Configurations card, click on the Reset App button.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_app.png",
 				]
 			},
@@ -530,10 +530,10 @@ var STORE = {
 				tag: "manage-logged-in-devices",
 				content: [
 					"title:::Step 1 Getting into the settings",
-					"text::: Select settings from the side-bar,",
+					"text::: Select settings from the sidebar,",
 
 					"title:::Step 2 Logging out from other devices",
-					"text:::On the Logins card you can click on logout on each device you wish to log out from.",
+					"text:::On the Logins card, you can click on logout on each device you wish to log out from.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/logout_devices.png",
 				]
 			},
@@ -542,10 +542,10 @@ var STORE = {
 				tag: "register-anonymously",
 				content: [
 					"title:::Step 1 Getting your token",
-					"text:::On the login screen click on the Register Anonymously. On the first field in the form a token will appear save it somewhere or you will not be able to login, this acts like your username.",
+					"text:::On the login screen, click on Register Anonymously. On the first field in the form, a token will appear. Save it somewhere or you will not be able to login. This acts like your username.",
 
 					"title:::Step 2 Adding and confirming your password",
-					"text:::Add your password on the second field and once again confirm your password on the third. Optionally you can add an affiliate code in the last field.",
+					"text:::Add your password in the second field and once again confirm your password in the third. Optionally you can add an affiliate code in the last field.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/registering_anonymously.png",
 
 					"tile:::Completing the registration",
@@ -557,38 +557,38 @@ var STORE = {
 				tag: "change-dns",
 				content: [
 					"title:::Step 1 Getting into the DNS settings",
-					"text:::Select DNS from the side-bar.",
+					"text:::Select DNS from the sidebar.",
 
 					"title:::Step 2 Changing the DNS",
-					"text:::On the Settings card click on the field next to Primary delete the old IP and put the DNS IP you want. Do the same for the Secondary.",
+					"text:::On the Settings card, click on the field next to Primary delete the old IP and enter the DNS IP you want. Do the same for the Secondary.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/changing_dns.png",
 
 					"title:::Step 3 Saving your changes",
-					"text:::Don't forget to click the SAVE button that appeared on the top to save your settings."
+					"text:::Don't forget to click the SAVE button that appeared at the top to save your settings."
 				]
 			},
 			{
 				title: "Configuring the API IP and Port",
 				tag: "configure-api",
 				content: [
-					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
+					"html:::You must be in Advanced Mode. To learn how to enable it, click <a href='#/help/enable-advanced-mode'>here</a>.",
 
 					"title:::Step 1 Getting into the DNS settings",
-					"text:::Select DNS from the side-bar.",
+					"text:::Select DNS from the sidebar.",
 
 					"title:::Step 2 Changing the IP and Port",
-					"text:::In the Settings card you can input the IP you want in the Server IP field and the port right below it in the Server Port field.",
+					"text:::In the Settings card, you can input the IP you want in the Server IP field and the port right below it in the Server Port field.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/changing_api_ip_port.png",
 
 					"title:::Step 3 Saving your changes",
-					"text:::Click the SAVE button that appeared on the top to save your changes.",
+					"text:::Click the SAVE button that appeared at the top to save your changes.",
 				]
 			},
 			{
 				title: "Using ssh through NicelandVPN",
 				tag: "ssh-through-nicelandvpn",
 				content: [
-					"text:::If you have trouble with ssh connections use the following option:",
+					"text:::If you have trouble with SSH connections, use the following option:",
 					"html:::<code>ssh -o ServerAliveInternal=60</code>",
 				]
 			},
@@ -598,11 +598,11 @@ var STORE = {
 				content: [
 					"title:::Step 1 Downloading the CLI App",
 					"html:::Download the CLI binary for your platform from <a href='https://github.com/tunnels-is/NicelandVPN/releases/latest'>here</a>.",
-					"text:::For example if you are on windows you want to download the NicelandVPN-Windows-CLI.exe.",
+					"text:::For example, if you are on windows you want to download NicelandVPN-Windows-CLI.exe.",
 
 					"title:::Step 2 Move the binary to a convenient place",
-					"text:::We recommend to move the binary in it's own folder because it generates some files in the directory the binary is in on the first run.",
-					"text:::NicelandVPN makes a directory called files, inside it saves the configuration in config.json and also the logs.",
+					"text:::We recommend moving the binary to its own folder because it generates some files in the directory the binary is in on the first run.",
+					"text:::NicelandVPN makes a directory called files, inside this directory is the configuration in config.json and also the logs.",
 
 					"title:::Step 3 Execute the CLI App",
 					"text:::You have to execute the CLI app with elevated privileges.",
@@ -613,9 +613,9 @@ var STORE = {
 						<li>For Linux and MacOS:
 							<ul><li><code>sudo ./NicelandVPN-Linux-CLI</code></li></ul></li>
 					</ul>`,
-					"title:::Step 4 Using the cli App",
-					"text:::When you execute the NicelandVPN CLI app you can use the web UI that runs by default in localhost:22222.",
-					"html:::If you want to learn how to change the defaults see <a href='#/help/configure-api'>here</a>",
+					"title:::Step 4 Using the CLI App",
+					"text:::When you execute the NicelandVPN CLI app, you can use the web UI that runs by default on localhost:22222.",
+					"html:::If you want to learn how to change the defaults, see <a href='#/help/configure-api'>here.</a>",
 				]
 			},
 		]
