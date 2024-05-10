@@ -445,7 +445,7 @@ var STORE = {
 
 					"title:::Step 1 Selecting an entry point",
 					"text:::Select Routers from the sidebar.",
-					"text:::Choose a server, click the Add To Connection button and select DEFAULT.", 
+					"text:::Choose a server, click the Add To Connection button and select DEFAULT.",
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_entry_point.png",
 
 					"title:::Step 2 Selecting an exit point",
@@ -588,8 +588,10 @@ var STORE = {
 				title: "Using ssh through NicelandVPN",
 				tag: "ssh-through-nicelandvpn",
 				content: [
-					"text:::If you have trouble with SSH connections, use the following option:",
-					"html:::<code>ssh -o ServerAliveInternal=60</code>",
+					"text:::If you have trouble with SSH connections, use the ServerAliveInterval option.:",
+					"text:::ServerAliveInterval will send pings between client and server to make sure the connection stays active.",
+					"text:::",
+					"html:::<code>$ ssh -o ServerAliveInternal=30 root@1.1.1.1</code>",
 				]
 			},
 			{
@@ -605,13 +607,18 @@ var STORE = {
 					"text:::NicelandVPN makes a directory called files, inside this directory is the configuration in config.json and also the logs.",
 
 					"title:::Step 3 Execute the CLI App",
-					"text:::You have to execute the CLI app with elevated privileges.",
+					"text:::NicelandVPN requires elevated privileges because it is a portable VPN.",
+					"text:::Wich means that NicelandVPN will not install anything on your system.",
 					`html:::
+						<p>To run the CLI on windows:</p>
 					<ul>
-						<li>For windows:
-							<ul><li><code>Start-Process -FilePath C:\\path\\to\\NicelandVPN-Windows-CLI.exe -Verb RunAs</code></li></ul></li>
-						<li>For Linux and MacOS:
-							<ul><li><code>sudo ./NicelandVPN-Linux-CLI</code></li></ul></li>
+							<li>1. Start Poweshell, CMD or bash shell as Administrator</li>
+							<li>2. Navigate to the directory containing NicelandVPN </li>
+							<li>3. Run NicelandVPN: <code>$ NicelandVPN-Windows-CLI.exe</code></li></ul>
+						<p>To run the CLI on MacOS and Linux:</p>
+						<ul>
+							<li>1. Navigate to the directory containing NicelandVPN </li>
+							<li>2. Run NicelandVPN: <code>$ sudo ./NicelandVPN-Linux-CLI</code></li>
 					</ul>`,
 					"title:::Step 4 Using the CLI App",
 					"text:::When you execute the NicelandVPN CLI app, you can use the web UI that runs by default on localhost:22222.",
