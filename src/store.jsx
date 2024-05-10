@@ -441,7 +441,7 @@ var STORE = {
 				title: "Connections: Configuring the DEFAULT connection",
 				tag: "configuring-default-connection",
 				content: [
-					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
+					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/guides/enable-advanced-mode'>here</a>.",
 
 					"title:::Step 1 Selecting an entry point",
 					"text:::Select Routers from the sidebar.",
@@ -571,7 +571,7 @@ var STORE = {
 				title: "API: Configuring address and port",
 				tag: "configure-api",
 				content: [
-					"html:::You must be in Advanced Mode. To learn how to enable it, click <a href='#/help/enable-advanced-mode'>here</a>.",
+					"html:::You must be in Advanced Mode. To learn how to enable it, click <a href='#/guides/enable-advanced-mode'>here</a>.",
 
 					"title:::Step 1 Getting into the DNS settings",
 					"text:::Select DNS from the sidebar.",
@@ -622,7 +622,7 @@ var STORE = {
 					</ul>`,
 					"title:::Step 4 Using the CLI App",
 					"text:::When you execute the NicelandVPN CLI app, you can use the web UI that runs by default on localhost:22222.",
-					"html:::If you want to learn how to change the defaults, see <a href='#/help/configure-api'>here.</a>",
+					"html:::If you want to learn how to change the defaults, see <a href='#/guides/configure-api'>here.</a>",
 				]
 			},
 		]
