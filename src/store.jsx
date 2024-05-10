@@ -588,7 +588,7 @@ var STORE = {
 				title: "Using SSH with NicelandVPN",
 				tag: "ssh-through-nicelandvpn",
 				content: [
-					"text:::If you have trouble with SSH connections, use the ServerAliveInterval option.:",
+					"text:::If you have trouble with SSH connections, use the ServerAliveInterval option.",
 					"text:::ServerAliveInterval will send pings between client and server to make sure the connection stays active.",
 					"text:::",
 					"html:::<code>$ ssh -o ServerAliveInternal=30 root@1.1.1.1</code>",
@@ -623,6 +623,33 @@ var STORE = {
 					"title:::Step 4 Using the CLI App",
 					"text:::When you execute the NicelandVPN CLI app, you can use the web UI that runs by default on localhost:22222.",
 					"html:::If you want to learn how to change the defaults, see <a href='#/guides/configure-api'>here.</a>",
+				]
+			},
+			{
+				title: "Password Recovery",
+				tag: "password-recovery",
+				content: [
+					"title:::Step 1 Log-in screen",
+					"text:::Select Login from the sidebar if you are not already there.",
+
+					"title:::Step 2 Starting the password recovery",
+					"text:::Click on Reset Password at the bottom.",
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_password.png",
+					
+					"title:::Step 3 Entering your email",
+					"text:::Your account's email should be in the first field (1), if not enter it now.",
+
+					"title:::Step 4 Getting the recovery code",
+					"text:::Press the Click To Reset Code button (2). You will receive a recovery code in your email.",
+					"text:::Enter the recovery code in the fourth field on the form (3).",
+
+					"title:::Step 6 Choose a new password",
+					"text:::Then enter a new password in the second and third field (4).",
+
+					"title:::Step 7 Complete the recovery",
+					"text:::Finaly click the Reset Password button to complete the reset (5). After that you can login with your new password.",
+
+					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_password-2.png",
 				]
 			},
 		]
