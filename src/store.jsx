@@ -423,7 +423,7 @@ var STORE = {
 				]
 			},
 			{
-				title: "Configuring DNS Blocking",
+				title: "DNS: How to configure blocking",
 				tag: "dns-blocking",
 				content: [
 					"title:::Step 1 Getting into the DNS settings",
@@ -438,7 +438,7 @@ var STORE = {
 				]
 			},
 			{
-				title: "Configuring The Default Connection",
+				title: "Connections: Configuring the DEFAULT connection",
 				tag: "configuring-default-connection",
 				content: [
 					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/help/enable-advanced-mode'>here</a>.",
@@ -553,7 +553,7 @@ var STORE = {
 				]
 			},
 			{
-				title: "Changing DNS",
+				title: "DNS: How to change servers",
 				tag: "change-dns",
 				content: [
 					"title:::Step 1 Getting into the DNS settings",
@@ -568,7 +568,7 @@ var STORE = {
 				]
 			},
 			{
-				title: "Configuring the API IP and Port",
+				title: "API: Configuring address and port",
 				tag: "configure-api",
 				content: [
 					"html:::You must be in Advanced Mode. To learn how to enable it, click <a href='#/help/enable-advanced-mode'>here</a>.",
@@ -585,7 +585,7 @@ var STORE = {
 				]
 			},
 			{
-				title: "Using ssh through NicelandVPN",
+				title: "Using SSH with NicelandVPN",
 				tag: "ssh-through-nicelandvpn",
 				content: [
 					"text:::If you have trouble with SSH connections, use the ServerAliveInterval option.:",
