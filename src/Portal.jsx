@@ -21,7 +21,7 @@ import CashPage from "./Portal/Cash";
 import GuidePage from "./Portal/GuidePage";
 import GuideLoaderPage from "./Portal/GuideLoaderPage";
 import PaymentPage from "./Portal/PaymentPage";
-import Guides from "./Portal/sections/Guides";
+import Embed from "./Portal/Embed";
 
 
 const root = createRoot(document.getElementById('root'));
@@ -31,8 +31,8 @@ const LaunchPortal = () => {
 	console.dir(window.location)
 	let locationHash = window.location.hash
 	let slider = false
-	if (locationHash.includes("slider")) {
-		slider = truzze
+	if (locationHash.includes("slider") || locationHash.includes("embed")) {
+		slider = true
 	}
 
 	return (
@@ -56,7 +56,9 @@ const LaunchPortal = () => {
 						<Route path="guides/:tag" element={<GuideLoaderPage />} />
 						<Route path="about" element={<AboutPage />} />
 						<Route path="download" element={<DownloadPage />} />
+						<Route path="embed" element={<Embed />} />
 						<Route path="policies" element={<Policies />} />
+						<Route path="countries" element={<CountriesPage />} />
 						<Route path="countries" element={<CountriesPage />} />
 						<Route path="business" element={<BusinessVPNPage />} />
 						<Route path="*" element={<HomePage />} />
