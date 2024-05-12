@@ -31,7 +31,7 @@ const Guides = (props) => {
 
 			{guides.map((guide, index) => {
 				return (
-					<Link to={"/guides/" + guide.tag} target="_blank" className="link box-shadow">
+					<Link to={"/guides/" + guide.tag} className="link box-shadow">
 						{guide.title}
 					</Link>
 				)
