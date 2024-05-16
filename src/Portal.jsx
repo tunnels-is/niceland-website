@@ -20,6 +20,8 @@ import PricingPage from "./Portal/Pricing";
 import CashPage from "./Portal/Cash";
 import GuidePage from "./Portal/GuidePage";
 import GuideLoaderPage from "./Portal/GuideLoaderPage";
+import BlogPage from "./Portal/BlogPage";
+import BlogLoaderPage from "./Portal/BlogLoaderPage";
 import PaymentPage from "./Portal/PaymentPage";
 import Embed from "./Portal/Embed";
 
@@ -54,6 +56,8 @@ const LaunchPortal = () => {
 						<Route path="features" element={<FeaturesPage />} />
 						<Route path="guides" element={<GuidePage />} />
 						<Route path="guides/:tag" element={<GuideLoaderPage />} />
+						<Route path="blogs" element={<BlogPage />} />
+						<Route path="blogs/:tag" element={<BlogLoaderPage />} />
 						<Route path="about" element={<AboutPage />} />
 						<Route path="download" element={<DownloadPage />} />
 						<Route path="embed" element={<Embed />} />

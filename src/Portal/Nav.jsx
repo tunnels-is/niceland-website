@@ -40,6 +40,7 @@ const Nav = (props) => {
 					<Link className={`mobile-item font-mobile-menu-item ${path === "features" ? "active" : ""}`} to={"/features"} onClick={() => setMenu(!menu)}>Features</Link>
 					<Link className={`mobile-item font-mobile-menu-item ${path === "download" ? "active" : ""}`} to={"/download"} onClick={() => setMenu(!menu)}>Download</Link>
 					<Link className={`mobile-item font-mobile-menu-item ${path === "guides" ? "active" : ""}`} to={"/guides"} onClick={() => setMenu(!menu)}>Guides</Link>
+					<Link className={`mobile-item font-mobile-menu-item ${path === "blogs" ? "active" : ""}`} to={"/blogs"} onClick={() => setMenu(!menu)}>Blog</Link>
 					{/* <Link className={`mobile-item font-mobile-menu-item ${path === "signup" ? "active" : ""}`} to={"/signup"} onClick={() => setMenu(!menu)}>Pricing</Link> */}
 					<Link className={`mobile-item font-mobile-menu-item ${path === "business" ? "active" : ""}`} to={"/business"} onClick={() => setMenu(!menu)}>Business</Link>
 				</div>
@@ -54,6 +55,7 @@ const Nav = (props) => {
 					<Link className={`item font-menu-item ${path === "features" ? "active" : ""}`} to={"/features"}>Features</Link>
 					<Link className={`item font-menu-item ${path === "download" ? "active" : ""}`} to={"/download"}>Download</Link>
 					<Link className={`item font-menu-item ${path === "guides" ? "active" : ""}`} to={"/guides"}>Guides</Link>
+					<Link className={`item font-menu-item ${path === "blogs" ? "active" : ""}`} to={"/blogs"}>Blogs</Link>
 					{/* <Link className={`item font-menu-item ${path === "signup" ? "active" : ""}`} to={"/signup"}>Pricing</Link> */}
 					<Link className={`item font-menu-item ${path === "business" ? "active" : ""}`} to={"/business"}>Business</Link>
 				</div>

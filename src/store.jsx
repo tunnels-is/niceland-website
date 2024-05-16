@@ -652,6 +652,16 @@ var STORE = {
 					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_password-2.png",
 				]
 			},
+		],
+		Blogs: [
+			{
+				title: "Test Blog Post",
+				tag: "test-blog-post",
+				content: [
+					"title:::Test Blog Post",
+					"text:::Blah blah blah blah...",
+				]
+			},
 		]
 	},
 	GetAndSaveDomain: function() {
