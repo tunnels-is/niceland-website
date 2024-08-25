@@ -3,11 +3,11 @@ import React from "react";
 const Download = (props) => {
 
 	function handleWindowsClick() {
-		window.open("https://github.com/tunnels-is/NicelandVPN/releases/download/v2.1.0/NicelandVPN-Windows-app.exe", '_blank');
+		window.open("https://github.com/tunnels-is/NicelandVPN/releases/download/v2.2.0/NicelandVPN-Windows-app.exe", '_blank');
 	}
 
 	function handleMacClick() {
-		window.open('https://github.com/tunnels-is/NicelandVPN/releases/download/v2.1.0/NicelandVPN-MacOS-app.zip', '_blank');
+		window.open('https://github.com/tunnels-is/NicelandVPN/releases/download/v2.2.0/NicelandVPN-MacOS.zip', '_blank');
 	}
 
 	function handleLinuxClick() {
